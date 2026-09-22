@@ -1,12 +1,12 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-## **Deliverable D8.1 Concepts for Vertical Applications**
+# Deliverable D8.1 Concepts for Vertical Applications
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
 Horizon Innovation action
 
-# Responsible authors CNR
+**Responsible authors CNR**
 
 |    Project start    | 1 June 2024 |
 |:-------------------:|-------------|
@@ -163,7 +163,7 @@ Finally, the document provides a consolidated architectural synthesis and develo
 
 ## Table of Contents
 
-[Deliverable D8.1 Concepts for Vertical Applications](#deliverable-d8.1-concepts-for-vertical-applications)
+[Deliverable D8.1 Concepts for Vertical Applications](#_Toc230164984)
 
 [Deliverable Information](#deliverable-information)
 

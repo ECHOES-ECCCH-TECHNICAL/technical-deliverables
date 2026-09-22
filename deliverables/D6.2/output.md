@@ -1,8 +1,6 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-# Deliverable D6.2 Interoperability
-
-**Requirements and Guidelines**
+# Deliverable D6.2 Interoperability Requirements and Guidelines
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
