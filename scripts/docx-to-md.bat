@@ -36,11 +36,11 @@ if errorlevel 1 (
     exit /b 1
 )
 
-if not exist "%~dp0clean-docx.lua" (
+if not exist "%~dp0clean-docx_v02.lua" (
     echo.
-    echo ERROR: clean-docx.lua was not found.
+    echo ERROR: clean-docx_v02.lua was not found.
     echo Expected location:
-    echo   %~dp0clean-docx.lua
+    echo   %~dp0clean-docx_v02.lua
     echo.
     pause
     exit /b 1
@@ -83,7 +83,7 @@ pandoc "%~nx1" ^
   -t gfm ^
   --extract-media=. ^
   --wrap=none ^
-  --lua-filter="%~dp0clean-docx.lua" ^
+  --lua-filter="%~dp0clean-docx_v02.lua" ^
   -o "output.md"
 
 set "PANDOC_EXIT=%ERRORLEVEL%"

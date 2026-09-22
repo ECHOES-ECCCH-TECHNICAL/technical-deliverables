@@ -1,6 +1,6 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-Deliverable D6.3 - Architecture for Data and Cloud Components
+# Deliverable D6.3 - Architecture for Data and Cloud Components
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -457,9 +457,9 @@ Access / Entitlement Mapper (AEM)
 
 AEM is used as the name for the platform’s policy and context resolution capability. It combines trusted identity context with platform-owned policy inputs to derive effective access and operation context for the platform-facing operations. It should not be read as a source of truth for access rights or a mandatory central policy decision point for every request.
 
-# Introduction
+## Introduction
 
-## Purpose and scope
+### Purpose and scope
 
 Deliverable D6.3 defines the target architecture of the ECHOES Cultural Heritage Cloud and serves as the architectural counterpart to the data strategy and interoperability framework developed in WP6. It explains how the Cloud is structured, which core capabilities it provides, how responsibilities are assigned, and how the resulting environment supports the integration of datasets, services, workflows and applications across the wider ECCCH ecosystem.
 
@@ -467,7 +467,7 @@ This document is an architecture description, not a software specification. It d
 
 The scope covers the shared cloud core, the user-facing entry layer, platform control-plane services, execution and workflow capabilities, knowledge and storage architecture, application-facing integration patterns, and the operational and governance foundations required to keep the Cultural Heritage Cloud interoperable and sustainable over time
 
-## Document status and consolidation basis
+### Document status and consolidation basis
 
 This document consolidates the architectural baseline for the CH Cloud at M24. Earlier working notes and exploratory models are treated as inputs to this consolidation, while D6.3 sets the reference vocabulary and responsibility model used in the remainder of the document.
 
@@ -481,7 +481,7 @@ This deliverable also refines terminology used in earlier project documents, esp
 
 D6.3 defines the architecture, responsibility boundaries, control-plane logic and operational model of the CH Cloud. It does not define final API payload schemas, detailed machine-level contracts or deployment configurations, which belong in lower-level interface and implementation specifications and are expected to be further addressed in Deliverable D16.4. Unless explicitly stated otherwise, the components and interactions described here define the target architectural baseline, while their actual availability at M24 remains partial and aligned with the phased delivery plan described in D3.2.
 
-## How to read this architecture in practice
+### How to read this architecture in practice
 
 This document can be read from three complementary practical perspectives.
 
@@ -491,7 +491,7 @@ For **Vertical Application integration**, the key material concerns the control�
 
 For **central platform operation**, the most important sections concern sources of truth, ownership boundaries, lifecycle semantics and deployment assumptions. These explain which services remain authoritative, which state must be durable, and which responsibilities are retained centrally rather than delegated to providers or applications.
 
-## Architectural decisions summary
+### Architectural decisions summary
 
 The decisions below summarise the most important architecture-level decisions established in this deliverable. They are intended to make the baseline easier to review by showing, for each major choice, the problem addressed, the chosen baseline, its main consequence and what remains outside scope.
 
@@ -661,9 +661,9 @@ Operational degradation and conformance drift can be detected and acted on witho
 
 Universal internal telemetry from all partner‑operated components is not required.
 
-# Main functions of the ECCCH Platform
+## Main functions of the ECCCH Platform
 
-## The role of the CH Cloud within ECHOES
+### The role of the CH Cloud within ECHOES
 
 The Cultural Heritage Cloud (CH Cloud) is the enabling technical environment of the wider ECCCH ecosystem. It provides a coherent access layer, common trust and identity, shared semantic services, governed storage and publication pathways, execution capabilities for tools and workflows, and the operational foundations required for reliable participation by users, providers and connected applications.
 
@@ -673,7 +673,7 @@ The target architecture also supports governed integration with existing Europea
 
 The shared cloud environment can also provide a controlled place for AI-enabled processing capabilities delivered in later work packages or connected infrastructures. These capabilities are modelled as governed shared interfaces, not as local prerequisites for each institution. Section 4.3.1 describes this as an extension of the execution, integration and knowledge-management model.
 
-## Principal design drivers
+### Principal design drivers
 
 The architecture is shaped by a small number of design drivers derived from the Grant Agreement and related ECHOES documentation. These drivers explain the main constraints behind the platform model and the architectural decisions summarised in this deliverable. Table 1 presents the drivers and their architectural consequences.
 
@@ -686,11 +686,11 @@ The architecture is shaped by a small number of design drivers derived from the 
 | Secure common access | Users and applications require a trusted access environment across distributed services | SEP and AAI are core access and trust capabilities, not local implementation details |
 | Operational sustainability | The cloud must remain supportable over time and cannot silently absorb unlimited storage or operational responsibility | Activity monitoring, quota enforcement<sup>1</sup>, backup, recovery and clear responsibility boundaries were planned by design from the beginning |
 
-<span id="_Toc229719816" class="anchor"></span>Table 1 Principal architectural design drivers
+Principal architectural design drivers
 
 *1 Note: In the Table 1 quota enforcement refers to mechanisms that prevent unlimited consumption of shared platform resources. It covers two domains. Storage-side quota enforcement concerns private working storage, publication targets, retention and allowed write destinations. These checks are relevant when the platform resolves storage targets or provisions user space. Execution-side budget enforcement concerns compute-intensive operations such as job execution, GPU use or other execution capacities exposed by the platform. These checks are relevant when the platform runs managed operations.*
 
-## Architectural principles
+### Architectural principles
 
 The architecture defined in this deliverable is guided by a small set of principles that shape both the component model and the operational patterns introduced in the following chapters. These principles capture the core architectural choices of the CH Cloud including how responsibilities are separated, how integration is governed and how the Platform is expected to remain sustainable over time. Together they provide reasoning behind the component boundaries and interactions described later in the document.
 
@@ -708,13 +708,13 @@ These principles support FAIR-oriented practice in operational terms. Findabilit
 
 Finally, the principles reflect a sustainability-aware view of scope and responsibility. The architecture distinguishes between services that ECHOES operates directly, services it coordinates, and resources it links to or federates with. Making these boundaries explicit from the start is necessary to keep the CH Cloud interoperable and supportable over time, and to avoid taking on operational responsibilities that have not been explicitly agreed.
 
-## Scope boundaries
+### Scope boundaries
 
 The architecture includes the cloud components required to make the CH Cloud coherent: access and trust components, platform control‑plane services, knowledge services, storage and publication functions, workflow orchestration and cross‑cutting observability. It does not assume that every domain‑specific application or every external repository is centrally hosted by ECHOES.
 
 Similarly, D6.3 defines architectural responsibilities and operational boundaries but does not, by itself, define all future governance agreements, funding models or product‑level implementation choices. Where long‑term responsibility for durable storage, application maintenance or provider‑operated nodes lies outside the central cloud core, that boundary is explicitly marked in the architecture.
 
-## Functional view of the CH Cloud
+### Functional view of the CH Cloud
 
 This section summarises the main functions that the CH Cloud must support at architecture level. It is a functional view, not a second component model. Section 3.2 remains the canonical component vocabulary, while Section 4 defines the corresponding responsibilities, interfaces and operational boundaries.
 
@@ -786,7 +786,7 @@ This section summarises the main functions that the CH Cloud must support at arc
 
 The CH Cloud is a governed operational environment for collaboration, execution, knowledge management, publication and federation, not a discovery or storage layer alone.
 
-## Architecture Validation Scenarios
+### Architecture Validation Scenarios
 
 To support the verification of the architectural completeness of the CH Cloud, a selected set of user scenarios was introduced alongside the functional description of the platform. The purpose of these scenarios is not to redefine the architecture from a user-experience perspective alone, but to test whether the proposed cloud functions and components, when considered together, form a coherent and usable whole. In other words, the scenarios serve as an analytical bridge between architectural intentions and plausible modes of use. They make it possible to verify whether the architecture can realistically support contribution, discovery, collaboration, processing, knowledge exchange, and reuse across different categories of users and institutions. This approach is consistent with the broader ECCCH architectural approach, where technical design is explicitly informed by user profiles, collaborative scenarios, ongoing requirements collection, and feedback from applications and evaluation activities.
 
@@ -826,7 +826,7 @@ This scenario should be read as an architectural validation path. It shows how a
 
 <figure>
 <img src="./media/image3.png" />
-<figcaption><p><span id="_Toc229719802" class="anchor"></span>Figure 1 Representative validation scenario for creating/enriching an HDT</p></figcaption>
+<figcaption><p>Representative validation scenario for creating/enriching an HDT</p></figcaption>
 </figure>
 
 **Semantic and binary handling stay distinct** – Binary assets are uploaded to a resolved storage target and returned as stable asset references. Semantic output is written through KBMS within the resolved semantic workspace
@@ -841,7 +841,7 @@ The following scenario illustrates one representative path for discovering and r
 
 <figure>
 <img src="./media/image4.png" />
-<figcaption><p><span id="_Toc229719803" class="anchor"></span>Figure 2 Representative validation scenario for HDT discovery and reuse</p></figcaption>
+<figcaption><p>Representative validation scenario for HDT discovery and reuse</p></figcaption>
 </figure>
 
 Resource Onboarding Scenario
@@ -850,7 +850,7 @@ The following scenario illustrates one representative path for onboarding a reso
 
 <figure>
 <img src="./media/image5.png" />
-<figcaption><p><span id="_Toc229719804" class="anchor"></span>Figure 3 Representative validation scenario for resource onboarding</p></figcaption>
+<figcaption><p>Representative validation scenario for resource onboarding</p></figcaption>
 </figure>
 
 Workflow Execution Scenario
@@ -859,7 +859,7 @@ The following scenario illustrates one representative path for turning a user-in
 
 <figure>
 <img src="./media/image6.png" />
-<figcaption><p><span id="_Toc229719805" class="anchor"></span>Figure 4 Representative validation scenario for workflow execution</p></figcaption>
+<figcaption><p>Representative validation scenario for workflow execution</p></figcaption>
 </figure>
 
 Collaborative Research Scenario
@@ -868,12 +868,12 @@ The following scenario illustrates one representative path for collaborative res
 
 <figure>
 <img src="./media/image7.png" />
-<figcaption><p><span id="_Toc229719806" class="anchor"></span>Figure 5 Representative validation scenario for collaborative research</p></figcaption>
+<figcaption><p>Representative validation scenario for collaborative research</p></figcaption>
 </figure>
 
-# Overview of the architecture model
+## Overview of the architecture model
 
-## Layered model
+### Layered model
 
 The consolidated architecture is organised around a canonical layered model of the Cultural Heritage Cloud. The model distinguishes six main architectural areas: Access and trust layer, Platform control plane, Execution plane, Knowledge plane, Storage plane, and Applications and integration edge. These names are used consistently across the component inventory, diagrams and detailed component descriptions.
 
@@ -883,10 +883,10 @@ Applications and external ecosystem participants interact with the platform thro
 
 <figure>
 <img src="./media/image8.png" />
-<figcaption><p><span id="_Toc229719807" class="anchor"></span>Figure 6 Canonical layered model of the Cultural Heritage Cloud</p></figcaption>
+<figcaption><p>Canonical layered model of the Cultural Heritage Cloud</p></figcaption>
 </figure>
 
-## Canonical component inventory
+### Canonical component inventory
 
 This section defines the canonical component inventory of the Cultural Heritage Cloud. The inventory establishes the shared terminology, primary responsibility boundaries and placement of the main platform components within the layered model. Implementation details and deployment choices are addressed in later interface, engineering and deployment work. Detailed explanations of component roles, dependencies and interaction logic are provided in Section 4.
 
@@ -897,7 +897,7 @@ The inventory lists the main deployable or service-facing platform components an
 For the access-facing entry stack, the concise inventory entries are complemented by the fuller distinction between SEP, Access Edge / API Gateway and SEP Integration API in Section 4.1.
 
 <table>
-<caption><p><span id="_Toc229719818" class="anchor"></span>Table 3 Canonical component inventory of the Cultural Heritage Cloud</p></caption>
+<caption><p>Canonical component inventory of the Cultural Heritage Cloud</p></caption>
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 73%" />
@@ -1008,7 +1008,7 @@ For the access-facing entry stack, the concise inventory entries are complemente
 </tbody>
 </table>
 
-## Repository and storage categories
+### Repository and storage categories
 
 Section 3.2 lists the main deployable or service-facing components. This section complements that inventory by describing the repository and storage categories through which the Knowledge plane and Storage plane are realised. A key architectural distinction is the separation between cloud components, which expose governed capabilities or interfaces, and repository or storage categories, which describe where state is persisted and how private, shared, temporary, publication or external targets differ in architectural role. These categories should not be understood as implementation-level classes.
 
@@ -1021,9 +1021,9 @@ Section 3.2 lists the main deployable or service-facing components. This section
 | Temporary / working storage | Transient execution and staging areas | Support intermediate artefacts, hand‑off data and in‑progress transformations during managed execution |
 | Recognised institutional repositories | Partner‑operated repositories, DAM, CMS or archival systems | Provide publication, archival or institutional continuity targets outside the internal working storage |
 
-<span id="_Toc229719819" class="anchor"></span>Table 4 Repository and storage categories
+Repository and storage categories
 
-## Sources of truth and control-plane boundaries
+### Sources of truth and control-plane boundaries
 
 This section explains two related architectural ideas that are easy to confuse on first reading: sources of truth and control-plane boundaries. In practical terms, the question is simple: which platform component is authoritative for a given kind of state, and which components are only allowed to consume that state and act on it. The architecture separates these roles deliberately so that portal-facing components, Vertical Applications and execution services do not each maintain their own competing versions of user rights, semantic ownership or storage policy.
 
@@ -1037,7 +1037,7 @@ A typical interaction makes this clearer. A user authenticates through AAI and r
 
 This separation has three architectural benefits. First, it avoids duplicated and potentially inconsistent policy logic in multiple applications. Second, it keeps the portal and the Vertical Applications relatively thin, because they can rely on platform decisions instead of hard-coding infrastructure knowledge. Third, it improves traceability and auditability: when permissions, graph ownership or storage usage need to be explained, the architecture makes clear which repository or service is authoritative.
 
-## Architectural consequences
+### Architectural consequences
 
 The source-of-truth and control-plane model has the following architectural consequences:
 
@@ -1063,7 +1063,7 @@ Third, for the federated-versus-centralized Knowledge Base question, the M24 bas
 
 This position is also consistent with the HDT innesto principle referenced in D3.1 and D6.1, as the platform does not require semantic models contributed by sister projects, external providers or participating communities to be discarded. Instead, it governs how heterogeneous semantic contributions are connected, validated and published through the shared semantic architecture.
 
-## Mapping the layered model to business, data, application and infrastructure views
+### Mapping the layered model to business, data, application and infrastructure views
 
 The layered model used throughout D6.3 can also be read through the four architectural views explicitly referenced by D3.2. *Table 5* clarifies how the current component inventory maps to business, data, application and infrastructure architecture, without introducing a second competing structural model.
 
@@ -1074,15 +1074,15 @@ The layered model used throughout D6.3 can also be read through the four archite
 | Application architecture | Control‑plane services, integration contracts, workflow coordination and manager responsibilities | SEP Integration API, AEM, Processing Manager, Resource Manager, semantic and binary services | Defines the cloud capabilities that applications and providers integrate with in practice |
 | Infrastructure architecture | Deployment assumptions, runtime separation, durable state handling and approved external targets | Container‑orchestrated runtime baseline, stateful repositories and registries, internal working storage, recognised external targets | Clarifies what the architecture assumes below the logical model without prescribing a fixed technology stack |
 
-<span id="_Toc229719820" class="anchor"></span>Table 5 Mapping of the layered model to architectural views
+Mapping of the layered model to architectural views
 
-# Cloud components
+## Cloud components
 
 This chapter provides the detailed component view of the architecture. Section 3.2 defines the canonical component inventory, while this chapter explains what each component owns, which interfaces and dependencies matter, what it relies on, and which operational assumptions apply.
 
 A central principle of the CH Cloud is that policy resolution, cross-domain coordination and lifecycle control remain platform responsibilities. They are not delegated to individual applications or providers.
 
-## Access and trust layer
+### Access and trust layer
 
 The access and trust layer is formed by the Cloud Web UI / Portal, the Single Entry Point, the Access Edge / API Gateway and the shared Authentication and Authorisation Infrastructure. Together, these elements form the common access boundary of the ECCCH Cloud. This boundary gives users and applications a consistent entry point, establishes trusted access context and protects exposed service routes. Semantic governance, storage policy and execution state remain owned by the relevant platform services.
 
@@ -1098,12 +1098,12 @@ AAI provides identity federation and trusted access context. The current baselin
 
 <figure>
 <img src="./media/image9.png" />
-<figcaption><p><span id="_Toc229719808" class="anchor"></span>Figure 7 Common access boundary and access-trust handoff</p></figcaption>
+<figcaption><p>Common access boundary and access-trust handoff</p></figcaption>
 </figure>
 
 The figure shows the common access boundary as the externally visible part of the access and trust layer. It distinguishes the browser-facing path, the protected API path, shared AAI trust context and the SEP Integration API as the backend-facing handoff into platform-facing contracts.
 
-## Platform control plane
+### Platform control plane
 
 The platform control plane is the operational heart of the CH Cloud. It does not represent one deployable product, but a group of services that coordinate governed platform operations. These services handle routing, execution coordination, semantic governance, storage policy resolution, discoverability and policy composition. Their role is to turn requests into controlled platform actions, apply the relevant architectural boundaries and policy constraints, and coordinate outcomes without duplicating the authoritative state held in the registries, repositories and domain services named elsewhere in the architecture.
 
@@ -1126,7 +1126,7 @@ AEM resolves effective access and operation context for platform-facing requests
 The table distinguishes authoritative ownership from cross-component coordination. Some components remain authoritative for one domain of state or decision, while others combine or sequence actions when a single platform request affects more than one domain.
 
 <table>
-<caption><p><span id="_Toc229719821" class="anchor"></span>Table 6 Manager responsibilities and interaction boundaries</p></caption>
+<caption><p>Manager responsibilities and interaction boundaries</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 31%" />
@@ -1192,7 +1192,7 @@ For later low-level design, the most important boundary is the difference betwee
 For quick reference, *Table 7* summarises the most critical platform components in one compact view. It consolidates the most operationally relevant ownership boundaries.
 
 <table>
-<caption><p><span id="_Toc229719822" class="anchor"></span>Table 7 Ownership boundaries of core platform components</p></caption>
+<caption><p>Ownership boundaries of core platform components</p></caption>
 <colgroup>
 <col style="width: 37%" />
 <col style="width: 28%" />
@@ -1257,7 +1257,7 @@ For quick reference, *Table 7* summarises the most critical platform components 
 </tbody>
 </table>
 
-## Execution plane
+### Execution plane
 
 The Execution plane supports asynchronous processing, long-running workflows and the reuse of executable tools. It takes requests prepared by the control plane and turns them into governed running work. Durable execution state belongs in the execution substrate, not in the portal or in ad hoc application memory.
 
@@ -1267,7 +1267,7 @@ Execution workers and related runtime endpoints perform the technical work: tool
 
 The Tool Catalogue / Toolbox complements the Resource Manager. The Resource Manager governs platform-level registration and discoverability of datasets, APIs, tools, workflows and applications. The Catalogue focuses on execution-facing descriptors for invocable tools and operations, including invocation contracts, supported execution patterns, runtime requirements, result models and observability expectations. A tool may be visible at platform level through the Resource Manager while its runtime behaviour is described in the Catalogue for use by the Processing Manager and execution services.
 
-### AI-enabled capabilities in the ECCCH Platform
+#### AI-enabled capabilities in the ECCCH Platform
 
 AI-enabled capabilities should be treated in the ECCCH Platform architecture as a governed extension of the existing execution, integration and knowledge-management model. AI is not introduced as a separate architectural layer by default, but as a capability that can be integrated through the same platform mechanisms that already support tools, workflows, Vertical Applications and managed execution.
 
@@ -1295,7 +1295,7 @@ This is especially important because AI outputs are often derived, probabilistic
 
 At this stage, this future AI ecosystem is still evolving. Many Vertical Applications and services developed within ECHOES and its sister projects are still being designed, prototyped or refined. At the same time, the European AI infrastructure landscape is also changing rapidly, with several AI Factories and related national or European initiatives still under development. This means that the ECCCH Platform should not hard-code one fixed AI integration model too early. Instead, the architecture should provide a stable and governed foundation that can accommodate AI-enabled tools, services and infrastructures once their functional scope, technical interfaces, governance requirements and operational models become clearer.
 
-## Knowledge plane
+### Knowledge plane
 
 The knowledge plane is centred on the Core Knowledge Base, but it is expressed through repository classes rather than one undifferentiated KG block. Knowledge-sharing repositories form the shared semantic core. Private-space semantic repositories hold governed private or collaborative work before release. KBMS is the semantic governance capability across these repositories: it governs semantic writes, reads and publication, but it is not the authority for storage routing, quota policy or binary continuity.
 
@@ -1305,7 +1305,7 @@ Private-space semantic repositories form the semantic part of the User Personal 
 
 External semantic repositories remain a valid advanced path for federation. They are not the baseline obligation for every provider, but they are architecturally supported where interoperability, monitoring, ownership, identifier discipline and semantic governance are mature enough. In all cases, KBMS remains the central mediator of shared semantic governance, even when some semantic assets are stored outside the central cloud core.
 
-## Storage plane
+### Storage plane
 
 The Storage plane covers storage-side categories and capabilities used for private work, temporary execution, publication, archival continuity and recognised external targets. User Personal Space is described here because it is the platform’s main private working-space capability. It links a private semantic workspace with a private binary zone, but it is not a separate canonical architectural area.
 
@@ -1315,10 +1315,10 @@ The binary part of UPS does not require a bucket-per-user implementation as an a
 
 <figure>
 <img src="./media/image10.png" />
-<figcaption><p><span id="_Toc229719809" class="anchor"></span>Figure 8 User Personal Space and storage / publication model.</p></figcaption>
+<figcaption><p>User Personal Space and storage / publication model.</p></figcaption>
 </figure>
 
-## Applications and integration edge
+### Applications and integration edge
 
 Vertical Applications are domain-facing applications integrated with the common cloud backbone. From a user perspective, they may be among the most visible parts of the Cloud. Architecturally, they remain partner-owned applications that participate in the shared platform environment through governed integration contracts.
 
@@ -1326,13 +1326,13 @@ At minimum, Vertical Applications align with shared identity and access, use doc
 
 Applications do not select physical storage or repository targets directly. A Vertical Application does not decide whether a save goes to internal UPS storage, an institutional repository or another approved target. It calls documented platform-facing APIs, such as save asset, initialise upload, publish or save semantic output, and the platform resolves the target from context and policy.
 
-### Vertical Applications as black-box domain applications
+#### Vertical Applications as black-box domain applications
 
 Vertical Applications should be treated architecturally as domain-specific, partner-owned black-box applications rather than as decomposed internal modules of the platform. Their internal pipelines, algorithms, intermediate toolchains and technology choices remain application-specific. From the perspective of the ECCCH platform, the relevant concern is the governed integration boundary through which the application authenticates the user, obtains an effective working context, consumes selected cloud capabilities, and returns HDT-related outputs, assets, metadata or semantic structures.
 
 This distinction is important because it prevents the platform architecture from absorbing partner-specific processing logic into the cloud core. A Vertical Application may internally perform OCR, translation, reconstruction, annotation, enrichment, entity extraction or domain mapping. None of those internal stages need to be modelled as platform components unless the consortium explicitly decides to expose them as separate shared tools. What the platform must model is the contract at the boundary: what is submitted, which semantic scope is editable, where results may be saved, and how outcomes become platform-governed objects. This boundary also covers the user’s platform context: which ECHOES objects the user can see, which actions are available, and which private, collaborative or released HDT views may be opened through the application. The Vertical Application may decide how to present these views in its own user experience, but it should not become the source of truth for platform-level visibility or permissions.
 
-### Integration model
+#### Integration model
 
 The recommended baseline is a shared platform-side integration contract with only the necessary local integration on the application side. The platform remains responsible for governed processing at the integration boundary: user-context resolution, access-right evaluation, storage-target resolution, HDT-related create/save behaviour, managed operation handling, status tracking and, where exposed, governed publication. Vertical Applications invoke documented platform-facing contracts and rely on the platform control plane to resolve these concerns.
 
@@ -1348,10 +1348,10 @@ In summary, a Vertical Application is responsible for local invocation and respo
 
 <figure>
 <img src="./media/image11.png" />
-<figcaption><p><span id="_Toc229719810" class="anchor"></span>Figure 9 Vertical Application integration boundary and platform-governed processing</p></figcaption>
+<figcaption><p>Vertical Application integration boundary and platform-governed processing</p></figcaption>
 </figure>
 
-### Canonical platform interfaces and architectural contracts
+#### Canonical platform interfaces and architectural contracts
 
 Interoperability in the ECCCH Platform depends on stable platform-facing contracts. These contracts define how the Portal, Vertical Applications, provider-operated services and authorised platform clients interact with shared cloud capabilities. They are architectural contracts, not full API specifications: they identify the minimum surface, the main platform capability involved, the expected interaction pattern and the behaviour or evidence needed for conformance-oriented implementation.
 
@@ -1372,7 +1372,7 @@ The contract view is presented in two complementary tables. Table 8 lists the ma
 | Job or operation status | Processing Manager with Operation Registry or operation-state store | Expose the current state of a managed platform operation. |
 | Resource registration or update | Resource Manager | Register or update discoverable metadata for datasets, APIs, tools, workflows or applications. |
 
-<span id="_Toc229719823" class="anchor"></span>Table 8 Platform-facing contract catalogue
+Platform-facing contract catalogue
 
 | Contract family | Interaction pattern | Minimum evidence or behaviour |
 |:---|----|----|
@@ -1385,9 +1385,9 @@ The contract view is presented in two complementary tables. Table 8 lists the ma
 | Job or operation status | Synchronous status retrieval or polling interface | Stable state vocabulary, terminal and non-terminal states, consistent access control behaviour and correlation with the original operation. |
 | Resource registration or update | Usually synchronous for simple updates, or asynchronous/admin-mediated where validation or review is required | Validation of required metadata, governance status assignment and evidence of successful registration or rejection. |
 
-<span id="_Toc229719824" class="anchor"></span>Table 9 Interaction patterns and minimum evidence for platform-facing contracts
+Interaction patterns and minimum evidence for platform-facing contracts
 
-## HDT as a platform-managed object
+### HDT as a platform-managed object
 
 The Heritage Digital Twin is treated in this deliverable as a compound platform-managed object, not as a single payload. At minimum, an HDT combines a semantic representation managed through KBMS, references to binary or other non-semantic assets managed through the storage side of the platform, governance metadata such as ownership and workspace or publication scope, and operational state associated with long-running creation, update or publication flows. This is consistent with the wider ECHOES concept and clarifies how WP6 cloud components realise it technically.
 
@@ -1416,13 +1416,13 @@ For quick reference, Table 10 summarises the minimum architectural interpretatio
 | Persistent identity | A stable HDT‑level identifier, or published semantic identifier where required, assigned under KBMS‑led semantic governance control |
 | Publication state | The distinction between working or private forms and published, archived or retired forms of the same HDT lineage |
 
-<span id="_Toc229719825" class="anchor"></span>Table 10 Minimum architectural interpretation of an HDT
+Minimum architectural interpretation of an HDT
 
 A working-state HDT is not yet a release-grade object. It remains a governed working form that may change through private save operations and managed completion steps rather than through publication-grade release semantics. A published HDT should be treated as an immutable governed release or release-grade snapshot. Supersession, archival retention and later retirement still belong to the same object lineage, but they are not equivalent to continued editing of the working-state form.
 
-# Workflow and interaction patterns
+## Workflow and interaction patterns
 
-## Access and session continuation
+### Access and session continuation
 
 The basic user story begins with a user entering the common ECHOES access boundary, typically through the browser-facing portal environment, and authenticating through the shared AAI. Once authenticated, the user should experience continuity when switching between the central portal and a Vertical Application. This continuity depends on shared SSO, trusted token propagation and a common understanding of user entitlements and protected routes.
 
@@ -1430,7 +1430,7 @@ A second path remains possible in which a user reaches a Vertical Application be
 
 For protected services, the same shared trust context must be available to portal-facing functions, workflow execution paths and integrated applications. Restricted L2+ services therefore depend on correct token validation, issuer and audience checks and consistent authorisation enforcement, not merely on the presence of login.
 
-## UPS provisioning on first Platform-managed write
+### UPS provisioning on first Platform-managed write
 
 The preferred provisioning model is not the unconditional creation of the full UPS on first login, but provisioning or resolution when the user or application first performs a platform-managed write. In this context, a platform-managed write means an action that requires platform-managed persistence or governance, such as saving HDT-related material, uploading assets, creating or resolving a private semantic workspace, or starting a managed operation that requires platform-owned working context.
 
@@ -1438,7 +1438,7 @@ This distinction is important because the UPS is a logical platform capability, 
 
 For workflows that begin in a Vertical Application, local editing can remain application-specific until the user or application performs an ECHOES-facing write. At that point, the platform may resolve the UPS as the initial private working target, allowing HDT-related content to be refined in a private context before later decisions are made about sharing, publication or promotion into governed platform workflows. Under the M24 baseline, integrated Vertical Applications rely on the common ECHOES access boundary as the default and preferred trust boundary, as defined in Section 4.1. Alternative direct entry paths remain controlled exceptions under separate trust and governance arrangements and do not remove the need for the common platform boundary when an application performs an ECHOES-facing action such as create, save, query or job submission.
 
-## Vertical Application save HDT pattern 
+### Vertical Application save HDT pattern 
 
 Before a governed save is requested, a Vertical Application may keep its own application-level working draft or edit bundle so that local user interaction does not force every field-level change through the platform. The platform is therefore not intended to act as a field-by-field live editing backend for each application. The governed boundary is crossed when the application submits an explicit create, save or patch request for an HDT-related object.
 
@@ -1446,7 +1446,7 @@ Before a governed save is requested, a Vertical Application may keep its own app
 
 <figure>
 <img src="./media/image12.png" />
-<figcaption><p><span id="_Toc229719811" class="anchor"></span>Figure 10 Canonical Vertical Application create / save HDT flow</p></figcaption>
+<figcaption><p>Canonical Vertical Application create / save HDT flow</p></figcaption>
 </figure>
 
 The create/save pattern distinguishes control flow from data flow. Control flow remains with the platform: identity and trusted caller context are established, effective rights and allowed targets are resolved, a managed operation is created, first-write provisioning can be triggered where needed, upload sessions are prepared and governed status is returned. The binary payload follows the shortest safe route to the resolved storage backend, without being proxied through unnecessary intermediaries.
@@ -1465,7 +1465,7 @@ Delete, recover and retire form a lifecycle path under policy control. Deletion 
 
 Run tool on HDT is the execution path. The object acts as governed input to a processing flow. The Processing Manager owns the operation semantics, while workers or tools remain replaceable execution endpoints reporting through the common status and observability model.
 
-## Processing Manager, tool execution, chaining and workflow orchestration
+### Processing Manager, tool execution, chaining and workflow orchestration
 
 The execution model of the CH Cloud is easiest to understand if the Processing Manager is treated as the platform function that owns managed execution semantics. It is not the component that performs heavy processing itself, nor should it be reduced to a narrow job launcher for one specific class of tool runs. Instead, it receives execution-oriented requests, validates and normalises them, creates durable execution state where needed, determines the appropriate execution pattern, and coordinates hand-off to queueing, orchestration and runtime services.
 
@@ -1473,7 +1473,7 @@ The execution model of the CH Cloud is easiest to understand if the Processing M
 
 <figure>
 <img src="./media/image13.png" />
-<figcaption><p><span id="_Toc229719812" class="anchor"></span>Figure 11 Processing Manager governed execution pattern</p></figcaption>
+<figcaption><p>Processing Manager governed execution pattern</p></figcaption>
 </figure>
 
 Architecturally, the Processing Manager should be understood as a control-plane capability rather than as one fixed deployable unit. It may be realised as one service or as a small set of cooperating services behind a stable platform-facing contract. The key point is the responsibility boundary: one platform function must own execution intake, execution-state coordination, governed completion, and the translation of user or application intent into a managed execution flow.
@@ -1482,7 +1482,7 @@ Not every action in the Cloud has the same execution model. Some actions are sho
 
 The Processing Manager should therefore be read as a reusable platform capability for turning heterogeneous execution intents into governed operational paths. Its concrete internal decomposition may evolve as the platform matures, but the architectural principle remains the same: callers should not own long-running execution coordination themselves, and runtime services should not be burdened with platform-level responsibility for job semantics, governed completion or cross-service execution state.
 
-### What the Processing Manager is in practical terms
+#### What the Processing Manager is in practical terms
 
 In practical terms, the Processing Manager accepts an execution intent and turns it into a managed platform action. It sits between the caller and the execution substrate. The caller may be the portal, a Vertical Application, or another platform-side API, but the manager remains responsible for deciding how the request should be formalised, tracked and completed.
 
@@ -1498,13 +1498,13 @@ It does not replace KBMS, storage services or runtime engines. Those components 
 
 - **Completion and failure handling:** collects outcomes, triggers governed commit steps, records audit information and returns a diagnosable completion or failure state.
 
-### Interaction logic and dependency boundaries
+#### Interaction logic and dependency boundaries
 
 The manager only works because it relies on other components that remain authoritative in their own domains. It should therefore be described through its interaction surfaces rather than as an isolated black box. *Figure 12* summarises their interaction surfaces.
 
 <figure>
 <img src="./media/image14.png" />
-<figcaption><p><span id="_Toc229719813" class="anchor"></span>Figure 12 Processing Manager logical responsibilities and interaction surfaces</p></figcaption>
+<figcaption><p>Processing Manager logical responsibilities and interaction surfaces</p></figcaption>
 </figure>
 
 - **AEM:** provides resolved access and operation context where required, including caller context, permitted operation scope, target context and relevant quota or policy constraints.
@@ -1519,13 +1519,13 @@ The manager only works because it relies on other components that remain authori
 
 - **Monitoring and audit services:** receive job state, execution evidence, logs and failure signals so that long-running work remains operationally visible and supportable.
 
-### How the Processing Manager reacts in concrete scenarios
+#### How the Processing Manager reacts in concrete scenarios
 
 The function of the Processing Manager is best illustrated when it is put to the test through representative platform operations. The following list does not purport to lay out strict algorithms for their implementation, but serves to illustrate the type of response that is expected by the architectural design. The following diagram illustrates three representative responses before their detailed description.
 
 <figure>
 <img src="./media/image15.png" />
-<figcaption><p><span id="_Toc229719814" class="anchor"></span>Figure 13 Three representative operational reactions of the Processing Manager</p></figcaption>
+<figcaption><p>Three representative operational reactions of the Processing Manager</p></figcaption>
 </figure>
 
 In the figure above, small observability/audit tags indicate steps that should emit operation status, logs, audit evidence or diagnostic signals to the observability and operations layer.
@@ -1542,7 +1542,7 @@ A tool execution request arrives with a tool identifier, input references and ex
 
 A request to save an HDT-related object, or an explicit publication action invoked through the appropriate platform-facing entry point, may look like a single user action but can represent a composite platform operation. A simple synchronous metadata write may still go directly to KBMS. The manager becomes necessary when the save implies binary staging, graph updates, validation, provenance capture, identifier assignment or publication to a recognised target. In that situation the manager coordinates the required steps with storage-side and semantic-side services and only completes the action when the resulting identifiers, URIs, graph references and governed status are consistent enough to be returned as one coherent result. Where a stable object identity or publication-grade identifier must be assigned, that assignment should occur inside the same managed save or publication path under semantic governance rather than as a detached follow-up step.
 
-### Managed-operation failure handling
+#### Managed-operation failure handling
 
 Managed operations may involve several independent platform services, such as semantic storage, binary storage, governance records and execution services. The architecture does not assume one global transaction that can automatically commit or roll back all of these services at once. Accepting a request therefore only means that the platform has started handling it. The operation is successful only when it reaches an explicit governed completion state.
 
@@ -1554,7 +1554,7 @@ The Processing Manager coordinates operation state and cleanup coordination for 
 
 These failure states belong to the managed-operation layer rather than to the HDT object lifecycle itself. They may temporarily constrain further actions on an affected object or context, but they do not replace lifecycle states such as working, staged, published, archived or retired. Observability and alerting should make failed, pending cleanup and cleanup failed operations visible to operators and, where appropriate, to callers.
 
-## Resource onboarding and integration levels
+### Resource onboarding and integration levels
 
 The preceding sections describe interaction patterns triggered by users, Vertical Applications or platform services at runtime. Resource onboarding is included here as a complementary provider-facing interaction pattern: it describes how a dataset, API, tool, workflow, application or provider-operated service becomes known to the Platform and becomes eligible for discovery, execution, semantic participation or monitored federation.
 
@@ -1562,11 +1562,11 @@ Integration with the Cultural Heritage Cloud follows the process logic establish
 
 The assigned integration or interoperability level determines how the resource may participate in later platform flows. A resource may first become discoverable, then semantically integrated, and finally eligible for stronger federation or monitored cross-node participation. In this sense, onboarding defines the operational state that allows resources to participate in save, publish, query, execution, enrichment or federation patterns described elsewhere in this chapter.
 
-## Data architecture, lifecycle, versioning and caching
+### Data architecture, lifecycle, versioning and caching
 
 This section defines the operational data model for HDT-related objects in the Platform. It covers lifecycle states, versioning semantics and the role of caches or derived read layers. The model complements data-refinement lifecycle described in D6.1 which focuses on how data and knowledge are refined over time.
 
-### Lifecycle states and transitions
+#### Lifecycle states and transitions
 
 At the architectural level, the platform distinguishes five lifecycle states for HDT-related content. Platform working state covers material that has already crossed into platform-managed persistence, such as private semantic or binary working zones, for ongoing user or application work. Staged state covers material accepted into a managed operation, possibly with reserved targets, operation identifiers or temporary execution artefacts, before it becomes a completed released object. Published state covers a governed object whose semantic representation and binary references have been promoted to the relevant shared or recognised publication targets. Archived state covers material retained for continuity, preservation or institutional responsibility. Retired or expired state covers objects that are no longer active in normal discovery or write flows and are retained only under explicit retention rules, if retained at all.
 
@@ -1578,13 +1578,13 @@ The minimal operational state model distinguishes user-initiated transitions, ma
 
 Within this model, platform working state and published state are different lifecycle forms of the same governed lineage. Platform working-state HDTs support private progress and managed completion after they have crossed into platform-managed persistence. Published HDTs represent release-grade governed snapshots. Supersession, archival retention and retirement apply to the published lineage without turning release objects back into editable working-state forms.
 
-### Versioning strategy
+#### Versioning strategy
 
 The architecture should adopt a snapshot-oriented versioning strategy for released HDTs. For published or externally exposed HDTs, each released version should be treated as an immutable architectural snapshot with stable semantic references, explicit provenance and a clear relation to previous or superseded versions. This avoids ambiguous in-place overwrite semantics in the shared knowledge layer and is better aligned with citation, provenance and release discipline.
 
 In the current baseline, private semantic workspaces do not assume built-in history snapshots or provenance provisioning. This keeps D6.3 aligned with the private-space model established in D6.1, where private editing supports iterative work without publication-grade versioning, enforced provenance trails or mandatory change tracking for each edit. On the binary side, the platform should prefer immutable asset identifiers or versioned asset references wherever an asset participates in a governed HDT version. Reuse of the same binary payload across multiple HDT versions is acceptable, provided the references remain explicit and provenance remains reconstructable. Versioning baseline applies to governed published HDT representations. Private semantic workspaces are not expected to provide platform-level checkpointing, change-history tracking, or provenance provisioning or user-facing recovery mechanisms. This does not preclude ordinary infrastructure-level backup or disaster-recovery measures covered by operational continuity model.
 
-### Caching and materialised views
+#### Caching and materialised views
 
 Cache layers and materialised views support the read path. They do not own platform state. Semantic result caches, portal metadata views and other projections may sit between user-facing services, KBMS and repository targets, but the authoritative state remains in the services that own it. Semantic ownership and graph rules remain governed through the Administrative Repository and knowledge services. Storage targets, quota and allocations remain governed through the Storage Registry / Data API and storage-side services.
 
@@ -1592,11 +1592,11 @@ Short-lived caches and portal views may be used for frequently accessed metadata
 
 The Knowledge Base remains the semantic source of truth for HDT-related semantic content, but it does not need to serve every repeated read directly. The Portal, SEP-mediated clients and Vertical Applications may use derived views, response caches, search indexes or semantic read replicas. These mechanisms support retrieval and performance. They do not create new sources of truth.
 
-# Interoperability, security and governance alignment 
+## Interoperability, security and governance alignment 
 
 This chapter explains how defined architecture supports interoperability, security and governance expectations established in D6.2.
 
-## Alignment with D6.2 interoperability levels
+### Alignment with D6.2 interoperability levels
 
 The architecture described in this document is intentionally aligned with the cumulative interoperability model defined in D6.2. The L1/L2/L3 labels used here refer to interoperability level, not to the separate integration-level language used in D3.2 and D6.2. L1 corresponds to minimum discoverability, stable identifiers, clear licensing, baseline security and basic access. L2 adds structured semantics and operational readiness, including JSON-LD metadata, controlled vocabularies, versioned APIs, entitlement-based access and health and logging support. L3 corresponds to selective advanced federation with RDF discipline, SHACL validation, workflow integration, object-level provenance, semantic drift monitoring and stronger cross-node obligations.
 
@@ -1608,9 +1608,9 @@ Architecturally this means that the cloud must support gradual deepening of part
 | L2 | Entitlement‑aware access, structured semantics and monitored operational behaviour | AAI, SEP, AEM, KBMS or domain APIs, monitoring stack |
 | L3 | Advanced semantic integration, formal constraints and selective federation | KBMS, knowledge‑sharing or external semantic repositories, governance and monitoring services |
 
-<span id="_Toc229719826" class="anchor"></span>Table 11 Architectural interpretation of interoperability levels
+Architectural interpretation of interoperability levels
 
-## AAI, entitlement model and service protection
+### AAI, entitlement model and service protection
 
 AAI and entitlement handling are part of the interoperability baseline for protected services in the ECCCH Platform. A protected API, tool, workflow endpoint, application or node should be able to use trusted identity and access context consistently, and enforce access decisions in a way that is auditable and compatible with the wider platform.
 
@@ -1624,7 +1624,7 @@ The exposure model matters. Publicly exposed protected services may validate EGI
 
 For L2+ resources and services, this becomes part of interoperability evidence. A provider-operated API, tool, workflow endpoint or node should be able to demonstrate how protected access is enforced, how entitlements or platform-resolved permissions are consumed, how unauthorised and forbidden requests are handled, and how access-relevant events are logged or made auditable. In this sense, AAI and service protection contribute directly to interoperability conformance, operational monitoring and governance accountability.
 
-## Policy enforcement, quota and auditability
+### Policy enforcement, quota and auditability
 
 Access to the ECCCH Platform is not decided only at login. A user may be authenticated and still be unable to perform a specific action. For example, the user may not own a given HDT, may not be allowed to write to a selected semantic workspace, may have reached a storage or execution limit, or may be trying to publish into a context that requires additional approval. Runtime policy enforcement combines identity and entitlements with platform-specific information such as roles, ownership, workspace scope, storage policy, quota, execution budget and governance constraints.
 
@@ -1638,7 +1638,7 @@ Quota enforcement applies to binary and semantic private space, even when the ac
 
 Policy enforcement also covers legal and governance constraints where they affect runtime behaviour. Licensing, IPR, data-protection obligations, publication eligibility, federation status or downstream reuse conditions may determine whether a resource can be written, published, transferred, exposed or reused. Users, administrators, applications and operators should be able to understand, at an appropriate level, why an action or target was allowed, denied, unavailable or routed through approval. Internal policy rules do not need to be exposed, but denial reasons, operation correlation and auditable traces are required for exceptional overrides or governance-driven decisions.
 
-## Federation and node responsibilities
+### Federation and node responsibilities
 
 Node and service responsibilities must be explicit. At minimum, the architecture assumes distinct responsibility lines for platform availability and security, service behaviour and contract conformance, dataset metadata and access policy, and federation-level registries, trust and monitoring integration. This follows the spirit of the D6.2 node model and is necessary to keep federated participation workable over time.
 
@@ -1646,12 +1646,12 @@ Where external repositories or federated nodes participate, the cloud does not a
 
 Minimum federation readiness should therefore be read as a controlled admission bar rather than as a vague aspiration. For external semantic repositories this means stable identifiers, explicit access policy, semantic governance compatibility, observable health and a conformance package sufficient for the declared integration level. For recognised institutional storage targets it means registered target metadata, publication policy alignment, stable protocol support, diagnosable write behaviour and the ability to suspend or deactivate the target if monitoring, conformance or governance conditions degrade. Revalidation and operational suspension should be treated as normal parts of federation management, not as exceptional last-resort actions.
 
-## Enforcement matrix for D6.2 requirement families
+### Enforcement matrix for D6.2 requirement families
 
 D6.2 establishes interoperability as contract-driven and evidence-backed. The matrix below shows, at architecture level, which ECHOES components are expected to enforce or operationalise the major requirement families and what forms of evidence they should produce during onboarding or operation.
 
 <table style="width:100%;">
-<caption><p><span id="_Toc229719827" class="anchor"></span>Table 12 Enforcement matrix for D6.2 requirement families</p></caption>
+<caption><p>Enforcement matrix for D6.2 requirement families</p></caption>
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 36%" />
@@ -1740,13 +1740,13 @@ D6.2 establishes interoperability as contract-driven and evidence-backed. The ma
 </tbody>
 </table>
 
-# Operations, monitoring and sustainability
+## Operations, monitoring and sustainability
 
 This chapter focuses on operational sustainability, understood as the ability to keep shared and provider-operated services observable, diagnosable, recoverable and supportable over time. In this sense, monitoring is not only a technical support function. It helps the platform remain operable as more services, applications, providers and federated participants are onboarded.
 
 The broader organisational, legal and financial sustainability model of the Cultural Heritage Cloud is addressed through the project’s governance and sustainability work. The focus here is narrower. The sections below explain how observability, backup and recovery, deployment assumptions and responsibility boundaries support incident response, capacity planning, conformance checks, recovery verification and decisions about remediation, degraded status or suspension.
 
-## Observability baseline
+### Observability baseline
 
 Observability in the CH Cloud is a centrally governed cross-cutting capability, not an optional local add-on to individual services. It covers more than component availability. It must also make managed platform operations diagnosable end-to-end across entry APIs, control-plane managers, the execution substrate, semantic services and storage-side services. The baseline includes health and readiness signals, metrics, structured logs, correlation-capable traces, operation-state telemetry and security events relevant to incident analysis.
 
@@ -1767,7 +1767,7 @@ The observability baseline distinguishes several signal classes instead of treat
 | Security and audit events | Repeated denied actions, auth anomalies, admin-sensitive actions and policy denials | Supports incident response, abuse detection and audit-relevant traceability |
 | Federation and conformance signals | Health exposure, contract failures, stale evidence and suspended targets | Supports governance of partner-operated and federated participation without requiring full internal telemetry |
 
-<span id="_Toc229719828" class="anchor"></span>Table 13 Observable signal classes for the ECCCH Platform
+Observable signal classes for the ECCCH Platform
 
 **Correlation and operation traceability**
 
@@ -1789,13 +1789,13 @@ Not every class of component emits the same telemetry depth. The baseline expect
 | Resource and registry layer | Registration failures, discoverability errors, stale onboarding states and contract mismatch events | Support catalogue continuity, provider onboarding and operational governance |
 | Provider-operated or federated participants | Minimum health, contract and failure signals at the integration boundary | Enable diagnosis, conformance checks and possible operational suspension without requiring full internal partner telemetry |
 
-<span id="_Toc229719829" class="anchor"></span>Table 14 Minimum observability expectations by component class
+Minimum observability expectations by component class
 
 **Alerting and incident-relevant signals**
 
 Alerting should not be limited to infrastructure outages. The baseline should also include repeated authentication failures, degraded request success rates, stuck or repeatedly failing managed operations, queue saturation, semantic publication or cleanup failures, target deactivation or storage-write degradation, and conformance degradation of federated participants. The purpose of alerting is to support timely operational reaction and to preserve reliability, not merely to populate dashboards.
 
-## Continuity, backup and recovery
+### Continuity, backup and recovery
 
 Continuity and recovery measures should remain diagnosable and testable rather than existing only as policy statements. Backup success or failure, restore verification outcomes and stateful dependency degradation should therefore be part of the operational observability model for central repositories, registries and workflow state. Recovery planning is not sufficient unless its execution path can also be observed and verified.
 
@@ -1814,7 +1814,7 @@ This distinction is particularly important for integrated Vertical Applications 
 In operational practice, observability should remain visible at least to three groups: central platform operations, domain owners of key capabilities such as semantic, storage and execution services, and governance or onboarding owners responsible for partner-operated and federated participation.
 
 <table>
-<caption><p><span id="_Toc229719830" class="anchor"></span>Table 15 Operational reaction and durable remediation ownership</p></caption>
+<caption><p>Operational reaction and durable remediation ownership</p></caption>
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 38%" />
@@ -1865,7 +1865,7 @@ In operational practice, observability should remain visible at least to three g
 </tbody>
 </table>
 
-## Deployment and infrastructure assumptions
+### Deployment and infrastructure assumptions
 
 This section clarifies how the architectural choices described earlier translate into basic deployment assumptions. It is not intended as an infrastructure blueprint or an operational manual. Instead, it describes the minimum deployment expectations required to keep the Cultural Heritage Cloud coherent, governable and operable in a hybrid federated setting.
 
@@ -1883,10 +1883,10 @@ These assumptions deliberately avoid prescribing a specific deployment topology 
 
 <figure>
 <img src="./media/image16.png" />
-<figcaption><p><span id="_Toc229719815" class="anchor"></span>Figure 14 Observability and correlation model of the ECCCH Cloud</p></figcaption>
+<figcaption><p>Observability and correlation model of the ECCCH Cloud</p></figcaption>
 </figure>
 
-## Ownership and responsibility model
+### Ownership and responsibility model
 
 The architecture deliberately distinguishes between centrally managed cloud core capabilities, provider-operated integrated services and external targets. Table 16 is not a legal RACI, but a practical architecture-level responsibility map clarifying which side is expected to operate, govern or simply consume each capability. Read together with Sections 7.1–7.3, it also indicates where the full observability baseline remains central and where only minimum partner-side signals are required. This architecture-level map should be read together with the governance and accountability vocabulary established in D6.2 and with the broader project governance arrangements of WP10. Where formal accountability, escalation or compliance ownership is required, those governance instruments take precedence over the technical responsibility view used here.
 
@@ -1902,11 +1902,11 @@ The architecture deliberately distinguishes between centrally managed cloud core
 | Vertical Applications | Provider or partner | Applications remain black‑box, provider‑owned domain tools, while ECHOES governs the shared platform contract they rely on |
 | Provider‑operated tools or APIs registered in the cloud | Provider or partner | Providers own functionality and maintenance, while ECHOES governs discoverability, contract expectations and integration conditions |
 
-<span id="_Toc229719831" class="anchor"></span>Table 16 Ownership and responsibility model for platform and federated components
+Ownership and responsibility model for platform and federated components
 
-# Conclusion
+## Conclusion
 
-## Summary
+### Summary
 
 This deliverable establishes the M24 architectural baseline for the ECHOES Cultural Heritage Cloud. It describes how access and trust, platform control-plane services, execution capabilities, knowledge services, storage and application-facing integration are organised into a hybrid federated cloud environment. The resulting model allows the platform to scale across institutions, applications and providers while preserving shared governance, interoperability and operational visibility.
 
@@ -1916,7 +1916,7 @@ D6.3 also defines the operational baseline needed to make this model sustainable
 
 Rather than prescribing one fixed deployment or implementation stack, the document focuses on stable architectural responsibilities, contracts and interaction patterns. This document is therefore intended as a reference for phased implementation, onboarding and federation, while leaving room for later technical choices and deployment-specific decisions.
 
-## Next steps
+### Next steps
 
 D6.3 is intended to serve as a shared architectural reference for consortium discussion, detailed technical design and implementation planning. It provides the baseline against which future cloud components, integrations and onboarding activities can be aligned and assessed.
 
@@ -1924,7 +1924,7 @@ At the same time, the document makes explicit where further alignment will be re
 
 Addressing these topics incrementally, while preserving the architectural boundaries and governance principles established here, will be essential to the sustainable development of the Cultural Heritage Cloud in later project phases.
 
-# Appendix A. Open Architectural Issues
+## Appendix A. Open Architectural Issues
 
 The following topics are intentionally left open at this stage because they influence both detailed technical design and the long‑term operational model of the Cultural Heritage Cloud. They are not omissions of the architecture defined in D6.3, but areas where further project‑level agreement, governance input or operational experience will be required.
 

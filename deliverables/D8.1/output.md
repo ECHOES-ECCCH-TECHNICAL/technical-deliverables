@@ -1,12 +1,12 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-# Deliverable D8.1 Concepts for Vertical Applications
+## **Deliverable D8.1 Concepts for Vertical Applications**
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
 Horizon Innovation action
 
-**Responsible authors CNR**
+# Responsible authors CNR
 
 |    Project start    | 1 June 2024 |
 |:-------------------:|-------------|
@@ -17,7 +17,7 @@ Horizon Innovation action
 
 © 2025 by the authors, the ECHOES consortium. This work is licensed under a “CC BY 4.0” license.
 
-# Deliverable Information
+## Deliverable Information
 
 <table>
 <colgroup>
@@ -151,7 +151,7 @@ Horizon Innovation action
 
 *Disclaimer: Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
 
-# Abstract
+## Abstract
 
 This deliverable presents the conceptual framework and development roadmap for the Vertical Applications (VAs) developed within Work Package 8 (WP8) of the ECHOES project. Vertical Applications constitute the Application Layer of the European Collaborative Cloud for Cultural Heritage (ECCCH), providing domain-oriented tools that enable cultural heritage professionals and researchers to interact with, enrich, and exploit Heritage Digital Twins (HDTs) within a federated cloud environment.
 
@@ -161,7 +161,7 @@ Together, these applications demonstrate how domain-specific workflows can opera
 
 Finally, the document provides a consolidated architectural synthesis and development roadmap describing how the three VAs collectively support the HDT lifecycle, progressively increase interoperability and integration maturity, and contribute to the creation of interoperable Digital Commons for cultural heritage.
 
-# Table of Contents
+## Table of Contents
 
 [Deliverable D8.1 Concepts for Vertical Applications](#deliverable-d8.1-concepts-for-vertical-applications)
 
@@ -233,7 +233,7 @@ Finally, the document provides a consolidated architectural synthesis and develo
 
 [~~6.~~ ~~References~~](#_Toc230165018)
 
-# List of abbreviations
+## List of abbreviations
 
 AAI — Authentication and Authorisation Infrastructure
 
@@ -297,7 +297,7 @@ VTL — Virtual Transcription Laboratory
 
 WP — Work Package
 
-# Glossary
+## Glossary
 
 | Term | Intended meaning |
 |----|----|
@@ -308,9 +308,9 @@ WP — Work Package
 | Application component | Reusable part of an application, not automatically a cloud-core component |
 | Publication | The process through which a Vertical Application publishes a Heritage Digital Twin representation to the federated ECCCH Knowledge Base using the shared semantic, validation, and integration services provided by the ECCCH infrastructure. |
 
-# Introduction (CNR)
+## Introduction (CNR)
 
-## Purpose and Scope of the Document
+### Purpose and Scope of the Document
 
 This Deliverable provides the conceptual foundation and development roadmap for the Vertical Applications (VAs) developed within Work Package 8 (WP8) of the ECHOES project.
 
@@ -328,7 +328,7 @@ In accordance with the Description of Action, this deliverable presents:
 
 This deliverable does not present final implementations or demonstrators (covered in D8.2–D8.6), but instead establishes the conceptual architecture, workflows, interoperability approach, and integration strategy that guide their development and a description of the three vertical applications.
 
-## Vertical Applications in the ECCCH Architecture
+### Vertical Applications in the ECCCH Architecture
 
 The ECCCH is conceived as a federated, semantically interoperable cloud infrastructure enabling collaborative creation, enrichment, and reuse of cultural heritage data. Its architecture consists of:
 
@@ -364,7 +364,7 @@ This distinction is important for understanding the architectural role of the VA
 
 Each VA is designed to comply progressively with the *D6.2 Interoperability Requirements and Guidelines*[^1] and the *D6.1 Data Strategy for the CH Knowledge Base*[^2] defined by WP6 and to integrate with the KB and HDT lifecycle described in WP7. Through this alignment, Vertical Applications become native components of the federated ECCCH ecosystem rather than standalone tools.
 
-## The Role of Vertical Applications in the Digital Commons
+### The Role of Vertical Applications in the Digital Commons
 
 The ECHOES vision extends beyond digitisation toward the co-creation of semantically enriched, reusable Digital Commons. Vertical Applications operationalise this vision by:
 
@@ -380,7 +380,7 @@ Through their integration with the Heritage Digital Twin Ontology and Knowledge 
 
 In this sense, VAs are not merely tools, but knowledge-producing instruments embedded in a federated architecture.
 
-## Overview of the Three Vertical Applications
+### Overview of the Three Vertical Applications
 
 WP8 develops three flagship Vertical Applications, each addressing a distinct but complementary segment of the cultural heritage domain:
 
@@ -406,7 +406,7 @@ Together, these three VA’s:
 
 - Validate the scalability of the ECCCH Application Layer
 
-## Positioning of WP8 Vertical Applications within the ECCCH Ecosystem
+### Positioning of WP8 Vertical Applications within the ECCCH Ecosystem
 
 The ECHOES project operates within a broader ecosystem of initiatives. Alongside the core ECHOES infrastructure development, several sister projects are funded to contribute datasets, tools, and workflows to the emerging European Collaborative Cloud for Cultural Heritage (ECCCH). These projects, including initiatives such as AUTOMATA, TEXTaiLES, and HERITALISE and others listed in the project web site, focus on domain-specific research and innovation activities that generate digital assets and methodological outputs relevant to the Cultural Heritage Cloud.
 
@@ -450,7 +450,7 @@ Together, these applications demonstrate complementary functional modalities, se
 
 By framing the WP8 VAs as reference implementations, Deliverable D8.1 positions them as enabling instruments for a broader, evolving ecosystem of Vertical Applications that will collectively populate and enrich the ECCCH platform.
 
-## Structure of the Document
+### Structure of the Document
 
 This deliverable is structured as follows:
 
@@ -476,9 +476,9 @@ Each VA section follows a harmonised structure including:
 
 - Development plan and milestones
 
-# VA01 OCRA: Online Conservation-Restoration Annotator 
+## VA01 OCRA: Online Conservation-Restoration Annotator 
 
-## Introduction
+### Introduction
 
 The Online Conservation-Restoration Annotator (OCRA) is a Vertical Application designed to support structured documentation, analysis, and semantic enrichment of two- and three-dimensional representations of tangible cultural heritage assets. The Vertical Application is jointly developed by CNR and CRS4 as affiliated entity.
 
@@ -497,7 +497,7 @@ This design enables flexible reuse: a single geometry anchor may be associated w
 | ![](./media/image3.png) |
 |:-----------------------:|
 
-## Use Case Description/Workflow 
+### Use Case Description/Workflow 
 
 This section describes a representative workflow for OCRA, highlighting both the actions performed by the users inside the application and the points at which the workflow interacts with shared ECHOES services. The purpose of the examples is not to define a final implementation sequence in every technical detail, but to clarify how a domain-specific application such as OCRA can support collaborative annotation while relying on the common ECCCH infrastructure for authentication, governed storage, and HDT-related integration. In the following, we describe two workflows, one where the object of interest is represented in 3D (a statue), and one where it is represented as a relightable image (a painting).
 
@@ -644,7 +644,7 @@ This example presents the possible usage of OCRA for painting analysis. We empha
 </tbody>
 </table>
 
-## OCRA: Technical Architecture Overview
+### OCRA: Technical Architecture Overview
 
 OCRA (Online Conservation-Restoration Annotator) is a modular web-based application supporting collaborative 2D and 3D annotation workflows for conservation-restoration and heritage science. It operates at the ECCCH application-facing layer, consuming shared cloud services and producing structured, semantically enriched outputs aligned with the Heritage Digital Twin (HDT) framework.
 
@@ -768,7 +768,7 @@ OCRA is containerized (Docker-based deployment), supporting cloud-native orchest
 
 From the ECCCH architectural perspective, OCRA should be treated as a provider-operated Vertical Application that integrates with centrally governed ECHOES services through documented contracts. Its containerised deployment supports portability and operational integration, but does not by itself imply that all OCRA-managed data, roles, or services are central cloud-core capabilities. The relevant distinction is between application-owned services and platform-governed ECHOES-facing operations.
 
-## Development Plan and Resources
+### Development Plan and Resources
 
 | *Project month* | *Features implemented* | *Use case steps* |
 |----|----|----|
@@ -778,9 +778,9 @@ From the ECCCH architectural perspective, OCRA should be treated as a provider-o
 | M36 | Advanced support for concurrent collaborative editing of annotations; Publication-oriented workflows available through documented ECHOES interfaces; support for validation and review before publication; richer semantic mapping and controlled vocabularies; stronger interoperability with shared Knowledge Base services; improved monitoring, deployment, and operational readiness; possible reuse of technical components such as Three-Presenter and OpenLIME OCRA viewer in broader ECCCH contexts | Collaborate in real-time on annotating the same objects and scenes; Review validated results; trigger governed publication from OCRA UI through shared ECHOES publication paths; expose annotation results as reusable HDT-related outputs; support more mature end-to-end collaborative workflows |
 | M40 | Mature integration with ECCCH operational environment; refinement of visual analysis and annotation features, publication, provenance, and semantic consistency workflows; scalability improvements for larger collaborative projects and richer assets; stronger support for long-term reuse of OCRA outputs in the Digital Commons; consolidation of deployment and provider-operated sustainability model | Full workflow support from project setup to governed save and publication; stable collaborative annotation environment integrated with shared ECHOES services; reusable and semantically aligned outputs suitable for wider ECCCH uptake |
 
-# VA02 VTL: Virtual Transcription Laboratory
+## VA02 VTL: Virtual Transcription Laboratory
 
-## Introduction
+### Introduction
 
 Virtual Transcription Laboratory (VTL) empowers researchers, cultural heritage professionals, and data providers to unlock and enrich text-based cultural heritage materials at scale. By combining advanced automated processing with expert human input, it delivers flexible, reusable workflows for text recognition, and semantic enrichment. Whether working with historical newspapers, manuscripts, or ancient tablets, the Vertical Application supports the transformation of diverse text-based cultural heritage objects into structured, searchable, and meaningful data.
 
@@ -801,7 +801,7 @@ VTL will offer the following features:
 | ![](./media/image4.png) |
 |:-----------------------:|
 
-## Use Case Description / Workflow
+### Use Case Description / Workflow
 
 This section describes a representative workflow for the Virtual Transcription Laboratory (VTL), showing how a researcher can combine transcription, correction, enrichment, and publication-oriented actions within one domain-specific application while relying on shared ECHOES services for identity, governed persistence, discoverability, and HDT-related integration.
 
@@ -869,7 +869,7 @@ In this scenario, the VTL project should be understood as an application-level w
 </tbody>
 </table>
 
-## VTL: Technical Architecture Overview
+### VTL: Technical Architecture Overview
 
 - developed by PCSS
 
@@ -949,7 +949,7 @@ VTL maintains application-local constructs such as draft transcriptions, tempora
 
 From the ECCCH architectural perspective, VTL should be treated as a provider-operated Vertical Application that integrates with centrally governed ECHOES services through documented contracts. Its containerized deployment supports portability and operational integration but does not imply that all VTL-managed data, roles, or services are central cloud-core capabilities. The distinction between application-owned services and platform-governed ECHOES-facing operations remains critical for understanding its role within the broader ECCCH ecosystem.
 
-## Development Plan
+### Development Plan
 
 <table>
 <colgroup>
@@ -1015,9 +1015,9 @@ From the ECCCH architectural perspective, VTL should be treated as a provider-op
 </tbody>
 </table>
 
-# VA03 CIT: Collection Ingestion Tool
+## VA03 CIT: Collection Ingestion Tool
 
-## Introduction
+### Introduction
 
 The Collection Ingestion Tool (CIT) is a modular, standards-compliant, multi-domain platform designed to support the systematic cataloguing, semantic enrichment, and ingestion of cultural heritage collections into the European Collaborative Cloud for Cultural Heritage (ECCCH).
 
@@ -1064,7 +1064,7 @@ Communication between the different modules takes place through REST/JSON interf
 | ![](./media/image6.png) |
 |:-----------------------:|
 
-## Use Case Description
+### Use Case Description
 
 This section describes a representative cataloguing and publication workflow for the Collection Ingestion Tool (CIT). The example is intended to show how an institutional cataloguing environment can interact with shared ECHOES services for authentication, HDT discovery, semantic integration, and governed publication, while preserving the application-specific workflow logic and editorial practices required by cultural heritage institutions.
 
@@ -1191,7 +1191,7 @@ Use Case Steps
 
 In order to provide a more concrete representation of the use case described above, a set of **low-fidelity wireframes** has been produced to visually illustrate the workflow. The illustrated example is based on the conceptual model of a Heritage Digital Twin (HDT) presented by Maria Theodoridou *et al.* in the paper *“Towards the Definition of the Heritage Digital Twin Ontology for the European Collaborative Cloud for Cultural Heritage”*, presented at the Digital Heritage International Congress 2025 (Siena), and is grounded in the specific case study of the Derynia Icon, a 16<sup>th</sup> century religious icon from Cyprus. The Derynia icon HDT is also illustrated in the report Heritage Digital Twins Ontology – First Report, developed within the ECHOES (European Cloud for Heritage Open Science) initiative (Version 0.1, June 2025), p. 29, link: [250625_ECHOES_HDT_Ontology_v0.1.pdf](https://univtoursfr.sharepoint.com/:b:/r/sites/ECHOES2/Documents%20partages/WP%2007%20Digital%20Commons%20Knowledge-Base/ECHOES_WP07_Deliverables/240624_ECHOES_WP07_D7.1_The_Digital_Commons/Heritage%20Digital%20Twin%20Ontology/250625_ECHOES_HDT_Ontology_v0.1.pdf?csf=1&web=1&e=cxsPRL) .
 
-## Development Plan
+### Development Plan
 
 The development plan of CIT follows a gradual progression from baseline cataloguing functionality toward closer interaction with shared ECHOES services. At this stage, the roadmap should be understood as the staged maturation of the application, starting from core cataloguing and HDT-related interaction features, then moving toward preparatory work for semantic and AI-assisted integration, and finally toward publication-oriented interaction and more mature deployment conditions within the ECHOES environment.
 
@@ -1203,9 +1203,9 @@ The development plan of CIT follows a gradual progression from baseline catalogu
 | M36 | Availability of publication-oriented workflows through shared ECHOES services, supporting the transition from validated local catalogue work to governed publication in the broader ECHOES environment. | Step 8: review and publication. |
 | M40 | Scalable deployment and semantic consolidation, supporting a more mature operational condition of CIT within the ECHOES ecosystem. | Full workflow, from access and record creation to publication-oriented completion. |
 
-# Cross-VA Architectural Synthesis 
+## Cross-VA Architectural Synthesis 
 
-## Architectural Complementarity of the Three Vertical Applications
+### Architectural Complementarity of the Three Vertical Applications
 
 The three Vertical Applications developed in WP8 — OCRA (VA01), VTL (VA02), and CIT (VA03) — address distinct modalities and community needs within the cultural heritage domain. However, they are architecturally unified through their shared positioning within the ECCCH Application Layer and their reliance on common cloud services and semantic infrastructure.
 
@@ -1229,7 +1229,7 @@ all three applications:
 
 This complementarity ensures that WP8 does not produce isolated tools but instead delivers a coordinated Application Layer capable of addressing heterogeneous cultural heritage resources (3D, text, structured metadata) within a unified architectural paradigm.
 
-## Positioning Within the ECCCH Layered Architecture
+### Positioning Within the ECCCH Layered Architecture
 
 The ECCCH architecture, as defined in D6.3, is described through a canonical layered model that distinguishes access and trust, platform control-plane responsibilities, execution services, knowledge management, storage, and the application-facing integration edge. Within this model, the three WP8 Vertical Applications are positioned primarily at the application-facing edge of the architecture, while consuming governed capabilities provided by the shared ECHOES platform.
 
@@ -1275,7 +1275,7 @@ This shared positioning is also what makes them relevant as reference implementa
 
 The modular separation of reusable technical elements, such as the Three-Presenter component used in VA01, may support reuse beyond a single application. However, such reuse should be understood as a contribution to the broader modular ecosystem of ECHOES applications and services, not automatically as evidence that the component is itself a cloud-core capability.
 
-## HDT Lifecycle Coverage Across the VAs
+### HDT Lifecycle Coverage Across the VAs
 
 Collectively, the three VAs address complementary parts of the Heritage Digital Twin (HDT) lifecycle. In line with D6.3, this lifecycle should not be understood as if a single Vertical Application owns the full end-to-end lifecycle of an HDT as an autonomous platform object. Rather, the VAs contribute domain-specific creation, enrichment, validation, and publication-oriented actions, while the governed lifecycle of HDT-related objects remains coordinated through the shared ECHOES platform.
 
@@ -1311,7 +1311,7 @@ A more precise way to read the contribution of each VA is therefore the followin
 
 Taken together, these contributions show that the WP8 VAs cover complementary operational paths across the HDT lifecycle without collapsing that lifecycle into a single application-owned process. This is fully consistent with D6.3, where HDTs are treated as platform-managed compound objects whose lifecycle spans private working context, governed save, publication, versioning, and later transitions under shared architectural control.
 
-## Interoperability and Integration Maturity Progression
+### Interoperability and Integration Maturity Progression
 
 The staged development of the VAs aligns with the interoperability framework defined in WP6 in the D6.2 and with the architectural integration logic clarified in D6.3. Each VA progresses incrementally from baseline operational functionality toward deeper semantic, operational, and publication-oriented integration with the shared ECHOES environment.
 
@@ -1351,7 +1351,7 @@ This progression should not be interpreted as a transition from isolated local t
 
 Through this progression, the VAs evolve from early-stage integrated applications with limited but concrete ECCCH interaction toward more mature, interoperable, and operationally aligned applications participating in a federated cultural heritage infrastructure. Their architectural identity does not change: they remain application-facing, partner-owned Vertical Applications, while the depth, reliability, and scope of their interaction with the shared ECHOES environment increase over time.
 
-## Development Roadmap Consolidation
+### Development Roadmap Consolidation
 
 Although each VA follows its own internal roadmap, WP8 ensures coordination through aligned milestones:
 
@@ -1364,7 +1364,7 @@ Although each VA follows its own internal roadmap, WP8 ensures coordination thro
 
 This consolidated roadmap demonstrates that the three ECHOES VAs evolve coherently within the evolution and implementation of the ECCCH infrastructure reaching higher level of integrations with the development of the infrastructure.
 
-## Extensibility and Ecosystem Growth
+### Extensibility and Ecosystem Growth
 
 The architectural patterns validated through the three WP8 VAs provide a template for future Vertical Applications developed by sister projects, Cascading Grants beneficiaries, and affiliated initiatives. Because:
 

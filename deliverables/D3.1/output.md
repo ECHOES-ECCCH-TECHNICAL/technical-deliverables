@@ -1,6 +1,6 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-**Deliverable 3.1 – Integration Strategy for datasets, tools and workflows with potential for reuse in ECHOES**
+# Deliverable 3.1 – Integration Strategy for datasets, tools and workflows with potential for reuse in ECHOES
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -217,7 +217,7 @@ Deliverable Information
 </tbody>
 </table>
 
-# Abstract
+## Abstract
 
 The aim of the **ECHOES Integration Strategy (D3.1)** is to facilitate the development of the Cultural Heritage Cloud as a shared platform offering access to data, advanced digital tools and state-of-the-art workflows for the creation and analysis of a new generation of semantically rich and collectively produced heritage assets. The strategy helps to ensure that the Cultural Heritage Cloud becomes a coherent, sustainable and user-friendly infrastructure, optimising the reuse of the outcomes of EU and national cultural heritage projects, to meet the needs of the cultural heritage and research communities. The ultimate goal of this integration effort is to interconnect these datasets, tools and workflows in a federated manner, informed by the Community needs.
 
@@ -227,7 +227,7 @@ Finally, the strategy concludes (section 11), by emphasising the pivotal role th
 
 *Disclaimer: Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
 
-# Table of Contents
+## Table of Contents
 
 [1. Abstract](#abstract)
 
@@ -309,7 +309,7 @@ Finally, the strategy concludes (section 11), by emphasising the pivotal role th
 
 [References](#references)
 
-# List of figures and tables
+## List of figures and tables
 
 <u>Figures</u>:
 
@@ -329,7 +329,7 @@ Finally, the strategy concludes (section 11), by emphasising the pivotal role th
 
 - Table 5: [Community Integration Levels](#integrating-european-and-national-initiatives-institutions-and-individuals)
 
-# List of abbreviations
+## List of abbreviations
 
 | 3S     | Simple Storage Service                                      |
 |--------|-------------------------------------------------------------|
@@ -355,7 +355,7 @@ Finally, the strategy concludes (section 11), by emphasising the pivotal role th
 | KB     | Knowledge Base                                              |
 | VA     | Vertical Application                                        |
 
-# Purpose and scope 
+## Purpose and scope 
 
 The **ECHOES Integration Strategy** plays a pivotal role in realising the Cultural Heritage Cloud. To enable this, ECHOES is establishing a shared platform offering access to data, advanced digital tools and state-of-the-art workflows for the creation and analysis of a new generation of semantically rich and collectively produced heritage assets. By bringing together diverse actors from various fields and disciplines from across the sector into a cohesive community of heritage professionals and researchers, it will enable collaborative scientific research.
 
@@ -373,7 +373,7 @@ Complementing the integration strategy, the **ECHOES Integration Roadmap** (D3.2
 
 From the Cultural Heritage Cloud founding principles to the integration implementation via the Roadmap, the present ECHOES Integration Strategy sets the goals to be achieved (i.e. strategic pillars), provides the conceptual framework to achieve them – i.e. a resource-based and gradual integration framework - and highlight the challenges to be solved along the way. By design, this Strategy and its companioned Roadmap are iterative, and will be enriched or amended based on the learned experiences from the initial steps of integration discussed and collected by the ECHOES Integration Task Force (EITF).
 
-# Strategic pillars 
+## Strategic pillars 
 
 As a starting point, the ECHOES Integration Strategy builds on the Cultural Heritage Cloud Founding Principles[^3] and derives from them three key pillars of Integration Strategy are outlined as follows:
 
@@ -391,7 +391,7 @@ The long-term vision is to create the European *Collaborative* Cloud for Cultura
 
 Digital Commons. Federating cultural heritage resources in this way will foster innovative and collaborate co-creation of new knowledge about the Digital Commons by the wider CH community. The success of the collaborative aspect of the Cultural Heritage Cloud will be assessed as part of the Collaborative Research Scenarios that are being developed in ECHOES Task 3.3, *Enhancing and evaluating the collaboration potential of ECHOES*. They act as bridge between the technical integration of cultural heritage resources and the community dimensions, as developed within WP4, ensuring that the Cloud evolves to a functional collaborative ecosystem.
 
-# Guiding Principles for Integration
+## Guiding Principles for Integration
 
 A key principle underlying these three pillars is **finding a balance between standardisation and orchestration**. While ECHOES standardises core infrastructure components (Authentication and Authorisation Infrastructure (AAI), Knowledge Base, APIs) and semantic interoperability layers (HDTO, metadata schemas), it must also orchestrate diverse domain-specific approaches. Different cultural heritage disciplines - archaeology, conservation science, musicology - have legitimate methodological traditions that should not be forced into a single rigid framework. The integration strategy therefore distinguishes between mandatory standards for interoperability and flexible frameworks for domain-specific tool ecosystems.
 
@@ -415,7 +415,7 @@ Depending on the integration level, for applications to be included in the ECHOE
 
 ECHOES adopts a clear strategic preference for open resources wherever possible. Legal and ethical considerations therefore include the open licensing of the data (e.g. CC-BY), metadata (e.g. CC0) or open source software (e.g. European Union Public Licence). Nonetheless, resources under more restrictive or proprietary licenses will not be excluded from integration, provided that their conditions of use are clearly stated, respected and appropriately managed. A policy regarding the integration of proprietary resources is needed to guide the resource providers and *D10.2 Governance Model of the legal entity* (due in May 2026) will provide the first elements in that direction.
 
-# ECHOES ecosystem 
+## ECHOES ecosystem 
 
 The ECHOES project – the mission of which is to develop and implement the European Collaborative Cloud for Cultural Heritage (ECCCH) – operates within a multi-layered ecosystem of stakeholders (see Figure 1 below). At the core of this ecosystem are the ECHOES consortium members and the broader network of ECCCH-funded projects. Their close coordination aims to facilitate the integration of the data, tools and services developed by each project, through the adoption of common technical standards and interfaces that allow for interoperability and scalability across the European cloud environment. Additionally, the ECHOES project must also integrate the tools and datasets that constitute the outcomes of up to 50 projects selected through the three Cascading Grants calls.
 
@@ -427,13 +427,13 @@ Furthermore, the concentric circles depicted in the ECHOES Integration Ecosystem
 
 Figure 1 The ECHOES Ecosystem
 
-## Within ECHOES 
+### Within ECHOES 
 
-### Vertical Applications 
+#### Vertical Applications 
 
 Vertical Applications (VAs) in ECHOES are domain-specific, vertically designed web applications that integrate deeply with the ECHOES cloud infrastructure[^4]. While they can be seen as standalone tools that focus on a specific problem (like transcribing a digitised document or annotating a 3D model), they also work as components tightly connected to the core of the ECHOES infrastructure, hiding the complexity and the more tedious details of the inner infrastructure. The applications will be able to transparently access infrastructure resources like data storage, user management, AAI or processing capabilities. Moreover, the VAs will rely on the HDT ontology for metadata representation in order to guarantee a proper and coherent semantic representation in the Knowledge Base. **Because the first three VAs are developed within the ECHOES project, they will also serve as real-world tests validating how the cloud components integration operates and as practical examples for demonstrating how tightly coupled services can be built on the ECHOES cloud infrastructure.**
 
-### ECHOES Cascading Grants 
+#### ECHOES Cascading Grants 
 
 The ECHOES Cascading Grants Programme provides funding for consortia led by Cultural Heritage Institutions (CHIs) to engage with the Cultural Heritage Cloud[^5]. The programme supports up to 50 projects across three calls to enhance digital engagement, data sharing, and collaboration. Smaller and medium-sized or lesser resourced CHIs are especially encouraged to apply.
 
@@ -447,7 +447,7 @@ The Key focus areas of the three calls are:
 
 The outcomes of the projects funded under the ECHOES Cascading Grants Programme are a key potential source of resources for integration into the Cultural Heritage Cloud in the form of datasets, training materials or vertical applications. They will not only demonstrate the engagement of the wider cultural heritage community with the Cultural Heritage Cloud but provide practical integration examples for validating the Integration Strategy and Roadmap.
 
-## Within ECCCH 
+### Within ECCCH 
 
 Beyond the applications developed with the ECHOES project, the ECHOES community[^6] that the Integration Strategy must take into consideration is primarily composed of so-called “sister projects” funded under ECCCH calls.
 
@@ -489,7 +489,7 @@ Furthermore, additional ECCCH projects will join this group of “sister project
 
 While the three first sister projects are already onboarded in the ECHOES Integration Task Force (EITF), and with the next ten projects about to join, several key integration questions have already emerged and are used to structure the present strategy and the accompanying roadmap (D3.2). These include the need to identify resource types (section 8) and offer clear interoperability guidelines (D6.2, January 2026) and integration processes (D3.2, November 2025). Developing the storage and computing resources of the ECCCH under a federated model where not all the resources are provided by the same provider is a question that also needs to be tackled via the technical governance principles (D10.2, May 2026). In general, distinguishing between agreements during and beyond the projects’ lifetime is one of the main challenges discussed by the ECHOES Integration Task Force.
 
-## Beyond ECCCH
+### Beyond ECCCH
 
 Beyond ECHOES and the ECCCH framework developed by the European Commission through its calls, “external projects” are also expressing interest in integrating with the ECCCH. Even if the integration of the outcomes of these projects and their communities cannot be prioritised in the same way as the ECCCH projects or ECHOES Cascading Grants projects, they represent an important dimension of the Cultural Heritage Cloud in the making and are considered as potential ECCCH stakeholders.
 
@@ -497,11 +497,11 @@ These projects come from a wide range of initiatives, including Horizon Europe, 
 
 Based on the work conducted in ECHOES Work Package 4 around the identification of communities and their needs, we expect to refine the understanding of the ecosystem of interest for ECHOES integration by identifying even more projects, initiatives or stakeholders that could tomorrow become actors of the ECCCH. The formalisation of relationships between ECHOES and these external projects and the scope and modalities of their integration could take many forms. Confronted to this diversity and multiplicity, the role of the integration strategy is also to clarify different roles (users vs. providers for example as elaborated in section 10), and to set up mechanisms balancing easy contribution of all interested parties and capacities of the ECHOES consortium (and of the future legal entity) in supporting the integration of resources from these various communities (see section 9).
 
-## Broader European ecosystem
+### Broader European ecosystem
 
 The ECHOES project itself is developing in a context that needs to be highlighted in the integration strategy as it also influences some of the integration principles described above, and as synergies need to be developed with existing EU initiatives - from Data Spaces to Joint Programming Initiatives or Joint Undertakings - to ensure the long-term sustainability of the ECCCH, avoid the duplication of efforts, pool efforts and maximise investments.
 
-### Data Space for Cultural Heritage 
+#### Data Space for Cultural Heritage 
 
 The Data Space for Cultural Heritage (DS4CH) is inherently a twin initiative with substantial scope complementarity (Cultural Heritage) and consequently very close relations, requiring intensive and continuous information exchange and coordination to identify points of interaction/integration and to delineate the functional scopes of the two initiatives. While many aspects remain under discussion, a consensus is emerging on the main points of the relationship between the two initiatives:
 
@@ -513,25 +513,25 @@ The Data Space for Cultural Heritage (DS4CH) is inherently a twin initiative wit
 
 - Dedicated access services will offer specialised means for retrieving and consuming the metadata and data, such as APIs that support search and export of item-level metadata, as well as packages of custom subsets.
 
-### European Open Science Cloud (EOSC) 
+#### European Open Science Cloud (EOSC) 
 
 The European Open Science Cloud[^7] and the emerging EOSC Federation[^8] are key initiatives in the European research data landscape. Recognised by the European Commission as the Data Space for Research and Innovation, EOSC additionally provides a bridging function with the common European Data Spaces. As a key initiative offering access to cultural heritage data for scientific research, it is important that ECHOES considers how the Cultural Heritage Cloud will position itself within the EOSC ecosystem. While this is a long-term endeavour, in the framework of the Integration Strategy, it is important that ECHOES considers the alignment with the EOSC technical and interoperability requirements as outlined in the EOSC Federation Handbook[^9]. For example, the EOSC Federation provides clear guidelines about the EOSC Authentication and Authorisation Infrastructure (AAI) Architecture[^10], based on the AARC Blueprint Architecture[^11]. It is therefore important that ECHOES already considers the EOSC approach to AAI, for the implementation of the ECHOES AAI solution. Such alignment will help facilitate the smooth integration of the Cultural Heritage Cloud into the EOSC Federation should it wish to establish itself as a node in the future.
 
-### Joint Programming Initiative on Cultural Heritage (JPI CH) 
+#### Joint Programming Initiative on Cultural Heritage (JPI CH) 
 
 The Joint Programming Initiative on Cultural Heritage and Global Change[^12] was created in 2010 based on an instrument launched by the European Commission. It is a Member-State-driven initiative bringing together national research funding organisations, ministries, and research councils from Europe to address societal challenges in the framework of the European Research Area (ERA) to tackle the many threats that cultural heritage is exposed to, which, in addition to natural ageing, include climate change and pollution, increasing urbanisation, mass tourism, human negligence, vandalism and terrorism. The JPI CH addresses these challenges by, for example, improving the coordination of research on Cultural Heritage at the EU level by identifying short and long-term needs and priorities, promoting joint and multidisciplinary approaches to Cultural Heritage research and improving knowledge and increasing awareness of citizens, policymakers, and stakeholders. In the first instance, ECHOES has collaborated with the JPI CH regarding the potential integration of resources from projects listed in the [Heritage Research Hub](https://www.heritageresearch-hub.eu/heritage-projects/) in the ECHOES Inventory. Further opportunities for collaboration in the framework of the ECHOES Integration Strategy will be explored in the course of the project.
 
-### High Performance Computing and AI Factories
+#### High Performance Computing and AI Factories
 
 The state-of-the-art tooling which will be integrated into the Cultural Heritage Cloud ecosytem, will make use of High Performance Computing (HPC) resources and Artificial Intelligence. It is therefore important that ECHOES aligns with and where possible leverages existing initiatives in this area such as the EuroHPC[^13] and the emerging AI Factories[^14]. There is already considerable interest from communities within ECHOES to make use of compute and storage resources, e.g. for training models for the analysis of cultural heritage artefacts. Assuming this need of providing computing resources is confirmed by the community, ECHOES provision of these resources could (partially) rely on existing EuroHPC or the forthcoming AI factories infrastructure, especially considering that some of consortium partners, like PCSS, are also leading AI Factories[^15]. In this context, it is also important to consider the tensions between commercial and and public sector computing provision.
 
-### ESFRI Research Infrastructures and related initiatives 
+#### ESFRI Research Infrastructures and related initiatives 
 
 European Research Infrastructures (RIs) are strategic contributors to the Europe Research and Technology Infrastructure ecosystem[^16]. The European Strategy Forum on Research Infrastructures (ESFRI)[^17] ensures that the European Research Infrastructures landscape remains coherent and carries out regular RIs landscape analysis while also evaluating, reviewing and monitoring EU RIs. Three ERICs from the Social Sciences and Humanities domain are partners of the ECHOES project - DARIAH, CLARIN and E-RHIS - ensuring that their expertise and infrastructure, including the data, tools and workflows contributed and used by their community can be leveraged for the benefits of the future ECCCH.
 
 In addition to their establishment as European legal entities – European Research Infrastructure Consortia or ERICs[^18] - DARIAH, CLARIN and E-RHIS are also working towards a more harmonised data and services landscape, for example by sharing services provision when they benefit to their user base, and by collaborating through the SSH Open Cluster, one of the five science clusters[^19] operating within the context of the European Open Science Cloud (EOSC) to foster the uptake of Open Science practices in Europe.
 
-### National Initiatives across Europe
+#### National Initiatives across Europe
 
 At the national level, key initiatives are also funded that are very relevant to the ECHOES ecosystem, as they bring together major actors from the Cultural Heritage sector and pull together national resources for the benefits of the national users. There is a wide diversity of these national initiatives, however, the goal here is not to provide an exhaustive inventory, but rather to highlight some of the specificities that the ECHOES Integration Strategy must tackle – see next section – when it comes to their potential integration to the ECCCH. The French initiative ESPADON focusing on the Heritage Science, and on supporting dynamic analysis of ancient and digital objects[^20] aims, for example, by 2028, to create a network of platforms, facilities, instruments and expertise, at establishing a common framework for data management and archiving, especially by enabling the creation of “augmented CH objects”. In Italy, the H2IOSC project brings together the national representations of 4 major ERICs - CLARIN-IT, DARIAH-IT, E-RIHS.it and OPERAS-IT - with the ambition of establishing itself as an EOSC node. H2IOSC will provide its users with an ”open and multidisciplinary environment that enables access to advanced tools for conducting innovative and computationally intensive research on complex digital data and objects”[^21]. In Germany, the data infrastructure landscape, mostly structured via the national research data infrastructure (NFDI, Nationale Forschungsdateninfrastruktur), established several thematic consortia, including one particularly relevant for the ECCCH context: the NFDI4Culture, the Consortium for Research Data on Material and Immaterial Cultural Heritage. Through this consortium, the German community establishes a needs-based infrastructure covering all the stages of the data lifecycle for a wide range of research data (from architecture, art history and musicology to theatre, dance, film and media studies)[^22]. Finally, the last example is the UK initiative RICHeS (Research Infrastructure for Conservation and Heritage Science) programme, that funds, for example, the Heritage Science Data Service (HSDS) that offers unified access to services and data, as well as a collection aggregator, repository and a suite of VREs.
 
@@ -539,17 +539,17 @@ These examples illustrate the diversity of national initiatives, scientific or t
 
 The ECHOES ecosystem presented in this section presents itself as diverse and complex. Resources created or used in different contexts – by projects or already sustained and maintained by well-established institutions – presenting different maturity levels have to be integrated in the ECCCH. And potential ECCCH providers are identified as actors ranging from local/regional institutions to large scale clusters of EU infrastructures. While this possibility to build on the existent represents a strength for the ECCCH infrastructure that does not have to be built from scratch, hence the federation approach chosen, it also means that to address/face this heterogenous landscape the ECCCH Integration Strategy must ensure an inclusive and flexible framework. This strategic framework is presented in the next section.
 
-#  ECCCH Integration Strategy: Building the Federated Digital Commons
+##  ECCCH Integration Strategy: Building the Federated Digital Commons
 
 The European Collaborative Cloud for Cultural Heritage (ECCCH) is not a central repository; it is a **federated ecosystem** connecting distinct nodes (national/regional clouds, institutional data centres, and the central hub, which itself is also federated). To achieve this, the integration strategy moves beyond simple file hosting to create a **Distributed Data Fabric** and beyond simple applcation cataloguing to create a live ecosystem of tools, applications and services that can scale, learn and work collaboratively for and with the users.
 
 This strategy is designed to guide the transition from isolated project outputs to a cohesive, distributed and federated **Digital Commons** **for Cultural Heritage**. It defines how different resources, such as Data and Metadata, Applications and Services, and Workflows evolve across three levels to support this architecture, with specific attention to **provenance** (where data comes from) and **quality** (how reliable it is), and how **Integration Units (IU)** consisting of a “resource-cloud component pair” are used as a structuring concept to navigate the Integration Roadmap.
 
-## Integration Units (IU)
+### Integration Units (IU)
 
 An Integration Unit is defined as a pair consisting of a *resource to be integrated to the Cultural Heritage Cloud* and *a Cloud component to integrate with*. For a given resource, it could be that multiple integration units are needed. For example, an application could need to integrate with the ECCCH AAI and with the Knowledge Base. This would be considered as two different Integration Units. The processes leading to the identification of these Integration Units is described in detail in the Integration Roadmap. Breaking down contributions from the ecosystem to Integration Units is necessary to capture their diversity, to offer a unified but flexible integration framework, and to easily track progresses of numerous integration activities running in parallel across the many different actors involved.
 
-## Levels of integration
+### Levels of integration
 
 The integration strategy accompanies partners while navigating the complex integration landscape by suggesting three different levels/types of integration depending on the operation mode, the maturity and the target of each organization wishing to contribute one or more integration units to the Cloud. Each phase represents a significant leap in how resources interact with the Cloud's core components, such as the Knowledge Base or the Authentication and Authorisation Infrastructure (AAI).
 
@@ -571,11 +571,11 @@ The ultimate goal is automation, autonomy, and distributed trust. We transition 
 
 - **Sustainability:** By relying on the logic (Workflows) but distributing the storage, institutions maintain ownership of their data while benefiting from shared cloud intelligence.
 
-## The Central Role of the Heritage Digital Twin (HDT)
+### The Central Role of the Heritage Digital Twin (HDT)
 
 The Heritage Digital Twin is the primary "citizen" of the ECCCH ecosystem. It differs from standard data because it combines computable data (e.g., geometry, text, audio) with semantic knowledge (e.g., history, context, relationships) governed by the Heritage Digital Twin Ontology (HDTO). The integration process essentially transforms a passive digital record into a (dynamic) HDT.
 
-### The HDT Creation Lifecycle
+#### The HDT Creation Lifecycle
 
 The three integration levels correspond directly to the **maturity and capability** of the Digital Twin within the Cloud.
 
@@ -616,7 +616,7 @@ The three integration levels correspond directly to the **maturity and capabilit
 
 Table 1: Digital Twin integration levels
 
-### Provenance and Quality: The "Paradata" 
+#### Provenance and Quality: The "Paradata" 
 
 For a Digital Twin to be scientifically valid, the integration strategy must enforce rigorous paradata (documentation of the processing steps).
 
@@ -626,11 +626,11 @@ For a Digital Twin to be scientifically valid, the integration strategy must enf
 
 - **Level 3:** The Workflow Engine automatically appends paradata to the HDT. For example, if a "Denoising Algorithm" is applied to the HDT’s geometry, the HDT’s metadata is automatically updated to reflect this change, creating an unalterable audit trail.
 
-## Resource Integration Matrix
+### Resource Integration Matrix
 
 The following tables detail the technical progression for Data, Applications, and Workflows required to build this ecosystem.
 
-### Data and Metadata Integration
+#### Data and Metadata Integration
 
 **Objective**: To transition from isolated "Data Sources" to a semantically unified "Knowledge Graph".
 
@@ -679,7 +679,7 @@ The following tables detail the technical progression for Data, Applications, an
 
 Table 2 Data and Metadata Integration levels
 
-### Applications and Services Integration
+#### Applications and Services Integration
 
 **Objective:** To evolve from "downloadable tools" to "Cloud-Native Microservices".
 
@@ -727,7 +727,7 @@ Table 2 Data and Metadata Integration levels
 
 Table 3 Applications and Services Integration levels
 
-### Workflows Integration
+#### Workflows Integration
 
 **Objective**: To transition from "Wiki/Textual Instructions" to "Executable Scientific Workflows”.
 
@@ -777,7 +777,7 @@ Table 4: Workflows Integration levels
 
 Beyond the Data, Applications, and Workflows, other resource types will need to be integrated to the ECCCH, such as semantic artefacts, AI models, training materials, etc. The list is not exhaustive[^23], but it is not presented here with the same level of detail as the needed integration is foreseen as less complex than the three main categories presented above. Dedicated “integration destinations“ (e.g. semantic artefacts catalogue) are under development to enable the integration of these other resource types into the ECCCH infrastructure.
 
-## Integrating European and National initiatives, institutions and individuals
+### Integrating European and National initiatives, institutions and individuals
 
 Considering the diversity of the actors involved in the ecosystem – as presented in the previous section - community integration in the federation is also a key dimension to tackle. The following table suggests community integration dimensions to be covered.
 
@@ -822,7 +822,7 @@ Considering the diversity of the actors involved in the ecosystem – as present
 
 Table 5: Community Integration Levels
 
-## The Final Federated (Integrated) Architecture
+### The Final Federated (Integrated) Architecture
 
 The ultimate goal of Level 3 Integration is to realise a fully **Federated Architecture**. This architecture fundamentally changes how Cultural Heritage data is stored, processed, and trusted across Europe. The four dimensions presented below detail how:
 
@@ -880,7 +880,7 @@ The integration strategy, based on the ECCCH federation model, addresses the cri
 
 - **Asset Reuse:** By federating and validating resources, the ECCCH ensures that data remains usable for future research, maximizing the return on investment for every digitization effort.
 
-# 10.Integration Governance
+## 10.Integration Governance
 
 In order to ensure clear and transparent decision-making in relation to the ECHOES Integration Strategy and Roadmap it is important that ECHOES integration activities are embedded into the overall ECHOES Governance Structure[^24]. An overview of the ECHOES Governance Structure is provided below:
 
@@ -888,21 +888,21 @@ In order to ensure clear and transparent decision-making in relation to the ECHO
 
 Fig. 2 ECHOES Governance Structure
 
-## Stakeholders Council
+### Stakeholders Council
 
 Firstly, as part of the Governance layer of the overall ECHOES organisational structure, the **Stakeholders Council (StaC)** has been established to bring together representatives from the other ECCCH-funded projects and European initiatives related to Cultural Heritage. The StaC provides advisory support to the ECHOES General Assembly and a structural forum to facilitate the strategic integration of the broader community of stakeholders into the ECCCH ecosystem, as well as to oversee the ECHOES integration activities at a strategic level, for example, contributing to the development of and providing feedback on the ECHOES Integration Strategy. The first meeting of the Stakeholders Council will take place in March 2026 during the ECHOES Annual Event in Poznan. After which a regular feedback loop between the StaC and the ECHOES Integration Task Force will be established to facilitate the strategic and sustainable integration of ECCCH-sister projects and related initiatives into the Cultural Heritage Cloud.
 
-## ECHOES Integration Task Force
+### ECHOES Integration Task Force
 
 While ensuring the provision of regular updates to the ECHOES Stakeholder’s Council, the day-to-day activities integration activities are coordinated by ECHOES Integration Task Force (EITF). The EITF, led by ECHOES project partners DARIAH-EU and CNRS-CY Cergy Paris University, is a dedicated Task Force at the level of the ECHOES Project Team, which was initiated at the start of the project. It is composed of ECHOES Work Package Leaders, from the Coordination Team (WP1), the Communities (WP4) and Capacity Building (WP5) work packages, as well as the technical work packages Cloud Environment (WP6), Digital Commons Knowledge Base (WP7) and Vertical Applications (WP8) plus the Cloud Assessment Framework work package (WP9). Other experts are invited as required. The EITF coordination is undertaken jointly by WP1 (T1.5 Managing and coordinating the project’s technical development and infrastructure) and WP3 (Enhancing Collaboration and Integration).
 
 In addition to the ECHOES project partners, representatives from the ECCCH sister-projects may also be invited to EITF meetings. These meetings are essential to oversee the integration activities across the ECHOES ecosystem. The key roles and Terms of Reference of the EITF are outlined as follows. Firstly, the EITF forms a transversal structure within the ECHOES project team to ensure join-up between the work packages, in particular bridging the communities and technical areas of the project. Secondly, the EITF forms a structural framework for coordinating integration activities together with the ECHOES-sister projects. To support these activities, the EITF is responsible for designing and developing both the ECHOES Integration Strategy and Roadmap, as well as monitoring its activities and progress.
 
-## Managing the roadmap
+### Managing the roadmap
 
 The ECHOES Integration Roadmap (D3.2) describes an initial set of processes to operationalise the Integration Strategy. The day-to-day management of the Roadmap is undertaken by the EITF Coordination Team who provide regular feedback to the ECHOES Integration Taskforce. The following subsections introduce the two key building blocks used in the Integration Roadmap: a) Integration Roles and b) Integration cycles. Finally, **integration risks** with related mitigation actions as well as **integration metrics** will be identified, monitored and iterated during the course of the project in close collaboration with the ECHOES Integration Task Force.
 
-### Integration roles
+#### Integration roles
 
 First of all, given the broad collaborative dimension of the ECCCH and the involvement of many diverse stakeholders, it is essential to define a set of Integration Roles that can be applied across all integration use cases. These roles, outlined below, are also used to model the processes in D3.2. The guiding principles behind this role attribution is to establish a balanced relationship between ECHOES and the projects or initiatives that must – or wish to - integrate with the ECCCH, so that integration efforts are distributed as evenly as possible.
 
@@ -924,7 +924,7 @@ While the ECHOES team is tasked with developing the initial ECCCH infrastructure
 
 As highlighted in the initial sections of the Integration Governance, both sides (adopters and ECHOES team) are united in the EITF, and thanks to this set-up, ECHOES adopters can also influence the overall direction of the Integration Strategy and Roadmap.
 
-### Integration Cycles 
+#### Integration Cycles 
 
 Secondly, a central element for enabling an iterative approach to integration activities is the concept of “integration cycles”. Organising and managing these cycles is at the core of the Integration Governance: the established cadence helps manage groups of incoming projects, allow for regular review and adjustment of processes, and provides regular metrics reflecting the diversity of the integration cases that will emerge.
 
@@ -934,7 +934,7 @@ A foundational principle of the integration roadmap is the **unit of integration
 
 Finally, as part of the implementation of the roadmap, ECHOES will identify and monitor **integration risks** with together related mitigation actions, which will be maintained in a risk register as part of the project. Furthermore, ECHOES will be able to demonstrate the breadth, depth, diversity, and granularity of integrations realised through a series of **integration metrics** complemented by integration examples. The design and implementation of these metrics, alongside the identification and mitigation of risks, will be undertaken, in close collaboration with the ECHOES Integration Task Force, during the project.
 
-# Conclusion 
+## Conclusion 
 
 The ECHOES Integration Strategy represents a foundational step in the realisation of the Cultural Heritage Cloud, setting the goals and establishing a cohesive framework for connecting resources across Europe and beyond in a federated environment. By focusing on the integration of resources, rather than individual projects, the strategy provides a clear methodology to incorporate the diversity of cultural heritage initiatives across Europe, maximising the reuse of existing cultural heritage assets and project results. This resource-centred approach allows for a scalable and flexible platform and technical architecture.
 
@@ -946,7 +946,7 @@ In addition to the technical sustainability outlined in section 9, the need to c
 
 Finally, by the end of the ECHOES project, the Cultural Heritage Cloud will have been established, including its related legal entity, as a first significant milestone towards the long-term sustainability. The ECHOES Integration Strategy and related Roadmap are fundamental building blocks in making the Cultural Heritage Cloud a reality.
 
-# References
+## References
 
 - Kanellopoulos, C., Adomeit, M., Ardizzone, V., Florio, L., Giacomini, F., Groep, D., Hardt, M., Kálmán, T., Kuczyński, T., Liampotis, N., Short, H., Sidorova, I., Michal, Š., & Wierenga, K. (2025). EOSC AAI Architecture 2025 (March 2025). Zenodo. <https://doi.org/10.5281/zenodo.15388270>
 

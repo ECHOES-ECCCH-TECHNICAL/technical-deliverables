@@ -2,7 +2,7 @@
 
 <span id="_Toc216125431" class="anchor"></span>
 
-**Deliverable D6.1 - Data Strategy for the CH Knowledge Base**
+# Deliverable D6.1 - Data Strategy for the CH Knowledge Base
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -189,9 +189,9 @@ Deliverable Information
 | Authors (Partner) | Andriana Sielli (CYI), Avgoustinos Avgousti (CYI), Sorin Hermon (CYI), Paolo Cignoni (CNR), Emanuel Demetrescu (CNR), Joanna Kowalska (PCSS), Konrad Pawlikowski (PCSS), Anastasia Axaridou (FORTH), Carlos Andújar (UPC), Matej Ďurčo (OEAW), Evangelos Kritsotakis (FORTH), Maria Theodoridou (FORTH), Elias Tzortzakakis (FORTH), Marios Pitikakis (FORTH) |
 | Contributors | Dimitrios Kotzinos (CNRS-CYU), Antoine Isaac (EUROPEANA), Sarah Middle (York University)  |
 
-#  
+##  
 
-# Abstract
+## Abstract
 
 This document, Deliverable D6.1 "Data Strategy for the CH Knowledge Base," establishes the foundational data and metadata management framework for the ECHOES project (European Cloud for Heritage Open Science). It outlines a comprehensive strategy to build a federated, semantically interoperable infrastructure that will support the creation, preservation, and reuse of Heritage Digital Twins (HDTs)—dynamic digital replicas of cultural heritage assets enriched with contextual knowledge. The strategy is designed to overcome critical challenges in the cultural heritage sector, including data fragmentation across institutions, semantic gaps, and scalability issues. It is grounded in core principles of semantic interoperability, a federated architecture that respects data ownership and provenance, and strict adherence to FAIR (Findable, Accessible, Interoperable, and Reusable) data practices. This approach ensures that cultural heritage institutions maintain control over their data while actively contributing to a shared, collaborative ecosystem. Key components of the strategy include: 
 
@@ -209,7 +209,7 @@ This deliverable defines the functional and non-functional requirements for the 
 
 *Disclaimer: Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
 
-# Table of Contents
+## Table of Contents
 
 [Deliverable D6.1 - Data Strategy for the CH Knowledge Base](#_Toc216125431)
 
@@ -325,7 +325,7 @@ This deliverable defines the functional and non-functional requirements for the 
 
 [References](#references)
 
-# List of abbreviations
+## List of abbreviations
 
 | AAI   | Authentication and Authorization Infrastructure    |
 |-------|----------------------------------------------------|
@@ -357,7 +357,7 @@ This deliverable defines the functional and non-functional requirements for the 
 | UI    | User Interface                                     |
 | VA    | Vertical Application                               |
 
-#  Definitions
+##  Definitions
 
 ![](./media/image5.png)
 
@@ -431,9 +431,9 @@ An ontology is a structured way of organizing and connecting knowledge about a p
 
 The CIDOC CRM is a formal ontology developed to support the integration, mediation, and exchange of cultural heritage information across diverse institutions such as museums, libraries, and archives. It provides a shared and extensible semantic framework for describing both the implicit and explicit relationships and concepts found in cultural heritage documentation. By enabling semantic interoperability across heterogeneous data sources, CIDOC CRM facilitates more effective data integration, discovery, and reuse in both research and heritage management contexts.
 
-# 1.Introduction
+## 1.Introduction
 
-## 1.1 Purpose and Scope of the Document
+### 1.1 Purpose and Scope of the Document
 
 The Data Strategy for the ECHOES Cultural Heritage (CH) Knowledge Base (KB) establishes a comprehensive framework to guide the management, integration, and governance of cultural heritage semantic data within the European Collaborative Cloud for Cultural Heritage (ECCCH). The purpose of this document is to:
 
@@ -447,7 +447,7 @@ The Data Strategy for the ECHOES Cultural Heritage (CH) Knowledge Base (KB) esta
 
 Crucially, this strategy is designed to serve as the foundational data pillar for **the sustainable and inclusive legal entity outlined in Strategic Objective 2 (SO2)**, ensuring the ECCCH platform is supported by robust, long-term semantic data and metadata management practices from its inception. Furthermore, the technical approach detailed herein is fundamentally shaped by **Strategic Objective 4 (SO4)**, providing the specific semantic and interoperability framework required to integrate results from past, current, and future projects into a unified digital ecosystem. Additionally, this strategy supports **Strategic Objective 5 (SO5)** by establishing the foundation for technical and governance preconditions for a trusted collaborative environment that fosters innovative co-creation of new knowledge.
 
-## 1.2 Knowledge Base in the Context of the CH Cloud
+### 1.2 Knowledge Base in the Context of the CH Cloud
 
 The Knowledge Base (KB) serves as the semantic and operational backbone of the European Collaborative Cloud for Cultural Heritage (ECCCH), designed to support intelligent integration, discovery, and reuse of cultural heritage data at scale. As a dynamic, standards-compliant linked data repository, the KB hosts Heritage Digital Twins (HDTs) - structured, machine-readable representations of CH assets enriched with contextual metadata, semantic relationships, and AI-driven insights (described in more detail in 2.3, below). Built on internationally recognized ontologies such as CIDOC-CRM and aligned with interoperability protocols, the KB ensures semantic consistency across heterogeneous datasets and enables federated querying across distributed data sources. This foundational role directly enables SO4 by providing the technical mechanism for integrating diverse project outcomes and supports SO5 by creating the structured environment necessary for collaborative knowledge co-creation.
 
@@ -459,47 +459,47 @@ Beyond its technical foundation, the KB functions as a collaborative platform fo
 
 Within the context of this Data Strategy, the KB plays a central role in linking the semantic tooling developed in WP7 with the cloud infrastructure of WP6, thereby operationalizing the HDT conceptual model and anchoring it within the broader ECHOES ecosystem. This strategic positioning ensures that the KB serves as the critical integration point between technical infrastructure and data semantics, fulfilling its role as the cornerstone of the ECCCH's value proposition.
 
-## 1.3 Alignment with ECHOES Goals
+### 1.3 Alignment with ECHOES Goals
 
 Although, this Data Strategy is fundamentally anchored to the three strategies mentioned above it support all the six defined by the ECHOES project vision, ensuring that every technical decision and architectural choice directly contributes to the project's overarching goal of establishing the European Collaborative Cloud for Cultural Heritage (ECCCH). The KB serves as the central semantic data infrastructure that operationalizes these strategic objectives, transforming high-level project goals into concrete data management capabilities.
 
-### Strategic Objective 1: Open-Source Infrastructure for Community-Driven Applications
+#### Strategic Objective 1: Open-Source Infrastructure for Community-Driven Applications
 
 The Data Strategy directly supports the vision of building an open-source infrastructure through the KB's federated architecture, which ensures that heritage institutions retain full ownership and control over their semantic data while participating in a shared, interoperable ecosystem. The implementation of a Heritage Digital Twin Ontology (HDTO) provides the standardized framework necessary for diverse applications to interact seamlessly with cultural heritage data. **KPI 1.3 (Heritage Digital Twin Availability)** drives the architectural decisions around HDT accessibility, with a target of making more than 5,000 HDTs accessible by Month 60.
 
 The KB's modular design ensures that applications can be developed independently while leveraging shared data assets, fostering innovation within the CH community without compromising data integrity.
 
-### Strategic Objective 2: Holistic Digital Transformation Approach
+#### Strategic Objective 2: Holistic Digital Transformation Approach
 
 The KB operationalizes the paradigmatic shift from object-focused digitization to a holistic approach through the HDT conceptual model, which captures not only the digital representation of cultural objects but also the rich contextual information, interpretative narratives, and scholarly discourse that constitute their cultural significance.
 
 The Data Strategy's semantic interoperability framework enables the integration of diverse data types - from 3D models and archival documents to contemporary interpretations -within a unified knowledge graph. **KPI 1.4 (Heritage Digital Twin Quality)** reflects this strategic priority by establishing targets for formally documented and integrated HDTs, with over 2,000 HDTs to be processed by project-developed tools by M60.
 
-### Strategic Objective 3: Community Integration and Cohesion
+#### Strategic Objective 3: Community Integration and Cohesion
 
 The Data Strategy addresses community fragmentation by enabling multiple stakeholders to contribute to and enrich digital heritage assets within the KB architecture, fostering collaboration that transcends traditional institutional boundaries. The provenance tracking capabilities supported by the infrastructure ensure transparency and data integrity throughout the collaborative process.
 
 The federated search and discovery capabilities of the KB allow users to locate and access relevant resources across participating institutions without requiring knowledge of specific institutional systems. The Data Strategy's commitment to Findable, Accessible, Interoperable, and Reusable (FAIR) principles ensures that contributed data becomes maximally useful to the broader community while respecting appropriate access controls.
 
-### Strategic Objective 4: Integration of ECCCH-Related Projects
+#### Strategic Objective 4: Integration of ECCCH-Related Projects
 
 The KB is designed with integration capabilities that allow for the incorporation of datasets, tools, and workflows from external projects. **KPI 4.1 (Inventory and Gap Analysis)** drives the Data Strategy's comprehensive mapping approach, requiring the assessment of more than 50 European and national initiatives to identify alignment opportunities and interoperability gaps. The standards-based design approach ensures that external systems can interface with the KB using established ontology.
 
-### Strategic Objective 5: Enabling Collaborative Co-Creation around Digital Commons
+#### Strategic Objective 5: Enabling Collaborative Co-Creation around Digital Commons
 
 The Data Strategy provides the essential technical foundation for SO5 by breaking down cross-disciplinary barriers and enabling new knowledge generation. The KB facilitates this through FAIR-aligned semantic data representations, allowing diverse digital assets to be integrated into shared workflows. KPI 5.1 (Multidisciplinary Collaboration) drives the focus on creating high-quality, reusable Heritage Digital Twins (HDTs) for interdisciplinary research. Simultaneously, KPI 5.3 (Inclusive Approach) is supported by the federated architecture, enabling participation from institutions of all sizes and ensuring socio-cultural diversity.
 
 The KB’s connection with ECHOES core cloud components enables both web-based and cloud-based solutions, like visualization, annotation, and analysis tools and create a practical environment for collaborative work. **KPI 5.2 (Advanced Visualisation)** directly shapes data structuring for sophisticated visual techniques, while the strategy's robust provenance and rights management framework - measured by **KPI 5.4 (Enhanced Metadata)** - builds trust and demonstrates the value of the Digital Commons through access and re-use metrics.
 
-### Strategic Objective 6: Collaborative Co-Creation around Digital Commons
+#### Strategic Objective 6: Collaborative Co-Creation around Digital Commons
 
 The KB serves as the technical substrate for Digital Commons creation by communicating with tools for collaborative annotation, interpretation, and knowledge building around cultural heritage assets. **KPI 5.2 (Advanced Visualisation)** influences the Data Strategy's approach to data representation, ensuring also that the ECHOES web version supports sophisticated visual techniques for communication and understanding. **KPI 5.4 (Enhanced Metadata)** drives the Data Strategy's emphasis on enriched metadata systems that improve information retrieval and accessibility. The collaborative capabilities of the KB enable multiple contributors to work on digital heritage assets while maintaining complete audit trails and supporting the evolution of interpretations over time.
 
 The strategic alignments outlined in this section are operationalized through detailed technical specifications discussed in Section 4.1 (ECHOES Objectives Regarding Data) and throughout the subsequent sections of this deliverable. This strategic foundation ensures that the Data Strategy serves not only as a technical blueprint but as a roadmap for cultural heritage sector transformation in the digital age.
 
-# 2. State of the Art
+## 2. State of the Art
 
-## 2.1 Current Practices in Cultural Heritage Data Strategy
+### 2.1 Current Practices in Cultural Heritage Data Strategy
 
 Cultural Heritage (CH) data remains highly fragmented across institutions, regions, and disciplines. It is often confined to legacy systems - such as spreadsheets, local databases, and isolated digital repositories - that lack interoperability. While these systems have served individual institutions, they are inadequate for modern research, preservation, and public engagement needs.
 
@@ -507,7 +507,7 @@ Diverse institutional practices and a lack of harmonized metadata standards impe
 
 In response, institutions are increasingly prioritizing the digitization of high-value resources and adopting practices to improve discoverability and interoperability. These include the use of controlled vocabularies, semantic enrichment, and Linked Open Data (LOD) principles. Many now provide API access to open data repositories, publishing digital collections as open datasets to increase visibility and enable data-driven research. As a result, heritage institutions are evolving into data providers and co-creators of knowledge, with Research Data Management (RDM) becoming an essential component of CH scientific work.
 
-## 2.2 Gaps and Challenges
+### 2.2 Gaps and Challenges
 
 The digital transformation of the cultural heritage sector continues to face persistent and interconnected challenges that hinder progress and scalability.
 
@@ -527,13 +527,13 @@ This gap critically hinders reproducibility, interpretability, and collaborative
 
 Existing initiatives like the Italian DIGILAB platform (E-RIHS.eu) explicitly address this by adopting a three-pillar model (Data, Process, and Knowledge Management). It extends beyond a semantic repository to include a workflow editor and engine that formally describe and execute scientific processes. This enables both the reproducibility of known procedures and the dynamic composition of new workflows, thereby bridging the critical divide between static data storage and active knowledge generation. ECHOES will function as a unifying system, designed to aggregate and streamline similar efforts.
 
-## 2.3 Heritage Digital Twins: A New Paradigm
+### 2.3 Heritage Digital Twins: A New Paradigm
 
 Heritage Digital Twins (HDTs) represent a transformative paradigm for the documentation, management, and interpretation of cultural heritage assets. HDT serves as the nexus of digital representations and their associated interpretations, enabling dynamic, evolving, and multi-perspective engagement with the cultural artifact over time.
 
 Within the ECHOES platform, HDTs are realized as interoperable entities grounded in semantic ontologies, notably HDTO. They are hosted within the KB and linked to a broader digital continuum, a design that fundamentally promotes transparency, reusability, and cultural equity.
 
-## 2.4 Metadata Transformation and Ontologies 
+### 2.4 Metadata Transformation and Ontologies 
 
 Supporting a semantic infrastructure for cultural heritage data necessitates the transformation of legacy, heterogeneous datasets into structured, interoperable formats. This is increasingly achieved by adopting formal ontologies like CIDOC CRM, which provide a robust conceptual framework for consistently representing complex relationships between events, actors, and objects. These semantic models are essential for reconciling disparate data sources into unified, machine-readable knowledge structures.
 
@@ -543,7 +543,7 @@ The CIDOC CRM Special Interest Group has defined SYNERGY, a reference model desi
 
 This transformation process is inherently complex and resource intensive. It requires powerful tools to align, map, and convert existing schemas and datasets into E-HDTo compliant structures. Successful implementation demands close collaboration among domain experts, ontologists, data engineers, and cultural heritage curators to ensure both semantic fidelity and practical usability. Within ECHOES, this interdisciplinary effort is operationalized through dedicated work packages that develop mapping templates, validation workflows, and training resources - ultimately enabling institutions of all sizes to contribute to and benefit from the ECCCH’s interoperable, collaborative digital ecosystem.
 
-## 2.5 Federated Architectures and FAIR Data
+### 2.5 Federated Architectures and FAIR Data
 
 A key limitation of current semantic approaches is the absence of a unified querying layer that can seamlessly operate across multiple institutional endpoints. In practice, each institution exposes its data differently - through distinct SPARQL endpoints, APIs, or partial exports - requiring users to manually locate, access, and harmonize results. This places a heavy burden on researchers and prevents the execution of cross-collection queries that require consistent reasoning across distributed datasets. As a result, federated knowledge networks often behave as a set of parallel repositories rather than a truly integrated ecosystem. Addressing this gap is essential for ECHOES, where unified discovery, cross-institutional analytics, and collaborative enrichment depend on reliable, coherent querying mechanisms across the entire federation
 
@@ -555,7 +555,7 @@ This approach offers key advantages: it preserves institutional autonomy, safegu
 
 By uniting the distributed resilience of federation and application of the FAIR framework, ECHOES ensures cultural heritage data remains technically sustainable, socially inclusive, and semantically coherent.
 
-## 2.6 Positioning of the ECHOES Knowledge Base
+### 2.6 Positioning of the ECHOES Knowledge Base
 
 The ECHOES Cultural Heritage Knowledge Base (KB) is positioned to become a central hub within the evolving, interconnected landscape of cultural heritage data. Built on semantic web technologies and rigorously grounded in FAIR principles, it provides a unified, standards-aligned platform for the creation, discovery, and reuse of Heritage Digital Twins (HDTs).
 
@@ -579,7 +579,7 @@ Notable progress has been made within the European Open Science Cloud (EOSC) fra
 
 Building on these foundations, the ECHOES project aims to establish a federated knowledge base aligned with EOSC and ECCCH principles. It will provide a FAIR-compliant KB infrastructure and metadata associated with it with rich APIs, tailored to the CH community. By leveraging existing expertise and advancing federation-based interoperability, ECHOES will create a distributed network of institutional knowledge bases connected through common standards and protocols, enhancing access, reuse, and long-term sustainability of CH data across Europe.
 
-# ![Żarówka i koło zębate z wypełnieniem pełnym](./media/image4.svg)
+## ![Żarówka i koło zębate z wypełnieniem pełnym](./media/image4.svg)
 
 *The document mentions several standards (e.g. RDF, Dublin Core, SKOS, IIIF, OAI-PMH), but it does not yet provide:*
 
@@ -593,7 +593,7 @@ Building on these foundations, the ECHOES project aims to establish a federated 
 
 3\. Understanding the Data Ecosystem
 
-## 3.1 Data Processing Stages and Levels of Interpretation 
+### 3.1 Data Processing Stages and Levels of Interpretation 
 
 This section outlines the data lifecycle within the ECHOES project, a framework designed to address the challenges faced by the cultural heritage sector—such as fragmentation and heterogeneity—by accommodating data at different stages and levels of refinement. From primary observations to semantically enriched knowledge representations, this structured progression ensures inclusivity for institutions with varying levels of technical maturity and enables increasingly sophisticated analysis and integration over time.
 
@@ -637,7 +637,7 @@ These stages align directly with the DIKW (Data–Information–Knowledge–Wisd
 
 Figure 1: A DIWK pyramid that illustrates the project's data lifecycle framework
 
-### 3.1.1 Example 1: Heritage science-based art historical investigation of the Derynia icon
+#### 3.1.1 Example 1: Heritage science-based art historical investigation of the Derynia icon
 
 This example illustrates the progression of cultural heritage data through its lifecycle stages by examining a pigment analysis of the Derynia icon, which is a specific religious icon from a church in the village of Derynia, Cyprus. The artwork was investigated using advanced imaging techniques, including Macro X-Ray Fluorescence (MA-XRF), Reflectance Imaging Spectroscopy (RIS), and Luminescence Imaging Spectroscopy (LIS). This case study demonstrates how raw instrumental signals are transformed into semantically rich, interpreted knowledge that supports both scientific and art historical research.
 
@@ -695,7 +695,7 @@ This entire pipeline, from raw signals to interpreted knowledge, demonstrates ho
 
 > *Figure 2: Derynia Icon*
 
-### 3.1.2 Example 2: Ayios Ioannis Lampadistis Monastery, Cyprus 
+#### 3.1.2 Example 2: Ayios Ioannis Lampadistis Monastery, Cyprus 
 
 This example describes the 3D-based data workflow for the digital documentation and preservation of the Ayios Ioannis Lampadistis Monastery, which is a UNESCO World Heritage site in the Troodos Mountains of Cyprus, located in Kalopanayiotis village.
 
@@ -747,7 +747,7 @@ The HBIM model is integrated with historical research, architectural analysis, a
 
 Figure 7: An image of the Kalopanayiotis monastery (at the yard covering part of the scanned area of fig 3 and 5.
 
-### 3.1.3 Example 3: Andrea Pisano's pulpit in the Church of Sant’Andrea in Pistoia (Italy)
+#### 3.1.3 Example 3: Andrea Pisano's pulpit in the Church of Sant’Andrea in Pistoia (Italy)
 
 The intervention outlines the procedures adopted for the 3D digital documentation of Giovanni Pisano’s Pulpit in the church of Sant’Andrea in Pistoia. The survey was carried out to record the current state of conservation with precision, verify the structural condition of the work, and provide support for the subsequent monitoring program.
 
@@ -849,7 +849,7 @@ Sources: historical inventories, floor plans, descriptive texts, historical phot
 
 > Figure 10: Orthophoto of the 3D model
 
-## 3.2 Data Sources
+### 3.2 Data Sources
 
 The ECHOES Knowledge Base integrates and standardizes cultural heritage data from diverse sources, ensuring compliance with FAIR principles and semantic interoperability. This federated ecosystem draws from institutional archives, public repositories, and collaborative platforms, each contributing unique datasets to enrich the collective knowledge base.
 
@@ -858,9 +858,9 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 <figcaption><p><em>A comprehensive list of data sources can be found in the D3.1 Integration Strategy document.</em></p></figcaption>
 </figure>
 
-### 3.2.1 Category 1: Structured databases
+#### 3.2.1 Category 1: Structured databases
 
-#### Institutional Databases
+##### Institutional Databases
 
 - **Description:** Structured datasets from museums, libraries, archives, and archaeological institutions
 
@@ -876,7 +876,7 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 
   - Robust database management systems
 
-#### Public / Open Datasets 
+##### Public / Open Datasets 
 
 - **Description:** Freely accessible datasets provided by governments, cultural organisations, and museums, often under Creative Commons or open data licenses and very often derived from institutional databases
 
@@ -898,9 +898,9 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 
   - **Global Reach:** Aggregates data from multiple countries/institutions into unified interfaces
 
-### 3.2.2 Category 2: Semi-structured databases
+#### 3.2.2 Category 2: Semi-structured databases
 
-#### Research Infrastructures
+##### Research Infrastructures
 
 - **Description:** High-value, scholarly datasets produced by EU-funded projects (e.g., Horizon Europe) and academic consortia (e.g., DARIAH, CLARIN), featuring rigorous curation and rich contextual metadata
 
@@ -936,9 +936,9 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 
 - **Project-Backed Curation:** Structured for long-term preservation and academic reuse (e.g., via institutional repositories)
 
-### 3.2.3 Category 3: No/minimal-structured databases
+#### 3.2.3 Category 3: No/minimal-structured databases
 
-#### Fieldwork and Crowdsourced Data
+##### Fieldwork and Crowdsourced Data
 
 **Description:** Data generated through on-site cultural heritage documentation (fieldwork) or contributed by the public via crowdsourcing platforms. These sources capture rich, often underrepresented information such as transcriptions, local knowledge, classifications, or geotagged imagery, enhancing institutional collections.
 
@@ -960,7 +960,7 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 
 - **Metadata Challenges:** Often needs standardization due to varied contributor expertise
 
-#### Legacy/Digitized Collections
+##### Legacy/Digitized Collections
 
 **Description:** Historical materials (manuscripts, photographs, maps, objects) digitized from physical archives or older digital formats, held by museums, libraries, or archives. Often requires normalization to meet modern standards. **Examples:**
 
@@ -980,7 +980,7 @@ The ECHOES Knowledge Base integrates and standardizes cultural heritage data fro
 
 **Processing Needs:** Requires conversion of image-based text into machine-readable formats.
 
-## 3.3 Ontology Models 
+### 3.3 Ontology Models 
 
 **HDTo (Heritage Digital Twin ontology)** is the core semantic framework of the European Collaborative Cloud for Cultural Heritage (ECCCH), a CIDOC CRM-compatible extension that models the dynamic relationship between HC1 Heritage Entity (real-world tangible, intangible, or born-digital assets with socially conferred value) and HC2 Heritage Digital Twin (evolving propositional objects aggregating all state-of-the-art digital representations, studies, and provenance metadata). HDTo enables the creation of versioned, collaborative Digital Commons capturing the full space-time-culture identity of heritage assets.
 
@@ -1014,9 +1014,9 @@ ECHOES uses other standardized ontologies and vocabularies to ensure interoperab
 
 HDTo serves as the integrative layer, harmonizing contributions from all listed models into a unified, extensible knowledge graph that supports cross-institutional collaboration, long-term preservation, and advanced research within the ECCCH.
 
-# 4. Data Management Requirements
+## 4. Data Management Requirements
 
-## 4.1 Functional Requirements
+### 4.1 Functional Requirements
 
 To ensure effective data management and user engagement, the ECHOES Knowledge Base must address the practical needs of its stakeholders. This section outlines key usage scenarios through representative user profiles, reflecting real-world challenges and informing system design.
 
@@ -1036,9 +1036,9 @@ In this context, we identify the following:
 
 Below, there is a section that categorizes users based on their digital and technical advancement. Even though, for each of those categories a set of ECHOES functional responses is listed, it needs to be taken into account that needs of communities vary. The categories were made to present diversity of Cultural Heritage ecosystem and lines between those categories are blurry. That means ECHOES will offer its capabilities to all kinds of users, for them to select the most applicable ones.
 
-### 4.1.1 End User Profiles
+#### 4.1.1 End User Profiles
 
-#### User Profile A: Independent Data Owners (Unstructured Assets)
+##### User Profile A: Independent Data Owners (Unstructured Assets)
 
 **Profile:**
 
@@ -1098,7 +1098,7 @@ All tools and services will be accessible via a standard web browser, requiring 
 
 **Impact:** By lowering the barriers to participation in digital heritage ecosystems, ECHOES empowers small-scale actors to preserve and share their data responsibly, enhancing long-term value for scholarship, education, and community heritage preservation.
 
-#### User Profile B: Small-to-Medium GLAM Institutions (Structured Data, No Durable Storage)
+##### User Profile B: Small-to-Medium GLAM Institutions (Structured Data, No Durable Storage)
 
 **Profile:**
 
@@ -1154,7 +1154,7 @@ All tools and services will be accessible via a standard web browser, requiring 
 
 ECHOES enables GLAM institutions to sustainably manage and share their collections, bridging legacy systems with modern digital infrastructures while maintaining institutional control over cultural assets.
 
-#### User Profile C: Scientific Community/Academics/Research Infrastructures, Large GLAM Institutions (Structured & Internally Hosted Data)
+##### User Profile C: Scientific Community/Academics/Research Infrastructures, Large GLAM Institutions (Structured & Internally Hosted Data)
 
 **Profile:**
 
@@ -1202,7 +1202,7 @@ ECHOES enables GLAM institutions to sustainably manage and share their collectio
 
 **Impact:** ECHOES serves as a trusted intermediary, amplifying research data visibility across Europe while maintaining institutional infrastructure autonomy, enabling compliance and broader participation in cultural heritage knowledge commons.
 
-### 4.1.2 Data Governance Roles
+#### 4.1.2 Data Governance Roles
 
 <figure>
 <img src="./media/image4.svg" alt="Żarówka i koło zębate z wypełnieniem pełnym" />
@@ -1211,7 +1211,7 @@ ECHOES enables GLAM institutions to sustainably manage and share their collectio
 
 Effective data governance within the ECHOES project relies on the collaboration of multiple actors, each with clearly defined roles and responsibilities. This section outlines the key functions of data providers, infrastructure operators, data stewards, data curators, and end users. Their coordinated efforts ensure that data is accurate, ethically managed, semantically aligned, and technically robust - supporting both immediate research needs and long-term sustainability.
 
-#### Data Providers
+##### Data Providers
 
 Data Providers are responsible for delivering accurate, high-quality data while adhering to all relevant policies and standards.
 
@@ -1225,7 +1225,7 @@ Data Providers are responsible for delivering accurate, high-quality data while 
 
 - Respect and align with semantic models and ontologies endorsed by the project to facilitate integration and discovery. ECHOES will provide mapping tools for those purposes.
 
-#### Infrastructure Operators
+##### Infrastructure Operators
 
 Responsible for managing and maintaining the technical environment and ensuring the security of the infrastructure.
 
@@ -1241,7 +1241,7 @@ Responsible for managing and maintaining the technical environment and ensuring 
 
 - Providing user support and guidance on governance policies, FAIR principles, and the use of data management tools.
 
-#### Data Stewards
+##### Data Stewards
 
 Data Stewards are domain or institutional actors responsible for overseeing the quality and coherence of data as it is prepared for ingestion or publication. By default this role is also given to each Data Provider. In case a separate entity is needed, for example for large institutions, those two can be separated.
 
@@ -1255,7 +1255,7 @@ Data Stewards are domain or institutional actors responsible for overseeing the 
 
 - Act as contact points within their organisations for quality assurance, versioning, and semantic alignment.
 
-#### Data Curators
+##### Data Curators
 
 Data Curators are internal to ECHOES and play a cross-cutting role in harmonizing data contributions, often working directly within the central ECHOES Knowledge Base.
 
@@ -1267,7 +1267,7 @@ Data Curators are internal to ECHOES and play a cross-cutting role in harmonizin
 
 - Oversee versioning and re-validation of evolving datasets.
 
-### 4.1.3 User Scenarios
+#### 4.1.3 User Scenarios
 
 In this section there are few examples of potential ECHOES functionalities.
 
@@ -1275,7 +1275,7 @@ Focus: helping users (conservators, archaeologists, curators) to learn, onboard 
 
 Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, data transformation, triplestores, APIs, and validation services that enable robust and scalable knowledge management.
 
-#### Use Case 1 – Rapid Onboarding of Unstructured Field Data 
+##### Use Case 1 – Rapid Onboarding of Unstructured Field Data 
 
 **Objective:** Enable independent researchers to quickly ingest and structure unstandardized field data.
 
@@ -1297,7 +1297,7 @@ Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, d
 
   7.  HDT is published to the public Knowledge Graph and thumbnails pushed to the ECHOES IIIF service.
 
-#### Use Case 2 – AI-Assisted Conservation Documentation
+##### Use Case 2 – AI-Assisted Conservation Documentation
 
 - **Objective:** Show how the KB stores and serves structured conservation data to enable AI-driven analysis.
 
@@ -1317,7 +1317,7 @@ Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, d
 
   6.  Deterioration patterns across artifacts are queried by other researchers for comparison.
 
-#### Use Case 3 – CIDOC-CRM Data Preservation & Publication for a Regional Museum
+##### Use Case 3 – CIDOC-CRM Data Preservation & Publication for a Regional Museum
 
 - **Objective:** Preserve and publish large existing museum collections in a sustainable RDF-based infrastructure.
 
@@ -1335,7 +1335,7 @@ Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, d
 
   5.  Federated search endpoints are exposed – data records will appear in cross-collection search.
 
-#### Use Case 4 – Legacy Collection Modernization
+##### Use Case 4 – Legacy Collection Modernization
 
 - **Objective:** Highlight KB’s ETL capabilities for migrating legacy museum catalogs.
 
@@ -1357,7 +1357,7 @@ Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, d
 
   7.  The KB assigns persistent identifiers and licenses to published datasets.
 
-#### **Use Case 5 – Federated Analytics Across Institutional Repositories**
+##### **Use Case 5 – Federated Analytics Across Institutional Repositories**
 
 - **Objective:** Enable institutions to perform analytics across federated repositories without losing local control.
 
@@ -1375,7 +1375,7 @@ Focus: infrastructure for ingestion, ETL (Extract, Transform, Load) pipelines, d
 
   5.  Citation and Provenance trails are automatically generated.
 
-## 4.2 Non-Functional Requirements
+### 4.2 Non-Functional Requirements
 
 In the ECHOES project, non-functional requirements (NFRs) are just as critical as functional ones. While functional requirements describe what the system must do (e.g., ingest heritage data, provide annotation tools, or enable federated search), non-functional requirements define how well these functions should be delivered. They capture qualities such as usability, reliability, security, or accessibility, which directly determine whether researchers, curators, and conservators will be able to effectively work with the system over time.
 
@@ -1387,15 +1387,15 @@ To address this dimension of quality in ECHOES, we adopt a dual perspective:
 
 These two perspectives are complementary rather than overlapping. First one focuses on the system and service level quality, ensuring that the infrastructure itself is reliable, secure, and usable. FAIR, in turn, focuses on the data level quality, ensuring that the cultural heritage objects managed within ECHOES can be discovered, accessed, and meaningfully reused by researchers across Europe and beyond.
 
-### 4.2.1 FAIR Principles in ECHOES
+#### 4.2.1 FAIR Principles in ECHOES
 
-#### Findable
+##### Findable
 
 - **Metadata is richly described** using shared vocabulary and persistent identifiers.
 
 - **Activity Logging and Auditing** (FAIR perspective): Logging supports traceability of dataset usage and enhances findability metrics.
 
-#### Accessible
+##### Accessible
 
 - **Data and metadata are retrievable** via standardized protocols.
 
@@ -1403,7 +1403,7 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 - **GDPR compliance** ensures that access conditions respect privacy rights.
 
-#### Interoperable
+##### Interoperable
 
 - **Community-endorsed formats and reference ontologies** such as CIDOC CRM ensure cross-system compatibility.
 
@@ -1417,7 +1417,7 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 - **Interoperability Support** via SPARQL endpoints, REST APIs.
 
-#### Reusable
+##### Reusable
 
 - **Licensing, provenance, and documentation** support reuse, reproducibility, validation.
 
@@ -1427,9 +1427,9 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 - **Extensibility and Flexibility** (FAIR perspective): architecture allows evolving data types and practices, supporting reuse in diverse contexts.
 
-### 4.2.2 System Quality Characteristics in ECHOES
+#### 4.2.2 System Quality Characteristics in ECHOES
 
-#### Security
+##### Security
 
 - **Role-Based Access Control (RBAC):** Access rights are assigned according to user roles, ensuring users only access or modify data permitted by their privileges.
 
@@ -1444,7 +1444,7 @@ These two perspectives are complementary rather than overlapping. First one focu
 <figcaption><p><em>System Quality Characteristics are only briefly described in this document, just to provide context relevant for data strategy. D6.1 does not specify minimal requirements such as encryption standards, access control models, data retention rules, or incident response procedures. This is not in the scope of this deliverable.</em></p></figcaption>
 </figure>
 
-#### Reliability & Accountability
+##### Reliability & Accountability
 
 - **Activity Logging and Auditing:** Detailed logs of data access, changes, and administrative actions support accountability and forensic investigations. These logs also capture: • Data usage (how datasets and metadata are accessed or downloaded). • Access frequency (unique and returning users, peak activity periods). • User demographics (geographic, institutional, user types). • Engagement metrics (number of HDTs accessed per session, annotations, user-generated metadata).
 
@@ -1456,7 +1456,7 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 - **User Profile Modeling:** Aggregate and normalize user profile data in compliance with GDPR. If full identity not stored, pseudonymous profiles still allow demographic/behavioral segmentation.
 
-#### Maintainability & Sustainability
+##### Maintainability & Sustainability
 
 - **Tracking data provenance, versions, and transformations.**
 
@@ -1470,13 +1470,13 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 - **Continuous Monitoring & Improvement:** Evaluation of: • CH data (digital assets and metadata in HDTs). • The Heritage Digital Twin Ontology (HDTO). • Infrastructure and digital services. • Vertical applications and tools. • Community-facing services (workshops, training, seminars). • Whole cloud ecosystem (usability, sustainability, innovation, collaboration).
 
-#### Usability
+##### Usability
 
 - **Accessibility (ISO sense):** Ensure that cloud services and dashboards are usable by diverse profiles of CH stakeholders.
 
 - **Community Feedback:** Gather feedback from users to assess the HDTO.
 
-#### Legal & Ethical Compliance
+##### Legal & Ethical Compliance
 
 - **Data Protection and Privacy:** Full adherence to GDPR and national data protection laws.
 
@@ -1488,9 +1488,9 @@ These two perspectives are complementary rather than overlapping. First one focu
 
 ![](./media/image5.png)
 
-# 5. Data Architecture Design
+## 5. Data Architecture Design
 
-## ![](./media/image5.png)5.1 Architecture Overview
+### ![](./media/image5.png)5.1 Architecture Overview
 
 The ECHOES architecture is being designed around a layered approach that supports multiple repositories while ensuring seamless integration within a federated environment. This allows the platform to balance flexibility and openness with the requirements of security, access governance, and accountability. In this document we focus on the layers describing the KB design.
 
@@ -1506,15 +1506,15 @@ Low-level, technical, interaction with the system takes place through a user-fac
 
 The service layer of the architecture implements the business logic of the KBMS. It manages queries, registry functions, monitoring of federated nodes, and secure communications between components. All services are exposed via REST APIs, making it straightforward to integrate third-party vertical applications and external tools into the platform.
 
-## 5.2 Federated Architecture and Data Lifecycle Management
+### 5.2 Federated Architecture and Data Lifecycle Management
 
-### 5.2.1. Federated Knowledge Strategy
+#### 5.2.1. Federated Knowledge Strategy
 
 As described in section 2, above, a federated architecture enables searching for information across distributed data sources without consolidating them in a central repository. Instead of gathering all data into a single location, a federated Knowledge Graph (KG) leaves data in its original silos and dynamically constructs responses through federated queries. This approach is commonly used in portals that retrieve data from multiple databases while maintaining decentralized storage.
 
 This section describes how a federation knowledge strategy is designed for the ECHOES requirements. The main key features of this strategy are discussed in the next paragraphs.
 
-#### Types of federation nodes
+##### Types of federation nodes
 
 Triplestores constitute the core storage layer of the Knowledge Base (KB), hosting the semantic RDF content, serving as the federated nodes of the infrastructure. These nodes may reside either within the ECHOES main infrastructure or be hosted by external providers. Their availability is monitored regularly to ensure the integrity and reliability of query results. Semantic representations of the HDTs are stored within these triplestores, enabling their seamless integration into the federated Knowledge Graph (KG).
 
@@ -1538,11 +1538,11 @@ Since the ECHOES-nodes support HDT knowledge sharing and enrichment provided in 
 
 *Proposed technology to be used: Virtuoso (Reference: <https://virtuoso.openlinksw.com/>) Information about the decision of using Virtuoso can be found in the Appendix*
 
-#### Joining and leaving the federation
+##### Joining and leaving the federation
 
 Data providers can join the federation in two ways: as full ECHOES Nodes and as External Nodes.
 
-#### Full ECHOES Nodes
+##### Full ECHOES Nodes
 
 Repositories of this type are considered ECHOES nodes and are used for sharing knowledge within the ecosystem. Access to these repositories—either open or restricted is managed through the KBMS. This mode of participation requires the deployment of a Virtuoso triplestore, whose management is governed by the ECHOES rules via the KB REST API.
 
@@ -1552,39 +1552,39 @@ Each triplestore registration must include a URL endpoint for REST access and a 
 
 To safeguard intellectual property rights (IPR) on RDF content, restricted access policies should be applied at the triplestore level, controlling who can view or modify the data and thus maintaining data confidentiality and security. However, other solutions that combine both open-access and restricted content within the same repository will also be explored.
 
-#### External Nodes
+##### External Nodes
 
 Repositories of this type also contribute to knowledge sharing within the ecosystem but are not governed by the ECHOES rules. This mode of participation requires only the registration of an open-access SPARQL REST endpoint, regardless of the underlying triplestore engine. Such endpoints can be integrated into federated queries across the ecosystem. Data providers requiring restricted access to their endpoints must implement appropriate protection mechanisms offered by their respective triplestore vendors. A typical example of an external repository includes large GLAM institutions that participate using their own managed SPARQL endpoints.
 
-#### Leaving the Federation
+##### Leaving the Federation
 
 A repository can leave the federation by invoking the ECHOES unregister process. This action notifies the Administrative Repository through the corresponding KB REST API service.
 
 However, unregistering - particularly in the case of full ECHOES nodes - is strongly discouraged, as it may lead to inconsistencies and integrity issues within the federated KG.
 
-#### Querying the federation
+##### Querying the federation
 
 Queries over the federated Knowledge Graph (KG) can be executed through dedicated services of the KB REST API in two modes: federated SPARQL queries and parallel execution of SPARQL queries. Both methods are designed to handle service unavailability and can provide information on how each endpoint contributes to the result set.
 
-#### Federated SPARQL Queries
+##### Federated SPARQL Queries
 
 These queries adhere to the SPARQL 1.1 standard, utilizing the SERVICE operator inline to specify the target endpoints. The query is executed on a triplestore that supports federated query processing, enabling seamless data retrieval across multiple sources. For queries that search for the same graph pattern across the federation, in other words to execute the same query on all KG nodes, the KB REST API offers a service that automatically builds the federated query and then executes it on a target triplestore. The target triplestore then manages the interaction with the participating federation nodes.
 
-#### Parallel execution of SPARQL Queries
+##### Parallel execution of SPARQL Queries
 
 SPARQL queries can be executed directly and concurrently on target nodes within the ECHOES federation. The individual query results are then synchronized and merged to produce a unified response. A timeout parameter can be defined for each endpoint to control the synchronization process.
 
-#### Central Management and Access Control
+##### Central Management and Access Control
 
 All the federated nodes are centrally managed by the ECHOES KBMS. The system handles the triplestores’ registration for joining the federation, applying user access control, and privacy policies. New data provider nodes can be registered to the federation by an infrastructure operator user interacting with the Administrative Repository of the KBMS. Users may query the shared content but can only edit or manage semantic content for which they have controlled authorization. Also, groups of users will be enabled under common authorization to interact with the triplestores of the federation. During the registration of a new triplestore, an ECHOES user can be assigned as the Owner, granting them authorization to enrich, update, and delete RDF content, as well as to designate maintainers who share these privileges for that triplestore.
 
 Finally, unregistering any triplestore from the federation is possible. However, this operation may affect consistency and data integrity if other knowledge-sharing nodes reference data hosted by the removed node.
 
-#### RDF Data Upload
+##### RDF Data Upload
 
 Ingestion of RDF data into a target ECHOES-node triplestore is performed exclusively through distinct RDF file uploads. Each upload results in the creation of a newly named graph within the triplestore to store the uploaded RDF content and triggers the generation of metadata documenting the upload event, thereby supporting traceability and provenance. Since the semantic data is ingested into a named graph, it becomes available for querying by ECHOES users.
 
-#### Collaborative Editing in Private Spaces of the KG
+##### Collaborative Editing in Private Spaces of the KG
 
 The system supports collaborative editing of semantic data through the creation of “temporary” Private Spaces. These are named graphs hosted on dedicated auxiliary triplestores facilitating easy isolation from shared content. These private named graphs allow for collaborating editing by individuals or groups to prepare and enrich HDT representations which can then be published and shared on the ECHOES-nodes. To ensure good performance and prevent synchronization conflicts during concurrent updates, these private spaces exclude features such as history snapshots and provenance provisioning.
 
@@ -1592,7 +1592,7 @@ Private Spaces are accessible only to authorized users. They are suitable for ei
 
 Within Private Spaces, users can ingest any content from RDF files or perform SPARQL-Update operations directly on their named graphs. As already mentioned, the system does not track changes during this private editing process.
 
-#### RDF Data Update and Versioning
+##### RDF Data Update and Versioning
 
 Once a NG is created on an ECHOES-node, it cannot be modified with new content. Authorized users, including the NG owner, may replace an existing NG by uploading a new one via the KB REST API. When an NG is replaced, the following strategic actions take place:
 
@@ -1608,13 +1608,13 @@ In contrast, triplestores dedicated to hosting Private Spaces do not support ver
 
 The NG update strategy described here supports snapshot versioning, enabling the capture of the “active” RDF content at any point in time as needed. A snapshot corresponding to a specific date or timespan for a given HDT can be obtained by querying the knowledge-sharing and recycle-bin triplestores to retrieve the named graph URIs and/or their content that were active during the desired period.
 
-#### Aggregated Knowledge and Discovery
+##### Aggregated Knowledge and Discovery
 
 Within the federated system, information about HDTs and other CH entities is distributed across named graphs. A single HDT may be referenced by multiple named graphs hosted on different triplestores. Each HDT maintains semantic links with a set of named graphs that capture these relationships within the context of each graph.
 
 Queries across knowledge-sharing nodes—and across private spaces for authorized users—enable semantic discovery by identifying where digital twins are mentioned and in what context.
 
-#### Intellectual Property Rights
+##### Intellectual Property Rights
 
 To protect semantic content from public access on account of IP rights limitations, a dedicated triplestore can be deployed for each provider to host the protected content, with access restrictions enforced at the node level. This approach ensures the highest level of content protection. Additionally, solutions combining both open-access and restricted content within the same repository will also be explored.
 
@@ -1622,13 +1622,13 @@ To protect semantic content from public access on account of IP rights limitatio
 
 All uploaded RDF files, either directly ingested by the users or published from Private Spaces are stored for provenance and reconstruction purposes. To meet this requirement, the system generates, alongside each RDF data file (e.g., *filename1.nt*), a companion metadata file (e.g., *filename1.nt.metadata*) containing audit information such as URI of the created named graph, upload time, user identity, etc.
 
-#### HDT Registration Policy
+##### HDT Registration Policy
 
 To prevent duplicate references to the same HDT or to the physical object it represents, it is strongly recommended that creators verify the existence of an existing URI before instantiating a new HDT. To support this process, the system maintains a catalog of all HDTs created within ECHOES, which users can search to identify reusable URIs. When the creation of a new HDT URI is required, a dedicated service of the KB REST API is invoked to generate and register the new URI.
 
 If duplicates are nevertheless detected within the Knowledge Base (KB), an authorized repair workflow can be initiated. During this process, redundant URIs can be replaced with the correct ones, the HDT registry is updated, and the corresponding named graphs are replaced with new versions. All modifications are documented through metadata to ensure that the KB remains consistent, traceable, and fully operational.
 
-#### URI Generation Policy
+##### URI Generation Policy
 
 The system applies to a ruled-based URI policy to ensure that each semantic resource has a persistent, unique, and context-independent identifier across the federation. This policy adopts the following principles:
 
@@ -1672,7 +1672,7 @@ The URI policy applies to the generation of URIs in the following cases:
 
 - Other Entities: Events, activities, and additional entity types follow domain-specific conventions.
 
-### 5.2.2 User Personal Space
+#### 5.2.2 User Personal Space
 
 The User Personal Space (UPS) should be implemented as a dedicated logical space within the ECHOES infrastructure, isolated from the public-facing federated graph but fully integrated with the platform’s core services. At a high level, this could be achieved through:
 
@@ -1690,7 +1690,7 @@ The User Personal Space (UPS) should be implemented as a dedicated logical space
 
 ![](./media/image5.png)
 
-### 5.2.3 Semantic Metadata Persistence Strategy
+#### 5.2.3 Semantic Metadata Persistence Strategy
 
 A key architectural consideration for federated knowledge graphs is ensuring that essential semantic information remains accessible and consistent across distributed environments. In cultural heritage contexts, where data may be replicated, shared, or migrated across institutions over time, the persistence of contextual metadata becomes critical for maintaining data integrity and legal compliance.
 
@@ -1698,7 +1698,7 @@ This section outlines strategies for embedding core semantic metadata directly w
 
 The ECHOES KB uses a hybrid approach for metadata management, separating semantic metadata (which belongs in the RDF graph) from operational metadata (which stays in the Administrative Repository for performance).
 
-#### Semantic Metadata in RDF
+##### Semantic Metadata in RDF
 
 Core semantic metadata should live directly in the RDF datasets, following the principle that "metadata travels with data" - similar to how modern file systems like ZFS embed ownership and permissions with the actual files.
 
@@ -1716,9 +1716,9 @@ This practice ensures that when data moves across federated nodes, its context a
 
 This separation maintains operational efficiency while keeping semantic context in RDF. When federated SPARQL queries run across multiple triplestores, the semantic metadata automatically comes with the results. This ensures that users receive proper attribution and licensing information without requiring additional database lookups.
 
-### 5.2.4 Potential Issues and Solutions
+#### 5.2.4 Potential Issues and Solutions
 
-#### Consistency and Integrity 
+##### Consistency and Integrity 
 
 Issues
 
@@ -1726,7 +1726,7 @@ Any removal of parts of the federated Knowledge Graph (KG), whether at the feder
 
 Solution: Consistency checks using appropriate queries can detect such issues, allowing for timely repairs.
 
-#### Redundant RDF Content and Performance 
+##### Redundant RDF Content and Performance 
 
 Issues
 
@@ -1734,7 +1734,7 @@ The requirement to include minimal RDF data for each resource to ensure integrit
 
 Solution: If performance issues arise with the current strategy of uploading RDF files to new graphs, an alternative approach will be adopted, such as using one named graph per owner or per HDT. Direct SPARQL updates through user queries should be avoided to maintain snapshot versioning control. However, minor edits like typo corrections may be permitted without replacing entire named graphs.
 
-#### Query Performance 
+##### Query Performance 
 
 Issues
 
@@ -1756,7 +1756,7 @@ Solutions and Best Practices:
 
 - Consider breaking queries into multiple federated queries, ensuring that subqueries within each federated query share bound values for common variables to enable coordinated filtering and joining across remote services.
 
-## 5.3 Data Storage Solutions
+### 5.3 Data Storage Solutions
 
 This section describes how the Data Preservation and Storage layer will support the assets managed in ECHOES, and how it will integrate with the Knowledge Base Management System (KBMS) and the overall ECHOES architecture. It proposes a model for storage repositories, dataset registration and persistent identifiers (PIDs).
 
@@ -1798,11 +1798,11 @@ While details of the storage integration with ECHOES will be included in D6.2 Da
 
 - Location/hosting organisation and basic policy information (retention, access control, availability).
 
-## 5.4 Replication / Backup Strategy
+### 5.4 Replication / Backup Strategy
 
 The replication and backup strategy presented here constitutes an initial design, which will be further expanded and fully detailed in Deliverable D6.3. At this stage of the project, the approach foresees that replication will be handled primarily within the central ECHOES hub rather than across external institutional nodes. Core components will be replicated across multiple secure locations inside the main ECHOES hub to ensure high availability and prevent single points of failure. Regular scheduled backups (both incremental and full) will be stored separately under strict integrity verification procedures. For partners maintaining their own local triplestores, ECHOES will provide recommended guidelines, but local replication will remain optional and outside the scope of central coordination. This staged design ensures robust preservation and data continuity while allowing D6.3 to refine the final topology, failover mechanisms, and long-term operational model of the ECHOES infrastructure.
 
-## 5.5 Core Platform Services and Administrative Subsystem
+### 5.5 Core Platform Services and Administrative Subsystem
 
 The Knowledge Base Management System (KBMS) constitutes the central component of the overall architecture, acting as a mediator between users, external applications, and the cloud infrastructure. It provides the core services required to manage and interconnect the distributed repositories that form the federated Knowledge Base (KB).
 
@@ -1834,7 +1834,7 @@ The following diagram illustrates the architecture, highlighting the main compon
 
 Figure 11: ECHOES Knowledge Base architecture
 
-### 5.5.1 Access to ECHOES - SSO
+#### 5.5.1 Access to ECHOES - SSO
 
 Single Entry Point (SEP) is a critical component of the architecture, that ensures consistent, secure, and traceable access to the platform itself and its distributed services. It is based on the Single Sign-On (SSO) concept, which allows users to authenticate once and then access all authorized services without repeated login attempts.
 
@@ -1869,7 +1869,7 @@ EGI Check-In offers:
 <figcaption><p><em>for AAI design and implementation.</em></p></figcaption>
 </figure>
 
-### 5.5.2 High-Level SSO process
+#### 5.5.2 High-Level SSO process
 
 The core workflow follows these essential steps:
 
@@ -1879,7 +1879,7 @@ The core workflow follows these essential steps:
 
 - External IdP authenticates user – Chosen IdP performs authentication using local credentials and returns OIDC Id token containing user attributes and institutional affiliations.
 
-#### Detailed Authentication Architecture - Overview
+##### Detailed Authentication Architecture - Overview
 
 The diagram below shows the high-level authentication and authorization flows managed by EGI Check-in as the central AAI provider. These flows ensure secure and interoperable access across the platform, supporting both web-based user interactions and programmatic access via CLIs and APIs.
 
@@ -1899,7 +1899,7 @@ Figure 12: Authentication and Authorization flow
 
 A more detailed description will follow in Deliverable D16.1: Single Entry Point to the CH Cloud.
 
-### 5.5.3 Administrative Repository
+#### 5.5.3 Administrative Repository
 
 The Administrative Repository manages metadata related to Knowledge Base (KB) users and triplestores, which constitute the nodes of the federated KB infrastructure. It serves as the central coordination layer for maintaining information about repository registration, configuration, ownership, and accessibility.
 
@@ -1911,7 +1911,7 @@ A document-oriented database (MongoDB) supports the storage of this metadata, pr
 
 *Proposed technology to be used: MongoDB (Reference: <https://www.mongodb.com/>)*
 
-### 5.5.4 Back-End - Web Services
+#### 5.5.4 Back-End - Web Services
 
 This is the core component of the KB architecture, responsible for implementing all essential business logic. It provides:
 
@@ -1939,11 +1939,11 @@ At a high level, this component, together with the Administrative Repository uti
 
 *Proposed technology to be used: Spring Boot (Reference: <https://spring.io/projects/spring-boot>)*
 
-#### API Endpoints and Operations
+##### API Endpoints and Operations
 
 The KB REST API for the basic CRUD operations (for triplestore interaction) and registry services is presented in the Appendix section *API Endpoints and Operations*. The completed API for all the provided services will be published in the ECHOES GitHub repository.
 
-### 5.5.5 Management Console
+#### 5.5.5 Management Console
 
 The KB Management Console is a web-based user interface designed to support administrative operations within the federated KB environment. It serves as a central access point for managing knowledge-sharing and private-spaces repositories, configuring user access, and handling digital twin registrations. The interface aims to provide a unified and intuitive environment for administrators and authorized users to perform governance-related actions without requiring direct interaction with low-level APIs or backend configurations.
 
@@ -1955,7 +1955,7 @@ In alignment with the overall architectural principles, the console will act pri
 
 *Proposed technology to be used: ReactJS (Reference: https://react.dev/)*
 
-# Conclusion
+## Conclusion
 
 Deliverable D6.1 presents the foundational Data Strategy for the ECHOES Cultural Heritage Knowledge Base (KB), outlining the principles, requirements, and preliminary architectural approach for building a federated, semantically interoperable data ecosystem within the European Collaborative Cloud for Cultural Heritage (ECCCH). The document establishes how cultural heritage data - from raw scientific measurements to interpreted knowledge -will be managed, integrated, enriched, and made reusable across institutions, domains, and countries. 
 
@@ -1967,7 +1967,7 @@ The deliverable outlines high-level functional and non-functional requirements b
 
 Overall, D6.1 establishes the strategic, conceptual, and methodological framework for managing cultural heritage data in ECHOES. It prepares the ground for subsequent deliverables, particularly D6.2 on interoperability requirements and guidelines and D6.3 on cloud architecture, where the technical specifications, standards, and implementation details will be further formalized and extended. 
 
-# References
+## References
 
 - Niccolucci, F., Felicetti, A. and Hermon, S., Populating the Data Space for Cultural Heritage with Heritage Digital Twins. Data, 7(8), 105 (2022). 
 
@@ -1977,7 +1977,7 @@ Overall, D6.1 establishes the strategic, conceptual, and methodological framewor
 
 - Niccolucci, F., Markhoff, B., Theodoridou, M., Felicetti, A., & Hermon, S. (2023). The Heritage Digital Twin: A bicycle made for two. The integration of digital methodologies into cultural heritage research. arXiv preprint arXiv:2302.07138. <https://doi.org/10.48550/arXiv.2302.07138> 
 
-# Appendix
+## Appendix
 
 **API Endpoints and Operations**
 

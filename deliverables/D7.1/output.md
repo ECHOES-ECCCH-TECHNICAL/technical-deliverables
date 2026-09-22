@@ -2,9 +2,7 @@
 
 European Cloud for Heritage Open Science
 
-Deliverable D7.1
-
-**The Digital Commons**
+# Deliverable D7.1 The Digital Commons
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -502,7 +500,7 @@ Table of contents
 
 [Endnotes](#endnotes)
 
-# List of Figures
+## List of Figures
 
 [Figure 1. The Digital Commons at the core of the ECCCH. [14](#_Toc230787435)](file:///C:\Users\maria\Downloads\D7.1_final.docx#_Toc230787435)
 
@@ -544,7 +542,7 @@ Table of contents
 
 [Figure 21. HDTO example (cont.) [42](#_Toc230787454)](file:///C:\Users\maria\Downloads\D7.1_final.docx#_Toc230787454)
 
-# List of Abbreviations
+## List of Abbreviations
 
 ECCCH – European Collaborative Cloud for Cultural Heritage
 
@@ -558,15 +556,15 @@ CH – Cultural Heritage
 
 *crmpem* – conceptual reference model Parthenos extension
 
-# Executive Summary
+## Executive Summary
 
 The deliverable describes the rationale for creating the Heritage Digital Twin (HDT) and its Ontology (HDTO), as the core ontology for organizing the data forming the ECCCH’s Knowledge Base and provides a detailed description of its classes and properties, along with concrete examples and references to CIDOC-CRM extensions the HDTO refers to.
 
 Currently, at [this page](https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html) - <https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html> you can navigate through the HDTO’s classes and properties.
 
-## 1. Introduction and Background
+### 1. Introduction and Background
 
-### 1.1. The Need for Semantic Integration in Cultural Heritage (CH)
+#### 1.1. The Need for Semantic Integration in Cultural Heritage (CH)
 
 Cultural Heritage practices cover a broad range of disciplines, societal sectors and actions. Drawing on diverse humanities, sciences, and engineering disciplines, CH research encompasses all forms of scientific inquiry into human works and the combined works of nature and humans that are of value to people. The field focuses on enhancing the understanding, care, sustainable use, and management of tangible and intangible heritage, aiming to enrich people's lives both today and in the future.
 
@@ -574,7 +572,7 @@ CH integrates data generated from within its sphere of activities as well as it 
 
 Semantic integration addresses the challenges of CH data fragmentation by establishing shared ontologies, controlled vocabularies, and linked data structures. By converting heterogeneous datasets into coherent knowledge graphs, it enables complex queries across modalities—such as linking material composition to construction phases or degradation patterns—and supports computational analysis and machine learning. This shared semantic framework transforms isolated datasets into an interconnected, actionable "heritage knowledge commons”. Semantic modelling is essential to implement the FAIR principles (Findable, Accessible, Interoperable, Reusable), widely recognized as best practice in CH. The ECCCH promotes FAIR-compliant ontologies, enhancing data discoverability, transparency, long-term preservation, and equitable access across fragmented research communities. By breaking interoperability barriers, semantic integration enables more robust, reproducible, and inclusive interpretations of CH.
 
-### 1.2 The role of ECHOES in Creating Digital Commons
+#### 1.2 The role of ECHOES in Creating Digital Commons
 
 Aligned with the *ex-ante* Report on the European collaborative cloud for CH, the European Commission granted ECHOES, a consortium of more than 50 institutions around Europe, the mission to set the foundations for the establishment of the European Collaborative Cloud for Cultural Heritage (ECCCH), “…a shared platform designed to facilitate collaboration among heritage professionals and researchers, enabling them to modernize their workflows and processes … (it) will offer access to data, cutting-edge scientific and training resources, and advanced digital tools…”.
 
@@ -586,7 +584,7 @@ Main obstacles in conducting exhaustive research based on openly available digit
 
 The ECHOES (European Cloud for Heritage Open Science) project establishes a federated cloud-based infrastructure for open and interoperable CH data, operationalizing the concept of “digital commons” where multiple institutions and research communities can contribute, access, and collaboratively use digital heritage resources. ECHOES promotes the FAIR principles by embedding semantic interoperability through the CIDOC CRM-based Heritage Digital Twin Ontology (HDTO) and, ensuring that heterogeneous datasets, covering the broad range of disciplines constituting CH (social sciences and the humanities, such as archaeology, anthropology, architecture, etc., natural sciences such as biology, chemistry or physics or exact sciences such as mathematics and computer sciences) are integrated into a unified, searchable knowledge graph. By maintaining explicit provenance chains, distinguishing raw observations and interpretative statements, and supporting reproducible workflows, the platform ensures that heritage knowledge remains transparent, traceable, and sustainable, thereby enabling robust cross-disciplinary collaboration and long-term reusability.
 
-### 1.3 Definitions - The digital commons and ensuring their digital continuum
+#### 1.3 Definitions - The digital commons and ensuring their digital continuum
 
 The concept of **<u>digital commons</u>** is anchored in the following conceptual definition: “…holistic social institutions for governing the (re)production of (digital) resources, addressed here as data, information, culture and knowledge, created and/or maintained online and articulated through interrelated legal, socio-cultural, economic and institutional dimensions…”[^2]. Digital commons are based on resources available, their quality and usability, a broad range of beneficiary communities to re-use these resources and managing frames in sustainable, collaborative and long-time perspective.
 
@@ -594,15 +592,15 @@ The success of building meaningful digital commons relies on the ability to desi
 
 Figure 1. The Digital Commons at the core of the ECCCH.
 
-### 1.4. The rationale behind conceptualizing the Heritage Digital Twin and its related Ontology 
+#### 1.4. The rationale behind conceptualizing the Heritage Digital Twin and its related Ontology 
 
 The definition of Digital Twins for Heritage assets adopted here parts away from the traditional approach of a “digital replica” of a real-world asset, as primarily conceptualized for industrial applications[^3]. We believe that the definition applied here, which regards a digital twin of a heritage asset as the complex of digital information about a real-world heritage asset (see below), better answers the necessities and peculiarities of the cultural heritage domain. Moreover, it has a specific scope, to gather and semantically unify existing information on a particular asset, possibly generated by various researchers, in different places and times. Thus, in a way, it maintains the initial definition of a digital twin[^4] as a digital replica of a real-world heritage asset, the difference being that its properties (materiality, shapes, functions, etc.) are described through the semantic description of the intellectual processes that generated these properties, rather than just simply providing a list of them. This is fundamentally important, since, unlike the manufacturing industry, where products parameters (materials, shape, etc.) are known by their initial design, in the Cultural Heritage (CH) domain, characterization of heritage assets is the result of intellectual processes, in a way, as a kind of “reverse engineering” approach, hence the importance of adopting a definition that suits best the CH reality. Consequently, the ontology proposed considers the pluri-disciplinary approaches CH is studied and processed and how data generated is used and re-used by a broad spectrum of stakeholders from multiple societal sectors (again, unlike the manufacturing industry). Finally, the flexibility of the ontology proposed, based on CIDOC-CRM, enables to captures various granularity levels of representation, aligned with the data models proposed to be integrated within the HDT.
 
 As characteristics of CH assets may change in time, it is important to understand the nature of these changes, the factors influencing them and the agents responsible for these changes (either natural or anthropogenic). Thus, following the initial conceptual role of Digital Twins as connectors between the physical and the digital worlds, the HDTO defines specific classes (see below), that capture the contribution of Internet of Things sensors (in particular time series data), described through the OGC (Open Geospatial Consortium) standards[^5], aimed at specifically describing these time-related changes in the structure and shape of CH assets.
 
-## 2. The Heritage Digital Twin (HDT) and its related Ontology (HDTO)
+### 2. The Heritage Digital Twin (HDT) and its related Ontology (HDTO)
 
-### 2.1. Introduction to HDTO as the Semantic Backbone of the ECCCH and its Knowledge Base
+#### 2.1. Introduction to HDTO as the Semantic Backbone of the ECCCH and its Knowledge Base
 
 The proposed Heritage Digital Twin (HDT), defined as the complex of digital information about a real-world heritage asset, with its tangible and intangible components, capturing the entirety of its space-time-culture identity and formally organized in a semantic framework and described by the CRM - based ontology (HDTO), aims to formally answer the above requirements, by providing the semantic glue and conceptual framework to achieve the expected vision of the ECCCH, having at its core the digital commons, as HDTs, co-created and co-used by CH communities. Main aspects to highlight are the completeness of information about a CH asset, as generated by various approaches to the study and interpretation of various disciplines, which cover both material and immaterial aspects of the CH asset, along its entire time existence.
 
@@ -649,7 +647,7 @@ The Heritage Digital Twin framework also allows digital twin components to be li
 
 The ontology includes <u>Observation with Inference</u>, a class representing activities where observations of real-world situations are paired with interpretative reasoning to produce formal knowledge statements. This concept supports the modelling of scholarly processes through which raw observations are transformed into documented interpretations and structured heritage knowledge. Overall, the HDTO class structure provides a comprehensive semantic framework that connects heritage entities, digital representations, scholarly research, institutional recognition, and knowledge management processes. It enables systematic organization of heritage knowledge and supports the creation and maintenance of digital heritage knowledge bases, such as those envisioned in large-scale infrastructures for cultural heritage research and documentation.
 
-### 2.2. HDTO’s main functionalities 
+#### 2.2. HDTO’s main functionalities 
 
 The HDTO explicitly models the dynamic, socially conferred nature of heritage value, the provenance of digital knowledge production and the evolving relationship between real-world assets and their digital counterparts. This enables the systematic aggregation of multimodal data (3D models, scientific analyses, restoration records, narratives) into versioned, semantically coherent Digital Commons that capture the full space-time-culture identity of CH assets. Going up the ladder of the data cycle and the knowledge pyramid (Figure 2), data provenance is formally contextualized by (1) providing technical information on how it was created, the workflows that generated it and related paradata; (2) by formal description of the protocols of processing data, validating the recent generation of information and (3) by formal description of passing on of historical information (or oral tradition) from one hand and valid source to another, to the degree possible. The HDTO specializes the following epistemological areas and connects them into a functionally complete whole. Three main functionalities are important to highlight here:
 
@@ -679,7 +677,7 @@ The HDTO is designed to enable interested communities to overcome major shortcom
 
 As mentioned above in (1.4), a basic functionality of a digital twin, as initially designed in the industrial manufacturing domain
 
-### 2.3. Building The Heritage Digital Twin Ontology 
+#### 2.3. Building The Heritage Digital Twin Ontology 
 
 The current version of the ontology represents a revision, refinement, and clarification of an earlier one introduced [in a previous study](https://arxiv.org/pdf/2302.07138). The updated model incorporates conceptual improvements, clearer definitions, and an expanded set of classes and properties, to better support the representation of heritage entities and their digital twins within interoperable CH infrastructures. The revised ontology aims to provide a consistent semantic framework for describing CH entities, their digital representations, and the processes through which heritage knowledge is created, documented, and maintained. In particular, the model was aligned with existing standards and best practices in CH data modelling, ensuring that the ontology can support complex digital heritage applications while remaining interoperable with established knowledge graphs and digital infrastructures.
 
@@ -687,18 +685,18 @@ The HDTO is a formal extension of CIDOC CRM (ISO 21127:2023), the international 
 
 The ontology proposes specialized extensions that simplify modelling practices and improve the clarity of relationships between entities. These extensions introduce new classes and properties that capture domain-specific aspects of HDTs while maintaining full conceptual alignment with the CIDOC CRM model. The new elements follow explicit naming conventions—HC (Heritage Class) and HP (Heritage Property)—which distinguish HDTO extensions from standard CRM concepts while preserving semantic consistency with the underlying ontology. Overall, this approach ensures that the HDTO remains methodologically grounded in the CRM and are sufficiently specialized to support the complex requirements of HDT systems, including representation of heritage entities, their digital documentation, associated narratives, scholarly studies, and ongoing maintenance activities.
 
-### 2.4. Naming conventions
+#### 2.4. Naming conventions
 
 The HDTO follows the naming conventions of the CRM. As such, all new declared classes and properties were given both a name and an identifier. For classes, the identifier consists of the letters HC (Heritage Class) followed by a number. Accordingly, Properties were given a name and an identifier. The identifier consists of the letters HP (Heritage Property), followed by a number, which is followed by the letter “i” each time the property is mentioned “backwards”, i.e., from target to domain (inverse link). “HC” and “HP” do not have any other meaning. They correspond respectively to letters “E” and “P” in the CRMbase naming conventions, where “E” originally meant “entity” (although the CRMbase “entities” are now consistently called “classes”), and “P” means “property”. Whenever CRMbase classes are used in our model, they are named by the name they have in the original CRMbase. The same applies for all the extensions which also follow the same conventions.
 
-### ![](./media/image10.svg)2.5. HDTO Fundamental Concepts
+#### ![](./media/image10.svg)2.5. HDTO Fundamental Concepts
 
 Figure 6. Conceptual structure of an HDT.
 
 The ontology introduces a structured conceptual framework to represent both CH entities and their corresponding digital representations. The model is organized around two central classes that capture the relationship between real-world CH assets and their digital counterparts: **HC1 Heritage Entity** and **HC2 Heritage Digital Twin**, described in detail [here](https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html).
 
 <figure>
-<img src="./media/image11.png" />
+<img src="./media/image10.png" />
 <figcaption><p>Figure 7. Core elements of an HDT.</p></figcaption>
 </figure>
 
@@ -732,7 +730,7 @@ Digital heritage knowledge is often generated and maintained by organized collab
 
 To support the management of digital information, the ontology distinguishes between different categories of digital objects. **HC14 Volatile Digital Object** represents digital resources whose content may change over time, such as heritage digital twins or other evolving digital datasets. These objects may generate snapshots that capture their state at a specific moment in time. Such snapshots are represented by **HC15 Persistent Digital Object**, which are stable digital objects defined by fixed content and identifiable creation moments. Persistent digital objects may contain structured knowledge units known as **HC16 Heritage Proposition Sets**, which represent formally encoded sets of propositions describing heritage-related knowledge. These proposition sets constitute the persistent building blocks that can be aggregated and updated within digital twins.
 
-### 2.6. HDTO Property [Declaration](https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html) 
+#### 2.6. HDTO Property [Declaration](https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html) 
 
 The HDTO defines a set of semantic properties that establish relationships between CH entities, their digital twins, narratives, studies, and digital documentation processes. These extend the CRM model and its extensions to support the representation and management of CH knowledge within digital infrastructures. Through these relationships, the HDTO describes how heritage entities are digitally represented, interpreted through narratives, investigated through scholarly research, socially valued, and maintained over time within HDT’s environments.
 
@@ -758,7 +756,7 @@ Figure 8: The observation of a crack by measuring temperature and crack width.
 
 Figure 9: Entities in Sensor Things API Standard.
 
-![SensorThings API Data Model](./media/image12.png)![](./media/image13.jpeg)
+![SensorThings API Data Model](./media/image11.png)![](./media/image12.jpeg)
 
 A complementary challenge in enriching the HDT is the link between the virtual realm of digital data and the physical world, through updates coming from IoT (Internet of Things) sensors, primarily useful in monitoring environmental conditions around heritage assets and the assessment of various natural / anthropogenic agents’ impact on them. For example, SensorThings provide Time Series Data on a variety of aspects related to the above – in the adjacent picture, one can observe changes in wall cracks due to changes in the temperature.
 
@@ -778,16 +776,16 @@ The Open Geospatial Consortium (OGC) develops standards for describing such data
 
 Table 1. Mapping the OGC Sensor Things API Standard entities to HDTO and CIDOC CRM family classes.
 
-## 3. The HDTO in action – an example 
+### 3. The HDTO in action – an example 
 
 <figure>
-<img src="./media/image14.jpeg" alt="Image" />
+<img src="./media/image13.jpeg" alt="Image" />
 <figcaption><p>Figure 10. The Deryneia icon.</p></figcaption>
 </figure>
 
 The text below demonstrates the applicability of the HDTO for documenting a multi-disciplinary study, published extensively here[^9], and summarised below. The research focuses on the study of a linseed oil/tempera and gold on wood panel icon originating from Deryneia (Cyprus), measuring 23 x 34 x 6 cm. Its iconography depicts the birth of Christ and belongs to the broader “Nativity” theme. The icon was painted by an unknown author with an estimated date based on style, sometime in the 16<sup>th</sup> century. It comes from the Church of the Virgin Mary in Deryneia, Cyprus, with a possible alternative provenance of the small 15<sup>th</sup>-16<sup>th</sup> century church of St. George, in the same town. There are no written records on previous restorations or on its ownership history. The icon maintains most of the traditional features of a Byzantine “Nativity” icon, although it omits the depiction of the shepherds and the devil, common elements in other icons of the same type. It is part of a series of twelve icons representing the twelve Great Church Feasts in the liturgical calendar of the Orthodox Church (the so-called Dodekaorton).
 
-![](./media/image15.png)The main research questions were \[a\] **art historical** – to describe the materiality of the icon and assess its provenance, to understand the style of painting technique, to identify possible overpaints and to position the icon in the broader synthetic research on Byzantine icons in Cyprus; \[b\] **conservation** – to identify the pigments used, to identify possible restorations and positions them in a timeframe and to characterize the painting’s integrity and deterioration conditions. To achieve these goals, an art historical study, based on visual analysis, aimed to define its descriptive principles (its composition, organisational patterns, colours, light and symmetry), the history of the icon, in terms of history of its ownership and its possible mention in written sources, its historiography and social aspects related to its intangible attributes and to reconstruct the context of the icon, described through its style, typology, location. The interpretative process focused on providing explicatory narratives contextualizing in the present the 16<sup>th</sup> century icon, its cultural meaning and its intangible values.
+![](./media/image14.png)The main research questions were \[a\] **art historical** – to describe the materiality of the icon and assess its provenance, to understand the style of painting technique, to identify possible overpaints and to position the icon in the broader synthetic research on Byzantine icons in Cyprus; \[b\] **conservation** – to identify the pigments used, to identify possible restorations and positions them in a timeframe and to characterize the painting’s integrity and deterioration conditions. To achieve these goals, an art historical study, based on visual analysis, aimed to define its descriptive principles (its composition, organisational patterns, colours, light and symmetry), the history of the icon, in terms of history of its ownership and its possible mention in written sources, its historiography and social aspects related to its intangible attributes and to reconstruct the context of the icon, described through its style, typology, location. The interpretative process focused on providing explicatory narratives contextualizing in the present the 16<sup>th</sup> century icon, its cultural meaning and its intangible values.
 
 Figure 11. The main components of the Deryneia icon’s knowledge graph.
 
@@ -796,45 +794,45 @@ A complementary heritage sciences investigation, based on dendrochronology, to i
 The HDT provides a single semantic descriptive framework for documentation data related to the scientific processes described above. We define here a knowledge graph that helps navigate between interpretative statements on the investigated icon, the reasoning processes behind them and the data on which they were based. The base is a common descriptive framework (an extendable knowledge graph) for painted artworks, which includes six principal nodes and their components. These cover descriptions of the tangible as well as intangible aspects of the artwork, such as its biography and the related art historical research, its physical properties, aspects related to its conservation, the methods applied for its documentation and the generated data and results (representing in this way both the data provenance and the scientific processes for obtaining them), the provenance of the artwork, including history of its ownership, exhibitions, publications and other attestations and finally a category named values which aims at capturing its risks of being illegally trafficked, its religious and community values and its potential re-use in education or by creative industries
 
 <figure>
-<img src="./media/image17.png" />
+<img src="./media/image16.png" />
 <figcaption><p>Figure 12: The complete knowledge graph describing the research activities on the Deryneia icon.</p></figcaption>
 </figure>
 
 The knowledge construction process builds on inferences deriving from formally described observations and the statements derived from them, based on reproducible workflows, using data that is presented in an accountable and transparent way and is described by the HDTO, as shown below.
 
 <figure>
-<img src="./media/image19.png" />
+<img src="./media/image18.png" />
 <figcaption><p><span id="_Toc230787447" class="anchor"></span>Figure 14. The heritage entity Deryneia icon as represente d by the HDTO’s main classes.</p></figcaption>
 </figure>
 
 <figure>
-<img src="./media/image20.png" />
+<img src="./media/image19.png" />
 </figure>
 
 <span id="_Toc230787448" class="anchor"></span>Figure 15. The valuation of the HC1 heritage entity Deryneia icon.
 
 <figure>
-<img src="./media/image21.png" />
+<img src="./media/image20.png" />
 <figcaption><p><span id="_Toc230787449" class="anchor"></span>Figure 16. The study of the HDT Deryneia icon, with its main HDTO classes.</p></figcaption>
 </figure>
 
 Finally, the three consequent diagrams describe the entirety of the HDT of the Derenyia icon:
 
-![](./media/image22.png)
+![](./media/image21.png)
 
 <figure>
-<img src="./media/image23.png" />
+<img src="./media/image22.png" />
 <figcaption><p><span id="_Ref230624864" class="anchor"></span>Figure 17. The maintenance of the Deryneia icon, as represented by the HDTO classes.</p></figcaption>
 </figure>
 
 <figure>
-<img src="./media/image24.png" />
+<img src="./media/image23.png" />
 <figcaption><p><span id="_Toc230787451" class="anchor"></span>Figure 18. The maintenance of the Deryneia icon, as represented by the HDTO classes (cont. from <a href="#_Ref230624864"><span>Figure 17</span>.</a>)</p></figcaption>
 </figure>
 
-## 4. Detailed description of the HDTO
+### 4. Detailed description of the HDTO
 
-### 4.1. Class declaration 
+#### 4.1. Class declaration 
 
 At this page <https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html> you can navigate** t**hrough Classes & Properties declarations of version 1.1 by:
 
@@ -844,7 +842,7 @@ At this page <https://isl.ics.forth.gr/ontology/echoes/html/HDT_v1.1.html> you c
 
 - Using the control located at the upper-right corner of this page (Click on 'Navigate to a section' text). Type any part of the Class or Property full name, and press Enter or select the preferred option to be automatically navigated to the relevant declaration.
 
-#### HC1 Heritage Entity
+##### HC1 Heritage Entity
 
 Subclass of: crm:E70 Thing
 
@@ -876,7 +874,7 @@ Properties:
 >
 > HP15 is heritage of (has original heritage): crm:E74 Group
 
-#### HC2 Heritage Digital Twin
+##### HC2 Heritage Digital Twin
 
 Subclass of: HC14 Volatile Digital Object
 
@@ -906,7 +904,7 @@ Properties:
 >
 > HP34 contained (is former proposition set of): HC16 Heritage Proposition Set
 
-#### HC3 Tangible Heritage Entity
+##### HC3 Tangible Heritage Entity
 
 Subclass of: HC1 Heritage Entity
 
@@ -934,7 +932,7 @@ Properties:
 
 HP7 is manifestation of (is manifested by): HC4 Intangible Heritage Entity
 
-#### HC4 Intangible Heritage Entity
+##### HC4 Intangible Heritage Entity
 
 Subclass of: HC1 Heritage Entity
 
@@ -958,7 +956,7 @@ Properties:
 
 HP6 has manifestation event (event is manifestation of): crm:E5 Event
 
-#### HC5 Digital Representation
+##### HC5 Digital Representation
 
 Subclass of: crmdig:D9 Data Object
 
@@ -988,7 +986,7 @@ Properties:
 
 HP22 represents (has digital representation): crmsci:S15 Observable Entity
 
-#### HC6 Sensor Data
+##### HC6 Sensor Data
 
 Subclass of**:** HC5 Digital Representation
 
@@ -1008,7 +1006,7 @@ Properties:
 
 HP38 is sensor representation of (has sensor representation): crmsci:S15 Observable Entity
 
-#### HC7 Digital Audiovisual Object
+##### HC7 Digital Audiovisual Object
 
 Subclass of: HC5 Digital Representation
 
@@ -1091,23 +1089,23 @@ HP25 has created (was created by): crm:E31 Document
 HP26 studied specifically (was studied by): crm:E1 CRM Entity
 
 <figure>
-<img src="./media/image25.png" />
+<img src="./media/image24.png" />
 <figcaption><p>Figure 19. The HDT ontology.</p></figcaption>
 </figure>
 
 <figure>
-<img src="./media/image26.png" />
+<img src="./media/image25.png" />
 <figcaption><p>Figure 20. HDT ontology - details.</p></figcaption>
 </figure>
 
 <figure>
-<img src="./media/image27.png" />
+<img src="./media/image26.png" />
 <figcaption><p>Figure 21. HDTO example (cont.)</p></figcaption>
 </figure>
 
-#### 
+##### 
 
-#### HC10 Heritage Valuation
+##### HC10 Heritage Valuation
 
 Subclass of: crm:E2 Temporal Entity
 
@@ -1131,7 +1129,7 @@ Properties:
 >
 > HP14 values (is valued by): HC1 Heritage Entity
 
-#### HC11 Digital Twin Maintenance
+##### HC11 Digital Twin Maintenance
 
 Subclass of: crm:E65 Creation
 
@@ -1163,7 +1161,7 @@ HP19 has composed (was composed by): HC2 Heritage Digital Twin
 >
 > HP31 deleted content (content was deleted by): HC16 Heritage Proposition Set
 
-#### HC12 Heritage Declaration Event
+##### HC12 Heritage Declaration Event
 
 Subclass of: crm:E13 Attribute Assignment
 
@@ -1185,7 +1183,7 @@ Properties:
 >
 > HP17 terminated (was terminated by): HC10 Heritage Valuation
 
-#### HC13 Project
+##### HC13 Project
 
 Subclass of: crm:E7 Activity
 
@@ -1211,7 +1209,7 @@ Examples:
 
 Properties:
 
-#### HC14 Volatile Digital Object
+##### HC14 Volatile Digital Object
 
 Subclass of: crmdig:D1 Digital Object
 
@@ -1239,7 +1237,7 @@ Properties:
 >
 > HP29 has digital object part: crmdig:D1 Digital Object
 
-#### HC15 Persistent Digital Object
+##### HC15 Persistent Digital Object
 
 Subclass of: crmdig:D1 Digital Object
 
@@ -1261,7 +1259,7 @@ Themas version 1.1 (ICS - THEMAS - Thesaurus Management System, n.d.)
 
 Properties:
 
-#### HC16 Heritage Proposition Set
+##### HC16 Heritage Proposition Set
 
 Subclass of: crminf:I4 Proposition Set
 
@@ -1283,7 +1281,7 @@ Properties:
 
 HP32 replaced (was replaced by): HC16 Heritage Proposition Set
 
-#### HC17 Observation with Inference 
+##### HC17 Observation with Inference 
 
 Subclass of:
 
@@ -1305,7 +1303,7 @@ Properties:
 
 HP35 made primary observation (was observation of): crmsci:S28 Observable Situation
 
-#### HC18 Provenance Statement 
+##### HC18 Provenance Statement 
 
 Subclass of: HC16 Heritage Proposition Set
 
@@ -1333,7 +1331,7 @@ Properties:
 
 HP36 is about the provenance of (has provenance claim): crm:E70 Thing
 
-#### HC19 Provenance Assessment 
+##### HC19 Provenance Assessment 
 
 Subclass of: crminf:I1 Argumentation
 
@@ -1355,7 +1353,7 @@ Properties:
 
 HP37 concluded provenance (was assessed by): HC18 Provenance Statement.
 
-#### HC20 Illicit Removal 
+##### HC20 Illicit Removal 
 
 Subclass of: crm:E10 Transfer of Custody
 
@@ -1375,9 +1373,9 @@ Examples:
 
 Properties:
 
-### 4.2. Property Declaration
+#### 4.2. Property Declaration
 
-#### HP1 has digital twin (is digital twin of)
+##### HP1 has digital twin (is digital twin of)
 
 Domain: HC1 Heritage Entity
 
@@ -1397,7 +1395,7 @@ Examples:
 
 > The Pafos Gate in Nicosia, Cyprus (HC1) *has digital twin* the Pafos Gate digital twin (HC2) created by Cyprus Institute.
 
-#### HP2 has story (is story about)
+##### HP2 has story (is story about)
 
 Domain: HC1 Heritage Entity
 
@@ -1417,7 +1415,7 @@ Examples:
 
 Falconry (HC1) *has story* the history of Falconry over the centuries (nont:Narrative).
 
-#### HP3 is digital twin component of (has digital twin component)
+##### HP3 is digital twin component of (has digital twin component)
 
 Domain: HC2 Heritage Digital Twin
 
@@ -1441,7 +1439,7 @@ Examples:
 >
 > The HC2 Digital Twin of the “Basilica of San Salvatore in Spoleto, Italy” is *digital twin component of* the HC2 Digital Twin of “Spoleto”, which *is digital twin component of* the UNESCO WHS “Longobards in Italy. Places of Power”.
 
-#### HP4 narrates (is narrated through)
+##### HP4 narrates (is narrated through)
 
 Domain: nont:Narration
 
@@ -1463,7 +1461,7 @@ Examples:
 
 > The “De Arte Venandi Cum Avibus” treatise by the Holy Roman Emperor Frederick II (nont:Narration) *narrates* the history of Falconry (nont:Narrative).
 
-#### HP5 has intangible heritage entity (is intangible heritage entity of)
+##### HP5 has intangible heritage entity (is intangible heritage entity of)
 
 Domain: HC3 Tangible Heritage Entity
 
@@ -1485,7 +1483,7 @@ Examples:
 >
 > The UNESCO WHS site “Routes of Santiago de Compostela” (HC3) *has intangible heritage entity* pilgrimage to Santiago (HC4).
 
-#### HP6 has manifestation event (event is manifestation of)
+##### HP6 has manifestation event (event is manifestation of)
 
 Domain: HC4 Intangible Heritage Entity
 
@@ -1505,7 +1503,7 @@ Examples:
 
 > The Palio di Siena (HC4) *has manifestation event* the historical horse race held in Siena on 17/8/2022 (E5).
 
-#### HP7 is manifestation of (is manifested by)
+##### HP7 is manifestation of (is manifested by)
 
 Domain: HC3 Tangible Heritage Entity
 
@@ -1525,7 +1523,7 @@ Examples:
 
 > The set of graffiti engraved on the walls of the Church of the Holy Sepulchre in Jerusalem (HC3) *is manifestation of* the pilgrimage of which the church is the destination (HC4).
 
-#### HP8 is narrated in document (document used for narration)
+##### HP8 is narrated in document (document used for narration)
 
 Domain: nont:Narrative
 
@@ -1547,7 +1545,7 @@ Examples:
 
 > The “De Arte Venandi Cum Avibus” treatise by the Holy Roman Emperor Frederick II (nont:Narrative) *is narrated in document* the “MS. Lat. 419” manuscript, now in the library of the University of Bologna (crm:E31).
 
-#### HP9 is visual representation of (has visual representation)
+##### HP9 is visual representation of (has visual representation)
 
 Domain: HC7 Digital Audiovisual Object
 
@@ -1573,7 +1571,7 @@ Examples:
 >
 > (https://www.europeana.eu/it/item/9200369/webclient_DeliveryManager_pid_6363979_c ustom_att_2_simple_viewer).
 
-#### HP10 tells about (is told by)
+##### HP10 tells about (is told by)
 
 Domain: nont:Narrative
 
@@ -1595,7 +1593,7 @@ Examples:
 
 > “The history of Falconry (nont:Narrative) *tells about* the writing of “De Arte Venandi Cum Avibus” treatise by the Holy Roman Emperor Frederick II (E5).
 
-#### HP12 regards as origin (is regarded as origin by)
+##### HP12 regards as origin (is regarded as origin by)
 
 Domain: HC10 Heritage Valuation
 
@@ -1615,7 +1613,7 @@ Examples:
 
 > The valuation of the Al Aksa Mosque (HC10) *regards as origin* Muslim worshippers (crm:E74 Group).
 
-#### HP13 had target (was community for)
+##### HP13 had target (was community for)
 
 Domain: HC10 Heritage Valuation
 
@@ -1635,7 +1633,7 @@ Examples:
 
 > The valuation of the Icon of The Nativity by the Department of Antiquities in Cyprus (HC10) *had target* the Cyprus and Greek Population (E74).
 
-#### HP14 values (is valued by)
+##### HP14 values (is valued by)
 
 Domain: HC10 Heritage Valuation
 
@@ -1655,7 +1653,7 @@ Examples:
 
 > The valuation of the Dresden Elbe Valley in March 2004 by ICOMOS (HC10) *values* the Dresden Elbe Valley (HC1) (ICOMOS, 2003).
 
-#### HP15 is heritage of (has original heritage)
+##### HP15 is heritage of (has original heritage)
 
 Domain: HC1 Heritage Entity
 
@@ -1679,7 +1677,7 @@ Examples:
 >
 > The Pisa Leaning Tower (HC1) *is heritage of* UNESCO World Heritage Listing.
 
-#### HP16 initiated (was initiated by)
+##### HP16 initiated (was initiated by)
 
 Domain: HC12 Heritage Declaration Event
 
@@ -1699,7 +1697,7 @@ Examples:
 
 > The UNESCO listing of the Dresden Elbe Valley in 2004 (HC12) *initiated* the valuation of the Dresden Elbe Valley in March 2004 (HC10) (Decision 28 COM 14B.40 - Nominations of Cultural Properties to the World Heritage List (Dresden Elbe Valley 2004).
 
-#### HP17 terminated (was terminated by)
+##### HP17 terminated (was terminated by)
 
 Domain: HC12 Heritage Declaration Event
 
@@ -1719,7 +1717,7 @@ Examples:
 
 > The UNESCO de-listing of the Dresden Elbe Valley in 2009 (HC12) *terminated* the valuation of the Dresden Elbe Valley in 2004 (HC10) (https://whc.unesco.org/en/list/1156, UNESCO World Heritage News 2009).
 
-#### HP18 has documented (was documented by)
+##### HP18 has documented (was documented by)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -1739,7 +1737,7 @@ Examples:
 
 > The ECHOES Project team CNRS Digital Twin Maintenance (HC11) *has documented* the Pafos Gate in Nicosia (HC1).
 
-#### HP19 has composed (was composed by)
+##### HP19 has composed (was composed by)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -1759,7 +1757,7 @@ Examples:
 
 > The ECHOES Project team CyI Maintenance (HC11) *has composed* the HDT of the Pafos Gate in Nicosia (HC2).
 
-#### HP20 was carried out under (had contribution)
+##### HP20 was carried out under (had contribution)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -1779,7 +1777,7 @@ Examples:
 
 > The ECHOES Project team CNRS Maintenance (HC11) *was carried out under* the ECHOES project 2024-2029 (HC13).
 
-#### HP21 is 3D representation output of (has 3D representation)
+##### HP21 is 3D representation output of (has 3D representation)
 
 Domain: HC8 3D Model
 
@@ -1801,7 +1799,7 @@ Examples:
 
 > The 3D model of the Neptune Fountain (HC8) *is 3D representation output of* the Neptune Fountain in Bologna (HC1).
 
-#### HP22 represents (has digital representation)
+##### HP22 represents (has digital representation)
 
 Domain: HC5 Digital Representation
 
@@ -1823,7 +1821,7 @@ Examples:
 
 > The digital version of Vasari’s “Vite” (HC5) *represents* the 'Vite' of Giorgio Vasari work (S15).
 
-#### HP23 was about (was subject of)
+##### HP23 was about (was subject of)
 
 Domain: HC9 Study
 
@@ -1843,7 +1841,7 @@ Examples:
 
 > The multi-dimensional analysis and the memorization made during the restoration of Notre-Dame cathedral (HC9) *was about* the Notre-Dame cathedral (HC1).
 
-#### HP24 has disciplinary focus (is aspect of) 
+##### HP24 has disciplinary focus (is aspect of) 
 
 Domain: HC9 Study
 
@@ -1863,7 +1861,7 @@ Examples:
 
 > The Heritage Science based Art historical Investigation of the Derynia Icon (HC9) *has disciplinary focus* Painting Techniques (E55).
 
-#### HP25 has created (was created by)
+##### HP25 has created (was created by)
 
 Domain: HC9 Study
 
@@ -1885,7 +1883,7 @@ Examples:
 >
 > The Heritage Science based Art historical Investigation of the Derynia Icon (HC9) *has created* the scientific report [http://dx.doi.org/10.2139/ssrn.5247574](https://dx.doi.org/10.2139/ssrn.5247574) (E31)
 
-#### HP26 studied specifically (was studied by)
+##### HP26 studied specifically (was studied by)
 
 Domain: HC9 Study
 
@@ -1907,7 +1905,7 @@ Examples:
 >
 > The Heritage Science based Art historical Investigation of the Derynia Icon (HC9) *studied specifically* the icon material composition (E1).
 
-#### HP27 used content of (content was used by)
+##### HP27 used content of (content was used by)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -1929,7 +1927,7 @@ Examples:
 >
 > The Deryneia icon Digital Twin Creation by CyI (HC11) *used content of* the scientific report [http://dx.doi.org/10.2139/ssrn.5247574](https://dx.doi.org/10.2139/ssrn.5247574) (crm:E31).
 
-#### HP28 has snapshot (is snapshot of)
+##### HP28 has snapshot (is snapshot of)
 
 Domain: HC14 Volatile Digital Object
 
@@ -1951,7 +1949,7 @@ Examples:
 
 > The submitted copy of ECHOES deliverable 7.1 in Microsoft Word format (HC15) is snapshot of the ECHOES deliverable doc (HC14), before its 1st release.
 
-#### HP29 has digital object part 
+##### HP29 has digital object part 
 
 Domain: HC14 Volatile Digital Object
 
@@ -1973,7 +1971,7 @@ Examples:
 
 > The HDT of the Pisa Leaning Tower (HC2) *has digital part* a 3D survey project database (crmdig:D1).
 
-#### HP30 added content (content was added by)
+##### HP30 added content (content was added by)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -1993,7 +1991,7 @@ Examples:
 
 > The Deryneia icon Digital Twin Creation by CyI (HC11) *added content* the proposition set (Namegraph URI) with content:{'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'religious icon' (crm:E55 Type) crm:P108 was produced by: 'Painting of the Nativity' (crm:E12 Production) P50 has current keeper:'Bishopcry of Constantia and Amochostos '(crm:E74 Group) crm:P1 is identified by: 'Nativity' (crm:E41 Appellation)} (HC16).
 
-#### HP31 deleted content (content was deleted by)
+##### HP31 deleted content (content was deleted by)
 
 Domain: HC11 Digital Twin Maintenance
 
@@ -2015,7 +2013,7 @@ Examples:
 
 > The Deryneia icon Digital Twin Creation by CyI (HC11) *deleted content* the proposition set (Namegraph URI) with content:{'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'religious icon' (crm:E55 Type) P108 was produced by: 'Painting of the Nativity' (crm:E12 Production) crm:P50 has current keeper:'Bishopcry of Constantia '(E74 Group)} (HC16).
 
-#### HP32 replaced (was replaced by)
+##### HP32 replaced (was replaced by)
 
 Domain: HC16 Heritage Proposition Set
 
@@ -2037,7 +2035,7 @@ Examples:
 
 > The proposition set with content:{'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'religious icon' (crm:E55 Type) crm:P108 was produced by: 'Painting of the Nativity' (crm:E12 Production) crm:P50 has current keeper:'Bishopcry of Constantia and Amochostos '(crm:E74 Group) P1 is identified by: 'Nativity' (crm:E41 Appellation)} (HC16) *replaced* the proposition set with content:{'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'icon' (crm:E55 Type) crm:P1 is identified by: 'The Nativity' (crm:E41 Appellation)} (HC16)
 
-#### HP33 contains (is proposition set of)
+##### HP33 contains (is proposition set of)
 
 Domain: HC2 Heritage Digital Twin
 
@@ -2057,7 +2055,7 @@ Examples:
 
 > The Deryneia icon Digital Twin (HC2) *contains* the proposition set with content:{'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'religious icon' (crm:E55 Type) crm:P108 was produced by: 'Painting of the Nativity' (crm:E12 Production) crm:P50 has current keeper:'Bishopcry of Constantia and Amochostos '(crm:E74 Group) crm:P1 is identified by: 'Nativity' (crm:E41 Appellation)} (HC16).
 
-#### HP34 contained (is former proposition set of)
+##### HP34 contained (is former proposition set of)
 
 Domain: HC2 Heritage Digital Twin
 
@@ -2077,7 +2075,7 @@ Examples:
 
 > The Deryneia icon Digital Twin (HC2) *contained* the proposition set with content: {'The Derynia Icon of Nativity' (HC3) crm:P2 has type: 'icon' (crm:E55 Type) crm:P1 is identified by: 'The Nativity' (crm:E41 Appellation)} (HC16).
 
-#### HP35 made primary observation (was observation of)
+##### HP35 made primary observation (was observation of)
 
 Domain: HC17 Observation with Inference
 
@@ -2099,7 +2097,7 @@ Examples:
 
 > The observation of low energy Pb-M lines (2.3 keV) with conclusions on pigments identifications (HC17) *made primary observation* the situation stated that “Lead white was used to tint flesh and clothing folds. The cave, the star rays, Mary’s mattress edges, have several layers of lead white (blue areas), magenta - a single surface layer” (crmsci:S28). \[*This statement can be represented by containing a set of CRM-compatible propositions\].*
 
-#### HP36 is about the provenance of (has provenance claim)
+##### HP36 is about the provenance of (has provenance claim)
 
 Domain: HC18 Provenance Statement
 
@@ -2123,7 +2121,7 @@ Examples:
 >
 > The provenance statement by the museum collection manager within the museum catalogue about the provenance of the painting YY (HC19) *concluded provenance* that “The painting YY is documented in XZ family collection until early ‘20s. Gallery XX in 1982; acquired by the museum, Bonhams 1990.” (HC18).
 
-#### HP37 concluded provenance (was assessed by)
+##### HP37 concluded provenance (was assessed by)
 
 Domain: HC19 Provenance Assessment
 
@@ -2145,7 +2143,7 @@ Examples:
 
 > The assessment by Glyptotek in 1979 about the provenance of the Chariot of Eretum (HC19) *concluded provenance* the provenance statement that “the Chariot of Eretum originates from the chamber tomb XI of Colle del Forno” (HC18).
 
-#### HP38 is sensor representation of (has sensor representation)
+##### HP38 is sensor representation of (has sensor representation)
 
 Domain: HC6 Sensor Data
 
@@ -2165,7 +2163,7 @@ Examples:
 
 The data of the Knossos Palace monitoring system (HC6) is sensor representation of the Knossos Palace (S15).
 
-## References
+### References
 
 ICOMOS, 2003. Evaluation in nomination file, Dresden Elbe Valley (Germany) No. 1156. Paris: UNESCO World Heritage Centre, p.85, https://whc.unesco.org/en/list/1156/documents/
 
@@ -2183,15 +2181,15 @@ Meghini, C., Bartalesi, V., and Metilli, D. (2021) “Representing Narratives in
 
 Bruseker, G., Doerr, M., & Theodoridou, M. (2018). PARTHENOS D5.5 Report on the Common Semantic Framework. Zenodo. <https://doi.org/10.5281/zenodo.2575465>
 
-## 5. Referred CIDOC CRM Classes and Properties
+### 5. Referred CIDOC CRM Classes and Properties
 
 Since our model refers to and reuses, wherever appropriate, large parts of ISO21127, the CIDOC Conceptual Reference Model, this section provides a comprehensive list of all constructs used from ISO21127, together with their definitions following version 7.3 maintained by CIDOC. The complete definition of the CIDOC Conceptual Reference Model can be found in its official site here - <https://cidoc-crm.org>
 
-### 5.1 Referred CIDOC CRM Classes
+#### 5.1 Referred CIDOC CRM Classes
 
 This section contains the complete definitions of the classes of the CIDOC CRM Conceptual Reference Model version 7.3 referred to by the model.
 
-#### E1 CRM Entity
+##### E1 CRM Entity
 
 Superclass of:
 
@@ -2245,7 +2243,7 @@ Properties:
 >
 > (P137.1 in the taxonomic role: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type)
 
-#### E2 Temporal Entity
+##### E2 Temporal Entity
 
 Subclass of:
 
@@ -2295,7 +2293,7 @@ Properties:
 >
 > [P185](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc11784) ends before the end of (ends after the end of): [E2](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc7310) Temporal Entity
 
-#### E4 Period
+##### E4 Period
 
 Subclass of:
 
@@ -2367,7 +2365,7 @@ Properties**:**
 >
 > [P9](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdorigin=TEAMS-MAGLEV.teamsSdk_ns.rwc&wdexp=TEAMS-TREATMENT&wdhostclicktime=1759138720867&wdenableroaming=1&mscc=1&hid=BDBBCAA1-E09A-E000-1F19-5A50619FC777.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=fc233108-1ab4-dbdd-8d85-27e12ebf5b9c&usid=fc233108-1ab4-dbdd-8d85-27e12ebf5b9c&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&afdflight=78&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc9005) consists of (forms part of): [E4](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdorigin=TEAMS-MAGLEV.teamsSdk_ns.rwc&wdexp=TEAMS-TREATMENT&wdhostclicktime=1759138720867&wdenableroaming=1&mscc=1&hid=BDBBCAA1-E09A-E000-1F19-5A50619FC777.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=fc233108-1ab4-dbdd-8d85-27e12ebf5b9c&usid=fc233108-1ab4-dbdd-8d85-27e12ebf5b9c&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&afdflight=78&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc7351) Period
 
-#### E5 Event
+##### E5 Event
 
 Subclass of:
 
@@ -2421,7 +2419,7 @@ Properties:
 >
 > [P12](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc9081) occurred in the presence of (was present at): [E77](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8533) Persistent Item
 
-#### E7 Activity
+##### E7 Activity
 
 Subclass of:
 
@@ -2507,7 +2505,7 @@ Properties:
 >
 > [P134](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc10938) continued (was continued by): [E7](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc7428) Activity
 
-#### E10 Transfer of Custody
+##### E10 Transfer of Custody
 
 Subclass of:
 
@@ -2543,7 +2541,7 @@ Properties:
 >
 > [P30](#_toc9416) transferred custody of (custody transferred through): [E18](#_toc7666) Physical Thing
 
-#### E13 Attribute Assignment
+##### E13 Attribute Assignment
 
 Subclass of:
 
@@ -2587,9 +2585,9 @@ Properties:
 >
 > [P177](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc11651) assigned property of type (is type of property assigned): [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type
 
-#### 
+##### 
 
-#### E18 Physical Thing
+##### E18 Physical Thing
 
 Subclass of:
 
@@ -2649,7 +2647,7 @@ Properties:
 >
 > [P196](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc11927) defines (is defined by): [E92](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8723) Spacetime Volume
 
-#### E28 Conceptual Object
+##### E28 Conceptual Object
 
 Subclass of:
 
@@ -2691,7 +2689,7 @@ In first-order logic:
 
 E28(x) ⇒ E71(x)
 
-#### E31 Document
+##### E31 Document
 
 Subclass of:
 
@@ -2721,7 +2719,7 @@ Properties:
 
 [P70](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc10034) documents (is documented in): [E1](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc7281) CRM Entity
 
-#### E36 Visual Item
+##### E36 Visual Item
 
 Subclass of:
 
@@ -2759,7 +2757,7 @@ Properties:
 
 (P138.1 mode of representation: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type)
 
-#### E39 Actor
+##### E39 Actor
 
 Subclass of:
 
@@ -2795,7 +2793,7 @@ Properties:
 >
 > [P76](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc10137) has contact point (provides access to): [E41](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8039) Appellation
 
-#### E55 Type
+##### E55 Type
 
 Subclass of:
 
@@ -2845,7 +2843,7 @@ Properties:
 >
 > [P150](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc11249) defines typical parts of (define typical wholes for): [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&wopisrc=https%3A%2F%2Funivtoursfr.sharepoint.com%2Fsites%2FECHOES2%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F899dc0a513ba4955a8c76f3c4aead3e3&wdpid=4fb769df&wdenableroaming=1&mscc=1&hid=05BCCAA1-F076-E000-2CEC-6BD82236BCDB.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&usid=68327bcc-76b3-5288-7f5f-4dc0d0140fdf&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=Other&afdflight=87&csiro=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type
 
-#### E65 Creation
+##### E65 Creation
 
 Subclass of:
 
@@ -2877,7 +2875,7 @@ Properties:
 
 [P94](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc10062) has created (was created by): [E28](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc7841) Conceptual Object
 
-#### E70 Thing
+##### E70 Thing
 
 Subclass of:
 
@@ -2923,7 +2921,7 @@ Properties:
 >
 > (P130.1 kind of similarity: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type)
 
-#### E74 Group
+##### E74 Group
 
 Subclass of:
 
@@ -2969,7 +2967,7 @@ Properties:
 >
 > (P107.1 kind of member: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8169) Type)
 
-#### E89 Propositional Object
+##### E89 Propositional Object
 
 Subclass of:
 
@@ -3015,7 +3013,7 @@ Properties:
 >
 > [P148](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc11232) has component (is component of): [E89](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8675) Propositional Object
 
-####  E90 Symbolic Object
+#####  E90 Symbolic Object
 
 Subclass of:
 
@@ -3063,11 +3061,11 @@ Properties:
 >
 > [P190](#_toc11875) has symbolic content: [E62](#_toc8298) String
 
-### 5.2. Referred CIDOC CRM Properties
+#### 5.2. Referred CIDOC CRM Properties
 
 This section contains the complete definitions of the properties of the CIDOC CRM Conceptual Reference Model version 7.3 referred to.
 
-#### P2 has type (is type of)
+##### P2 has type (is type of)
 
 Domain:
 
@@ -3109,7 +3107,7 @@ In first-order logic:
 >
 > P2(x,y) ⇐ (∃z) \[E17(z)\] ∧ P41i(x,z) ∧ P42(z,y)\]
 
-#### P9 consists of (forms part of)
+##### P9 consists of (forms part of)
 
 Domain:
 
@@ -3149,7 +3147,7 @@ In first-order logic:
 >
 > P9(x,y) ⇒ ¬P9(y,x)
 
-#### P16 used specific object (was used for)
+##### P16 used specific object (was used for)
 
 Domain:
 
@@ -3211,7 +3209,7 @@ In first-order logic:
 >
 > P16(x,y,z) ⇒ \[P16(x,y) ∧ E55(z)\]
 
-#### P17 was motivated by (motivated)
+##### P17 was motivated by (motivated)
 
 Domain:
 
@@ -3249,7 +3247,7 @@ In first-order logic:
 
 P17(x,y) ⇒ P15(x,y)
 
-#### P94 has created (was created by)
+##### P94 has created (was created by)
 
 Domain:
 
@@ -3295,7 +3293,7 @@ Domain:
 
 Range:
 
-#### [<span id="_Toc230787391" class="anchor"></span>E90](#_toc8683) Symbolic Object
+##### [<span id="_Toc230787391" class="anchor"></span>E90](#_toc8683) Symbolic Object
 
 Superproperty of:
 
@@ -3327,7 +3325,7 @@ In first-order logic:
 >
 > P106(x,y) ¬P106(y,x)
 
-#### P129 is about (is subject of)
+##### P129 is about (is subject of)
 
 Domain:
 
@@ -3361,7 +3359,7 @@ In first-order logic:
 >
 > P129(x,y) ⇒ P67(x,y)
 
-#### P130 shows features of (features are also found on)
+##### P130 shows features of (features are also found on)
 
 Domain:
 
@@ -3393,7 +3391,7 @@ Scope note:
 
 Properties:
 
-##### P130.1 kind of similarity: [E55](#_toc8153) Type
+###### P130.1 kind of similarity: [E55](#_toc8153) Type
 
 Scope note:
 
@@ -3415,7 +3413,7 @@ In first-order logic:
 >
 > ¬P130(x,x)
 
-#### P134 continued (was continued by)
+##### P134 continued (was continued by)
 
 Domain:
 
@@ -3457,7 +3455,7 @@ In first-order logic:
 >
 > P134(x,y) ⇒ ¬P134(y,x)
 
-#### P138 represents (has representation)
+##### P138 represents (has representation)
 
 Domain:
 
@@ -3485,7 +3483,7 @@ Scope note:
 
 Properties:
 
-##### P138.1 mode of representation: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8153) Type
+###### P138.1 mode of representation: [E55](https://frc-word-edit.officeapps.live.com/we/wordeditorframe.aspx?ui=en-US&rs=fr-FR&actnavid=eyJjIjo3NzkyMzYxMDl9&wopisrc=https%3A%2F%2Funivtoursfr-my.sharepoint.com%2Fpersonal%2Fflorian_hivert_univ-tours_fr%2F_vti_bin%2Fwopi.ashx%2Ffiles%2F6c342015803040cc8ce86e08388e5b90&wdenableroaming=1&mscc=1&wdodb=1&hid=F9B29DA1-E0B1-C000-A538-07EAA3B120AD.0&uih=sharepointcom&wdlcid=en-US&jsapi=1&jsapiver=v2&corrid=921acaad-3a58-e2ab-0081-37f7506312c3&usid=921acaad-3a58-e2ab-0081-37f7506312c3&newsession=1&sftc=1&uihit=docaspx&muv=1&ats=PairwiseBroker&cac=1&sams=1&mtf=1&sfp=1&sdp=1&hch=1&hwfh=1&dchat=1&sc=%7B%22pmo%22%3A%22https%3A%2F%2Funivtoursfr-my.sharepoint.com%22%2C%22pmshare%22%3Atrue%7D&ctp=LeastProtected&rct=Normal&wdorigin=AuthPrompt.Sharing.DirectLink&afdflight=9&csc=1&instantedit=1&wopicomplete=1&wdredirectionreason=Unified_SingleFlush#_toc8153) Type
 
 Scope note:
 
@@ -3507,7 +3505,7 @@ In first-order logic:
 >
 > P138(x,y) ⇒ P67(x,y)
 
-#### P148 has component (is component of)
+##### P148 has component (is component of)
 
 Domain:
 
@@ -3539,11 +3537,11 @@ In first-order logic:
 >
 > P148(x,y) ⇒ ¬P148(y,x)
 
-### 5.3. Referred CIDOC CRMsci Classes
+#### 5.3. Referred CIDOC CRMsci Classes
 
 This section contains the complete definitions of the classes of the CIDOC CRMsci family model [^13]version 3.0 referred to by the model.
 
-#### S15 Observable Entity
+##### S15 Observable Entity
 
 Subclass of:
 
@@ -3583,7 +3581,7 @@ Properties:
 
 O12 has dimension (is dimension of): E54 Dimension
 
-#### S27 Observation
+##### S27 Observation
 
 Subclass of:
 
@@ -3631,7 +3629,7 @@ Properties:
 >
 > O36 expressed the observed as (was the expression of): S28 Observable Situation
 
-#### S28 Observable Situation
+##### S28 Observable Situation
 
 Subclass of:
 
@@ -3683,11 +3681,11 @@ Properties:
 
 O40 refers to observable entity (is referred to in): S15 Observable Entity
 
-### 5.4. Referred CIDOC CRMsci Properties
+#### 5.4. Referred CIDOC CRMsci Properties
 
 This section contains the complete definitions of the properties of the CIDOC CRMsci Model version 3 referred to.
 
-#### O36 expressed the observed as (was the expression of)
+##### O36 expressed the observed as (was the expression of)
 
 Domain:
 
@@ -3731,11 +3729,11 @@ In first-order logic:
 >
 > O36(x,y) ⇔ S27(x) ∧ S28(y) ∧ (∃u) \[I2(u) ∧ J2(x,u) ∧ J4(u,y) ∧ J5(u,‘TRUE’)\]
 
-### 5.5. Referred CIDOC CRMdig Classes
+#### 5.5. Referred CIDOC CRMdig Classes
 
 This section contains the complete definitions of the classes of the CIDOC CRMdig family model[^14] version 4.0 referred to by the model.
 
-#### D1 Digital Object
+##### D1 Digital Object
 
 Subclass of:
 
@@ -3763,13 +3761,13 @@ In First Order Logic:
 
 D1(x) ⇒ E73(x)
 
-#### D2 Digitization Process
+##### D2 Digitization Process
 
 Subclass of:
 
-#### 
+##### 
 
-#### D11 Digital Measurement Event
+##### D11 Digital Measurement Event
 
 Scope note:
 
@@ -3789,7 +3787,7 @@ L1 digitized (was digitized by): E18 Physical Thing
 
 L60 documents: E1 CRM Entity
 
-#### D9 Data Object
+##### D9 Data Object
 
 Subclass of:
 
@@ -3813,11 +3811,11 @@ Properties:
 
 L61 contains value set of (has value set representation): E54 Dimension
 
-### 5.6. Referred CIDOC CRMdig Properties
+#### 5.6. Referred CIDOC CRMdig Properties
 
 Following is a list of complete definitions of the CRMdig Model properties version 4.0 referred to.
 
-#### L1 digitized (was digitized by)
+##### L1 digitized (was digitized by)
 
 Domain:
 
@@ -3843,7 +3841,7 @@ L1(x,y) ⇒ E18(y)
 
 L1(x,y) ⇒ P39(x,y)
 
-#### L20 has created (was created by)
+##### L20 has created (was created by)
 
 Domain:
 
@@ -3861,11 +3859,11 @@ Scope note:
 
 > This property identifies a Data Object that came into existence as a result of a D11 Digital Measurement Event
 
-### 5.7. Referred CIDOC CRMinf Classes
+#### 5.7. Referred CIDOC CRMinf Classes
 
 This section contains the complete definitions of the classes of the CIDOC CRMinf family model[^15] version 1.2 referred to by the model.
 
-#### I1 Argumentation
+##### I1 Argumentation
 
 Subclass of:
 
@@ -3909,7 +3907,7 @@ Properties:
 
 J2 concluded that (was concluded by): I2 Belief
 
-#### I4 Proposition Set
+##### I4 Proposition Set
 
 Subclass of:
 
@@ -3997,7 +3995,7 @@ Properties:
 >
 > J29 contains property type (is property type in): E55 Type
 
-#### I5 Inference Making 
+##### I5 Inference Making 
 
 Subclass of:
 
@@ -4027,7 +4025,7 @@ J1 used as premise (was a premise for): I2 Belief
 
 J3 applies (was applied by): I3 Inference Logic
 
-#### I10 Provenance Statement
+##### I10 Provenance Statement
 
 Subclass of:
 
@@ -4061,7 +4059,7 @@ Properties:
 
 J20 is about the provenance of (has provenance claim): E70 Thing
 
-#### I15 Provenance Assessment
+##### I15 Provenance Assessment
 
 Subclass of:
 
@@ -4085,11 +4083,11 @@ Properties:
 
 J21 concluded provenance (was assessed by): I4 Provenance Belief
 
-### 5.8. Referred CIDOC CRMinf Properties
+#### 5.8. Referred CIDOC CRMinf Properties
 
 This section contains the complete definitions of the properties of the CIDOC CRMinf Model version 1.2 referred to.
 
-#### J20 is about the provenance of (has provenance claim)
+##### J20 is about the provenance of (has provenance claim)
 
 Domain:
 
@@ -4131,7 +4129,7 @@ In First Order Logic:
 >
 > J20(x,y) ⇒ J28(x,y)
 
-#### J21 concluded provenance (was assessed by)
+##### J21 concluded provenance (was assessed by)
 
 Domain:
 
@@ -4169,11 +4167,11 @@ In First Order Logic:
 >
 > J21 (x,y) ⇒ J2(x,y)
 
-### 5.9. Referred Parthenos Classes
+#### 5.9. Referred Parthenos Classes
 
 This section contains the complete definitions of the classes of the Parthenos model version 3.1[^16] referred to by the model.
 
-#### PE19 Persistent Digital Object
+##### PE19 Persistent Digital Object
 
 Subclass of
 
@@ -4205,13 +4203,13 @@ Properties:
 
 PP16 has persistent digital object part: PE19 Persistent Digital Object
 
-#### PE20 Volatile Digital Object
+##### PE20 Volatile Digital Object
 
 Subclass of
 
 PE32 Curated Thing
 
-#### D1 Digital Object
+##### D1 Digital Object
 
 Superclass of
 
@@ -4241,11 +4239,11 @@ Properties:
 >
 > PP18 has digital object part: D1 Digital object
 
-### 5.10. Referred Parthenos Properties
+#### 5.10. Referred Parthenos Properties
 
 This section contains the definitions of the Parthenos Model version 3.1 properties referred to.
 
-#### PP17 has snapshot (is snapshot of)
+##### PP17 has snapshot (is snapshot of)
 
 Domain
 
@@ -4273,7 +4271,7 @@ Examples
 
 1.0 Parthenos.doc (PE19) is snapshot of Parthenos deliverable (PE20), before its 1<sup>st</sup> release.
 
-#### PP18 has digital object part (is digital object part of)
+##### PP18 has digital object part (is digital object part of)
 
 Domain
 
@@ -4299,13 +4297,13 @@ Scope
 
 Examples
 
-### 5.11. Referred Narrative Ontology Classes 
+#### 5.11. Referred Narrative Ontology Classes 
 
 This section contains the definitions of the classes and properties of the **Narrative Ontology**
 
 The complete definition of the The NOnt ontology is described here: [<https://dlnarratives.eu/ontology/>](https://dlnarratives.eu/ontology/)
 
-#### Narration
+##### Narration
 
 Subclass of: F1 Work
 
@@ -4319,7 +4317,7 @@ Examples:
 
 Properties:
 
-#### Narrative
+##### Narrative
 
 Subclass of:
 
@@ -4339,9 +4337,9 @@ Properties:
 
 has text: E90 Symbolic Object
 
-### 5.12. Referred Narrative Ontology Properties
+#### 5.12. Referred Narrative Ontology Properties
 
-#### hasText
+##### hasText
 
 Domain:
 
@@ -4355,7 +4353,7 @@ Scope note:
 
 This property relates a narrative to the text that expresses it.
 
-#### partOfNarrative
+##### partOfNarrative
 
 Domain:
 
@@ -4369,7 +4367,7 @@ Scope note:
 
 This property relates an event to the narrative that contains it.
 
-# Disclaimer
+## Disclaimer
 
 All information provided reflects the status of the ECHOES project at the time of writing and may be subject to change.
 
@@ -4377,13 +4375,13 @@ Neither the ECHOES Consortium as a whole, nor any single party within the ECHOES
 
 This document does not represent the opinion of the European Community, and the European Community is not responsible for any use that might be made of its content.
 
-ECHOES is a project funded by the European Commission under Grant Agreement n.101157364, with the support of UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee n.10110142 & n.10110466. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held ![Picture 5](./media/image28.png)responsible for them.
+ECHOES is a project funded by the European Commission under Grant Agreement n.101157364, with the support of UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee n.10110142 & n.10110466. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held ![Picture 5](./media/image27.png)responsible for them.
 
 Copyright Notice
 
 © 2024 by the authors, the ECHOES consortium. This work is licensed under a <span dir="rtl">“</span>CC BY 4.0” license.
 
-# Endnotes 
+## Endnotes 
 
 [^1]: <https://icom.museum/en/resources/standards-guidelines/objectid/>
 

@@ -1,8 +1,8 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-Deliverable D6.2 Interoperability
+# Deliverable D6.2 Interoperability
 
-Requirements and Guidelines
+**Requirements and Guidelines**
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -19,7 +19,7 @@ Responsible authors Joanna Kowalska (PCSS) and Konrad Pawlikowski (PCSS)
 
 © 2025 by the authors, the ECHOES consortium. This work is licensed under a “CC BY 4.0” license.
 
-# Deliverable Information
+## Deliverable Information
 
 <table style="width:94%;">
 <colgroup>
@@ -164,7 +164,7 @@ Responsible authors Joanna Kowalska (PCSS) and Konrad Pawlikowski (PCSS)
 </tbody>
 </table>
 
-# Abstract
+## Abstract
 
 This deliverable defines the interoperability requirements and implementation guidelines for the European Collaborative Cloud for Cultural Heritage (ECCCH). It establishes a structured interoperability framework covering technical, semantic, organizational, and legal dimensions necessary to enable reliable exchange, reuse, and federation of cultural heritage data, services, workflows, and applications across distributed infrastructures.
 
@@ -174,7 +174,7 @@ The deliverable specifies testable technical requirements, provider guidelines, 
 
 Disclaimer: Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.
 
-#  Table of Contents
+##  Table of Contents
 
 [Deliverable Information](#deliverable-information)
 
@@ -280,7 +280,7 @@ Disclaimer: Views and opinions expressed are however those of the author(s) only
 
 [B. RICE Scoring](#rice-scoring)
 
-# List of figures and tables
+## List of figures and tables
 
 [Table 1-1: Scope of this deliverable](#_Toc222088922)
 
@@ -418,7 +418,7 @@ Disclaimer: Views and opinions expressed are however those of the author(s) only
 
 [Table 10-4: RICE Scoring (Quantitative Ranking Mechanism)](#_Toc222088989)
 
-# List of abbreviations
+## List of abbreviations
 
 | Abbreviations | Meaning                                                   |
 |---------------|-----------------------------------------------------------|
@@ -448,7 +448,7 @@ Disclaimer: Views and opinions expressed are however those of the author(s) only
 | SPARQL        | SPARQL Protocol and RDF Query Language                    |
 | URI           | Uniform Resource Identifier                               |
 
-# Introduction
+## Introduction
 
 Interoperability is the ability of two or more systems, organizations, or components to exchange information and to use the information that has been exchanged. In practice, this means that data, services, and tools can interact in a predictable manner without requiring ad hoc conversions, bespoke integrations, or manual intervention at each interaction point. 
 
@@ -470,7 +470,7 @@ In practice, interoperability applies to how data, metadata, services, tools, an
 
 These layers are mutually reinforcing. Technical connectivity without semantic alignment produces unusable or misleading results; semantic alignment without organizational processes leads to unreliable operations; and any form of interoperability without legal clarity can prevent reuse entirely. 
 
-## Importance of Interoperability in ECHOES
+### Importance of Interoperability in ECHOES
 
 Interoperability is particularly critical in the cultural heritage domain because cultural heritage resources - including data, objects, narratives, interpretations, and tools - are inherently heterogeneous, distributed, and often multilingual. They are produced using different standards, stored in diverse repositories, and governed by distinct institutional and legal constraints. Without a common interoperability framework, these resources remain fragmented: difficult to discover, expensive to integrate, and often impossible to reuse reliably. 
 
@@ -502,7 +502,7 @@ Interoperability improves searchability, supports multilingual exploration, enab
 
 Interoperability is therefore not only a technical concern but a strategic enabler: it transforms isolated digital collections and tools into a connected, reusable, and evolvable ecosystem that supports preservation, research, innovation, and public engagement at European scale. 
 
-## Consequences of Poor Interoperability 
+### Consequences of Poor Interoperability 
 
 Poor interoperability in the Cultural Heritage domain has far-reaching consequences that affect not only technical systems, but also institutional collaboration, legal compliance, sustainability, and the ability to generate new knowledge.
 
@@ -640,7 +640,7 @@ This reduces the impact of cultural heritage digitization efforts.
 
 In summary, poor interoperability creates technical, semantic, organizational, and legal barriers that impede the CH domain's ability to function as a unified knowledge ecosystem. For the European Cultural Heritage Cloud, resolving these challenges is essential to ensure sustainable, trustworthy, and meaningful integration of cultural data and applications at scale.
 
-## How to Read This Document
+### How to Read This Document
 
 The purpose of this document is to define the interoperability requirements and guidelines that enable the European Collaborative Cloud for Cultural Heritage (ECCCH) to function as a coherent, federated, and sustainable digital ecosystem. It establishes the technical, semantic, organizational, and legal foundations that allow cultural heritage data, applications, workflows, and services originating from diverse institutions, infrastructures, and projects to be exchanged, combined, reused, and integrated meaningfully.
 
@@ -681,7 +681,7 @@ This document distinguishes clearly between requirements and guidelines to separ
 </tbody>
 </table>
 
-### Intended Audience
+#### Intended Audience
 
 The deliverable is written for a diverse audience within and beyond the consortium:
 
@@ -699,7 +699,7 @@ The deliverable is written for a diverse audience within and beyond the consorti
 
 Details of technical requirements, intended especially for groups from point 5 and 6, can be found in the ECHOES Technical Documentation.
 
-### ECHOES Technical Documentation 
+#### ECHOES Technical Documentation 
 
 This document defines the interoperability requirements and guidelines for the CH Cloud. While the normative principles and interoperability levels defined here are expected to remain stable, some implementation-level technical details may evolve as ECHOES grows and the technical ecosystem matures.
 
@@ -711,13 +711,13 @@ ECHOES Living Documentation can be found under the following link:
 
 <https://echoes-eccch-technical.github.io/internal-documentation/>
 
-### Key concepts
+#### Key concepts
 
 This chapter introduces the key concepts used throughout this document. Its purpose is to clarify terminology, define the relationship between interoperability requirements and implementation guidance, and explain how interoperability levels are structured and applied within the CH Cloud.
 
 Understanding these concepts is essential for providers preparing resources for onboarding, integration, and validation. The definitions and distinctions presented here establish the conceptual foundation for the interoperability requirements described in the following sections.
 
-#### Requirements vs. Guidelines
+##### Requirements vs. Guidelines
 
 **Requirements define what** must be satisfied to achieve and maintain interoperability at a given level. They represent the formal, normative criteria used for onboarding, validation, and conformance assessment. Requirements are written to be evidence-based and testable, and their fulfilment is assessed through defined validation mechanisms. Failure to meet a mandatory requirement results in non-conformance with the claimed interoperability level.
 
@@ -735,7 +735,7 @@ The following interpretation rules apply:
 
 This separation ensures that providers can clearly identify what is required for compliance, while using the guidelines as practical, structured support for implementation, without blurring obligations and recommendations.
 
-#### Interoperability vs. Integration
+##### Interoperability vs. Integration
 
 Although often used interchangeably, interoperability and integration describe distinct concepts.
 
@@ -769,7 +769,7 @@ Interoperable ecosystems are loosely coupled and vendor-neutral, enabling a plug
 
 Integrated systems tend to be tightly coupled and system-specific.
 
-#### Interoperability Levels 
+##### Interoperability Levels 
 
 ECHOES defines three mandatory, cumulative interoperability levels. Providers MUST declare a target level and the CH Cloud MUST validate it automatically. No resource may be onboarded below L1. Also, failure to maintain compliance will result in a level downgrade.
 
@@ -930,7 +930,7 @@ Fulfilling interoperability at **Level 3 - Advanced** will enable provider to ch
 
 ![](./media/image3.png)
 
-#### Resource Types
+##### Resource Types
 
 CH Cloud resources take different forms and therefore have different interoperability requirements.
 
@@ -946,7 +946,7 @@ Vocabularies, ontologies, thesauri, authority files, mappings, or alignment reso
 
 - **Workflows** Automated or semi-automated processes combining datasets, services, and applications, including orchestration and task execution.
 
-#### Other Terms
+##### Other Terms
 
 In this section, definitions of other terms important in the context of interoperability are provided. The comprehensive ECHOES glossary is maintained separately and is linked in Section 1.3.5 (Useful Resources).
 
@@ -969,7 +969,7 @@ In this section, definitions of other terms important in the context of interope
 
 <span id="_Toc222088926" class="anchor"></span>Table 1-4: Key concepts
 
-###  Useful Resources
+####  Useful Resources
 
 Project Page - [Link](https://www.echoes-eccch.eu/)
 
@@ -1001,7 +1001,7 @@ The aggregation of resources, including services and research products, within t
 
 Additional guidelines, for example concerning the use of Persistent Identifiers (PIDs) across the federation, are still under development. The governance of the EOSC Interoperability Framework is likewise expected to be established through several ongoing EOSC-related projects.
 
-# State of the Art 
+## State of the Art 
 
 This section surveys the interoperability standards, specifications, and practices that underpin the CH Cloud framework. It covers data formats, metadata schemas, semantic technologies, exchange protocols, deployment patterns, security mechanisms, and legal interoperability, within the context of cultural heritage (CH) and research infrastructures.
 
@@ -1029,7 +1029,7 @@ Detailed implementation guidance is maintained in the Living Documentation:
 
 <span id="_Toc222088927" class="anchor"></span>Table 2-1: Standards summary
 
-## Data Architecture - Standards and Formats
+### Data Architecture - Standards and Formats
 
 CH Cloud groups relevant standards into: (i) semantic representation (e.g., RDF/OWL/SKOS), (ii) metadata schemas (e.g., Dublin Core, EDM, DCAT), (iii) media and domain formats, (iv) exchange/packaging (e.g., BagIt, RO-Crate), and (v) rights/licensing mechanisms.
 
@@ -1043,7 +1043,7 @@ These categories align with the interoperability levels used in this deliverable
 
 Schemas, profiles, and concrete examples are provided in the Living Documentation
 
-## Protocols and APIs
+### Protocols and APIs
 
 Protocols and APIs determine how systems communicate and exchange data. They affect ingestion and synchronisation, delivery of digital objects, metadata harvesting, and semantic querying across distributed services.
 
@@ -1067,7 +1067,7 @@ To support automated compliance checks, CH Cloud also relies on machine-readable
 
 - SHACL for RDF graph validation.
 
-## Deployment and infrastructure
+### Deployment and infrastructure
 
 Interoperability depends not only on formats and APIs but also on reproducible deployment across heterogeneous deployment environments (i.e., different node infrastructure stacks, including institutional on-site installations and cloud-native environments). Key enabling practices include:
 
@@ -1077,7 +1077,7 @@ Interoperability depends not only on formats and APIs but also on reproducible d
 
 - CI/CD and GitOps patterns to standardise build/test/deploy workflows across nodes.
 
-## Security and data privacy
+### Security and data privacy
 
 Distributed services require a shared trust framework. In practice, this includes unified identity and authentication, consistent authorisation rules, secure transport, and audit/provenance-relevant security logging.
 
@@ -1089,7 +1089,7 @@ Within CH Cloud, commonly referenced security families include:
 
 - Consistent RBAC/ABAC-style authorisation enforcement aligned with rights and provenance requirements.
 
-## Access and use/reuse for legal interoperability
+### Access and use/reuse for legal interoperability
 
 CH Cloud does not redefine legal rules; instead, it provides technical mechanisms that make legal constraints machine-actionable and enforceable across providers. This includes:
 
@@ -1101,7 +1101,7 @@ CH Cloud does not redefine legal rules; instead, it provides technical mechanism
 
 - Coupling rights metadata with AAI-derived entitlements to support consistent policy enforcement across nodes, including cross-border reuse scenarios.
 
-# Interoperability Requirements
+## Interoperability Requirements
 
 This chapter defines technical **interoperability requirements** for resources onboarded into the CH Cloud. It translates the interoperability model into an evidence-driven requirements catalogue used for onboarding decisions, level assignment (L1/L2/L3), and conformance testing.
 
@@ -1109,7 +1109,7 @@ To ensure that document can quickly address Reader’s needs – requirements ar
 
 Authoritative inputs include the Grant Agreement, D6.1/WP6 outputs, D3.1/D3.2 technical design outputs, and previous sections of this deliverable. Where sources overlap, the requirement is expressed once as a single canonical statement.
 
-## Structure and Classification
+### Structure and Classification
 
 | Field | Required | Description |
 |----|----|----|
@@ -1142,9 +1142,9 @@ Authoritative inputs include the Grant Agreement, D6.1/WP6 outputs, D3.1/D3.2 te
 
 <span id="_Toc222088930" class="anchor"></span>Table 3-3: Validation classification
 
-## Requirements by Function
+### Requirements by Function
 
-###  Data Organization
+####  Data Organization
 
 This section defines normative requirements for metadata, semantic representation, and semantic alignment. Implementation guidance and checklists are provided in Chapter 4 (Interoperability Guidelines), while validation artefacts and machine-testable rules are specified in Chapter 6 (Validation and Conformance Testing). Governance and change control are defined in Chapter 7.
 
@@ -1206,7 +1206,7 @@ This section defines normative requirements for metadata, semantic representatio
 
 <span id="_Toc222088937" class="anchor"></span>Table 3-10: Provenance separation and mappings
 
-###  System Communication
+####  System Communication
 
 APIs must be discoverable, contract-driven, predictable for integrators, and operable in a federated environment.
 
@@ -1282,7 +1282,7 @@ APIs must be discoverable, contract-driven, predictable for integrators, and ope
 
 <span id="_Ref219295376" class="anchor"></span>Table 3-19: Data service endpoint requirements
 
-###  System Operation
+####  System Operation
 
 This section defines deployment characteristics enabling interoperable operation in federated environments.
 
@@ -1318,7 +1318,7 @@ This section defines deployment characteristics enabling interoperable operation
 
 <span id="_Toc222088950" class="anchor"></span>Table 3-23: Backup, recovery, integrity, dependencies
 
-###  Security
+####  Security
 
 | REQ-ID | Statement | Applies-to | Level | Evidence |
 |----|----|----|----|----|
@@ -1336,7 +1336,7 @@ This section defines deployment characteristics enabling interoperable operation
 
 <span id="_Toc222088952" class="anchor"></span>Table 3-25: Authentication and authorisation
 
-###  Monitoring and Provenance
+####  Monitoring and Provenance
 
 | REQ-ID | Statement | Level | Evidence |
 |----|----|----|----|
@@ -1409,13 +1409,13 @@ Living Documentation for evaluation integration (survey UI patterns, consent tex
 
 <span id="_Toc222088960" class="anchor"></span>Table 3-33: Reassessment and remediation lifecycle
 
-## Requirements by Resource Type
+### Requirements by Resource Type
 
-###  Datasets
+####  Datasets
 
 A dataset is any onboarded data collection intended for discovery, access, processing, or reuse in CH Cloud workflows and services, including assets supporting **Heritage Digital Twins** (e.g., digitised collections, 3D assets and associated metadata, annotations, and derived/enriched datasets).
 
-#### Minimum dataset onboarding evidence package
+##### Minimum dataset onboarding evidence package
 
 Providers MUST supply:
 
@@ -1473,11 +1473,11 @@ Notes:
 
 <span id="_Ref219295409" class="anchor"></span>Table 3-35: Data quality and Integrity Requirements
 
-### Applications
+#### Applications
 
 Applications are software tools onboarded for use within or alongside CH Cloud (e.g., HDT creation/visualisation tools, annotation tools, processing GUIs). Applications may be purely client-side or may expose runtime endpoints.
 
-#### Minimum application onboarding evidence package
+##### Minimum application onboarding evidence package
 
 Providers MUST supply:
 
@@ -1517,11 +1517,11 @@ Notes:
 
 - If the application is purely client-side with no exposed endpoints, SEC/DEP/MON runtime requirements may be N/A.
 
-###  APIs and Web Services
+####  APIs and Web Services
 
 APIs and services provide machine interfaces to CH Cloud capabilities (data access, workflow execution, registries, semantic services). They are critical federation integration points.
 
-#### Minimum API/service onboarding evidence package
+##### Minimum API/service onboarding evidence package
 
 Providers MUST supply:
 
@@ -1558,11 +1558,11 @@ Providers MUST supply:
 
 <span id="_Toc222088964" class="anchor"></span>Table 3-37: APIs and Web Services applicability
 
-### Semantic Artefacts
+#### Semantic Artefacts
 
 Semantic artefacts include SKOS vocabularies/thesauri, OWL ontologies, mapping files, SHACL shapes, and other semantic constraints used for CH Cloud semantic interoperability and (where applicable) knowledge graph integration.
 
-#### Minimum semantic artefact onboarding evidence package
+##### Minimum semantic artefact onboarding evidence package
 
 Providers MUST supply:
 
@@ -1591,11 +1591,11 @@ Providers MUST supply:
 
 <span id="_Toc222088965" class="anchor"></span>Table 3-38: Semantic Artefacts Applicability
 
-###  Workflows
+####  Workflows
 
 Workflows are executable processes that transform, enrich, validate, or analyse resources (including HDT-related processing pipelines). Workflows may be deployed as services or distributed as portable packages.
 
-#### Minimum workflow onboarding evidence package
+##### Minimum workflow onboarding evidence package
 
 Providers MUST supply:
 
@@ -1629,7 +1629,7 @@ Providers MUST supply:
 
 <span id="_Toc222088966" class="anchor"></span>Table 3-39: Workflows Applicability
 
-###  External repositories and sister projects (integration cases)
+####  External repositories and sister projects (integration cases)
 
 This section applies only where CH Cloud integrates/federates with external repositories. In such cases, the integration MUST ensure at minimum:
 
@@ -1641,7 +1641,7 @@ This section applies only where CH Cloud integrates/federates with external repo
 
 A provider MAY satisfy these obligations by supplying mapping/bridge services that meet the API, security, and monitoring requirements in this chapter.
 
-## Requirements by Level
+### Requirements by Level
 
 A resource is assigned the highest level for which:
 
@@ -1653,9 +1653,9 @@ A resource is assigned the highest level for which:
 
 If any higher-level gating requirement fails, the resource MAY still be onboarded at the highest lower level whose requirements are satisfied.
 
-###  Level 1
+####  Level 1
 
-#### Mandatory requirement set
+##### Mandatory requirement set
 
 All resource types:
 
@@ -1675,7 +1675,7 @@ If the resource is operated as a runtime service (hosted application/service/wor
 
 - **REQ-MON-001** (responsible party + incident contact)
 
-#### Minimum evidence package
+##### Minimum evidence package
 
 - Metadata record satisfying **REQ-META-001/002**
 
@@ -1689,7 +1689,7 @@ If the resource is operated as a runtime service (hosted application/service/wor
 
 - Responsible party/contact if runtime service exists (**REQ-MON-001**)
 
-#### Typical downgrade/block conditions
+##### Typical downgrade/block conditions
 
 - Any exposed endpoint without HTTPS/TLS → onboarding blocked (**SEC-01**)
 
@@ -1697,9 +1697,9 @@ If the resource is operated as a runtime service (hosted application/service/wor
 
 - Missing stable identifier → L1 not assignable (**REQ-META-003**)
 
-###  Level 2
+####  Level 2
 
-#### Mandatory requirement set 
+##### Mandatory requirement set 
 
 L2 includes all applicable L1 requirements plus:
 
@@ -1775,7 +1775,7 @@ Lifecycle reassessment:
 
 - **REQ-MON-011** (re-validation triggers on major changes)
 
-#### Minimum evidence package
+##### Minimum evidence package
 
 All L1 evidence, plus:
 
@@ -1797,7 +1797,7 @@ All L1 evidence, plus:
 
 - Reassessment trigger process (**REQ-MON-011**)
 
-#### Typical downgrade/block conditions 
+##### Typical downgrade/block conditions 
 
 - Missing OpenAPI contract or contract mismatch for an API: L2 not assignable (**REQ-API-002/003**)
 
@@ -1807,9 +1807,9 @@ All L1 evidence, plus:
 
 - Missing provenance for derived/enriched outputs: L2 not assignable for derived resources (**REQ-PROV-001/003**)
 
-###  Level 3 
+####  Level 3 
 
-#### Mandatory requirement set
+##### Mandatory requirement set
 
 L3 includes all applicable L1 and L2 requirements plus:
 
@@ -1835,7 +1835,7 @@ APIs exposing semantic interfaces (conditional):
 
 - **REQ-API-020** (if SPARQL provided: declare supported features and limits)
 
-#### Minimum evidence package
+##### Minimum evidence package
 
 All L2 evidence, plus:
 
@@ -1849,7 +1849,7 @@ All L2 evidence, plus:
 
 - Remediation/downgrade procedure evidence for critical conformance failures (REQ-MON-012)
 
-#### Typical downgrade/block conditions 
+##### Typical downgrade/block conditions 
 
 - SHACL validation failures without approved exceptions: L3 not assignable (**REQ-SEM-005**)
 
@@ -1859,7 +1859,7 @@ All L2 evidence, plus:
 
 - Persistent critical failures without remediation/downgrade: L3 status revoked (**REQ-MON-012**)
 
-## Federation and Node Requirements
+### Federation and Node Requirements
 
 This chapter defines the normative baseline for CH Cloud federation nodes (sites/environments) that host or expose CH Cloud resources. It focuses on stable and secure endpoint exposure, consistent cross-site access control for restricted services, and operational controls that prevent interoperability from drifting.
 
@@ -1901,7 +1901,7 @@ Operational guidance, validation procedures, evidence examples, and reference no
 
 <span id="_Toc222088967" class="anchor"></span>Table 3-40: Node requirements
 
-###  Node onboard evidence package
+####  Node onboard evidence package
 
 To onboard a node, operators MUST provide (or provide stable links to) the following minimum evidence:
 
@@ -1921,15 +1921,15 @@ To onboard a node, operators MUST provide (or provide stable links to) the follo
 
 - Monitoring coverage summary (availability + platform signals), health/readiness probing for hosted services, and revalidation trigger process (REQ-MON-011).
 
-### Optional capability HPC/GPU
+#### Optional capability HPC/GPU
 
 GPU/HPC is optional. If exposed as federation-facing services/workflows, GPU-backed capabilities MUST comply with applicable API (REQ-API-\*), deployment/operability (REQ-DEP-\*), security (SEC-\*), monitoring (REQ-MON-\*), and provenance requirements (REQ-PROV-\*). Providers/operators SHOULD document scheduling/quotas and capture processing environment identifiers for reproducibility.
 
-### Relationship to resource validation
+#### Relationship to resource validation
 
 Node compliance is necessary but not sufficient for resource compliance. Nodes provide the execution/security/monitoring baseline; resources remain responsible for their own REQ-\* (metadata, semantics, API contracts, behaviour) and SEC-\* (authorisation logic) obligations. Conformance testing links node evidence and runtime checks to the validation workflow and reporting format defined in Chapter 6.
 
-# Interoperability Guidelines
+## Interoperability Guidelines
 
 Guidelines explain how providers can implement the interoperability requirements in practice. They complement the normative requirements in Chapter 3 by providing concise implementation patterns and expectations.
 
@@ -2018,9 +2018,9 @@ Normative requirements: Chapter 3. Validation artefacts and testable rules: Chap
 </tbody>
 </table>
 
-## Guidelines by Function
+### Guidelines by Function
 
-###  Data Organization
+####  Data Organization
 
 Core expectations by interoperability level:
 
@@ -2066,7 +2066,7 @@ Core expectations by interoperability level:
 
 Details, templates, and examples: Data standards and protocols / Data standards (Metadata practices, Metadata vocabularies, Semantic & Linked Data, Identifier & URI management), Validation (Semantic validation).
 
-###  System Communication
+####  System Communication
 
 Core expectations by interoperability level:
 
@@ -2112,7 +2112,7 @@ Core expectations by interoperability level:
 
 Details, templates, and examples: Data standards and protocols / Protocols (IIIF, OAI-PMH, decentralised protocols); Validation (API validation).
 
-###  System Operation
+####  System Operation
 
 Core expectations by interoperability level:
 
@@ -2158,7 +2158,7 @@ Core expectations by interoperability level:
 
 Details, templates, and examples: SDLC / Deployment (environments & IaC, pipelines & rollback, validation & versioning), Federation nodes (runtime models, storage).
 
-###  Security
+####  Security
 
 Core expectations by interoperability level:
 
@@ -2204,7 +2204,7 @@ Core expectations by interoperability level:
 
 Details, templates, and examples: Security (security and data privacy) and SDLC (security).
 
-###  Monitoring and Provenance
+####  Monitoring and Provenance
 
 Core expectations by interoperability level:
 
@@ -2250,7 +2250,7 @@ Core expectations by interoperability level:
 
 Details, templates, and examples: SDLC (continuous monitoring and feedback loops); Interoperability evaluation & KPI (semantic monitoring).
 
-###  Documentation
+####  Documentation
 
 Core expectations by interoperability level :
 
@@ -2296,7 +2296,7 @@ Core expectations by interoperability level :
 
 Details, templates, and examples: SDLC (software documentation and codification).
 
-## Checklists
+### Checklists
 
 The following checklists provide a compact readiness view. Full checklists and evidence templates are provided in the ECHOES Engineering Handbook.
 
@@ -2347,7 +2347,7 @@ The following checklists provide a compact readiness view. Full checklists and e
 
 Full checklists, evidence templates, and worked examples: Interoperability requirements (provider requirements); Federation nodes (conformance evidence package); Validation (workflow)
 
-## Guidelines for Software Development
+### Guidelines for Software Development
 
 This section highlights engineering practices that reduce interoperability drift and improve reproducibility. Detailed procedures and templates are provided in the ECHOES Engineering Handbook.
 
@@ -2502,13 +2502,13 @@ This section highlights engineering practices that reduce interoperability drift
 </tbody>
 </table>
 
-# Evaluation and monitoring of interoperability
+## Evaluation and monitoring of interoperability
 
 This chapter defines how the CH Cloud evaluates interoperability at onboarding and monitors it continuously to detect drift from regressions, schema changes, configuration updates, dependency upgrades, or policy modifications. It operationalises the interoperability levels (Key Concepts in Chapter 1) and provider requirements (Chapter 3) into measurable checks and evidence-based outputs, without introducing new requirements.
 
 KPIs derive from normative obligations in D6.2. Concrete KPI thresholds and reporting cadence are set and maintained through project governance and the project’s validation activities.
 
-## Interoperability Evaluation Framework and KPIs
+### Interoperability Evaluation Framework and KPIs
 
 The evaluation framework supports: (1) pre-onboarding evaluation of conformance at the claimed interoperability level (L1/L2/L3), and (2) continuous monitoring to ensure that interoperability remains valid as systems evolve.
 
@@ -2516,7 +2516,7 @@ Evaluation readiness (L2+): as part of continuous evaluation, applications are e
 
 <https://echoes-eccch-technical.github.io/internal-documentation/engineering-handbook/Interoperability-evaluation-and-KPI/>
 
-###  Governance alignment and responsibilities
+####  Governance alignment and responsibilities
 
 Responsibility for maintaining and operating the evaluation framework (including KPI definitions, measurement cadence, and evidence handling) is distributed across project work packages as follows:
 
@@ -2526,7 +2526,7 @@ Responsibility for maintaining and operating the evaluation framework (including
 
 - PSNC (PCSS): responsible for hosting the federated infrastructure and storage for collected evaluation and monitoring data.
 
-###  Evaluation Principles
+####  Evaluation Principles
 
 - Evidence-based: every interoperability claim MUST be backed by verifiable documentation, machine-testable artefacts, or runtime behaviour.
 
@@ -2538,7 +2538,7 @@ Responsibility for maintaining and operating the evaluation framework (including
 
 - Automatable-by-default: where feasible, checks MUST be automated; manual checks MUST be used only where automation is unreliable or not possible.
 
-### Minimum evaluation evidence
+#### Minimum evaluation evidence
 
 A resource MUST be considered evaluable only if the provider supplies the minimum evidence required for its type (see Sections 6.2 and 7.2). Evaluation evidence includes:
 
@@ -2552,7 +2552,7 @@ A resource MUST be considered evaluable only if the provider supplies the minimu
 
 If required evidence for a claimed level is missing, the resource MUST NOT be assigned beyond L1 until the missing evidence is provided and validated.
 
-###  KPI model
+####  KPI model
 
 KPIs SHALL be defined and reported across four measurement categories aligned with the interoperability model and obligations in Chapters 3 and 4:
 
@@ -2573,7 +2573,7 @@ The authoritative KPI catalogue is maintained in Living Documentation:
 
 Mandatory KPIs per resource type/level, thresholds, and measurement cadence are confirmed and maintained through project validation governance.
 
-## Monitoring Tools and Signals (Interoperability Maintenance)
+### Monitoring Tools and Signals (Interoperability Maintenance)
 
 This section defines what SHALL be monitored to maintain interoperability over time. It complements the previous section by focusing on continuous signals that detect degradation or “interoperability drift” after onboarding. Where concrete tools are mentioned, they are illustrative; requirements are expressed as capabilities and signals, not vendor/tool mandates.
 
@@ -2611,7 +2611,7 @@ This section defines what SHALL be monitored to maintain interoperability over t
 
 <span id="_Toc222088980" class="anchor"></span>Table 5-4: 3. Signal groups
 
-###  Minimal monitoring baseline by level
+####  Minimal monitoring baseline by level
 
 The baseline below provides a practical minimum aligned with REQ-MON-\* obligations; additional signals may be required by resource criticality.
 
@@ -2621,11 +2621,11 @@ The baseline below provides a practical minimum aligned with REQ-MON-\* obligati
 
 **L3** includes all L2 signals plus automated conformance drift checks (including SHACL where applicable), structured logging and auditability, and change correlation (release/config tracking).
 
-###  Monitoring outputs and escalation
+####  Monitoring outputs and escalation
 
 Monitoring SHALL produce time-series metrics for availability/performance, structured logs and audit events, validation status summaries (conformance drift), and alerts/incident tickets for failures. Each monitored service SHALL have a declared escalation contact, remediation ownership (responsible team), and defined response expectations for critical failures.
 
-## Semantic Monitoring (Vocabulary, Ontology and KB Integrity)
+### Semantic Monitoring (Vocabulary, Ontology and KB Integrity)
 
 Semantic monitoring extends the scope of the previous subchapter with semantic-specific signals, validation methods, and drift detection mechanisms for resources that use semantic representations (JSON-LD, RDF, SKOS, OWL, mappings, SHACL). Semantic failures are often silent: endpoints may remain available while meaning becomes inconsistent across providers.
 
@@ -2633,7 +2633,7 @@ This section applies to semantic metadata (L2+), controlled vocabularies/thesaur
 
 **Living Documentation:** Operational procedures, worked examples, and reusable check templates for semantic monitoring are maintained in Live Documentation: <https://echoes-eccch-technical.github.io/internal-documentation/engineering-handbook/Interoperability-evaluation-and-KPI/semantic-monitoring/>
 
-###  Semantic monitoring objectives
+####  Semantic monitoring objectives
 
 - Detect semantic drift (changes altering interpretation).
 
@@ -2677,11 +2677,11 @@ For each monitored asset, providers SHALL declare: identifier and version, autho
 
 <span id="_Toc222088983" class="anchor"></span>Table 5-7: Severity, escalation, and reassessment rules
 
-###  Outputs
+####  Outputs
 
 Semantic monitoring SHALL produce pass/fail validation status per monitored asset, drift reports correlated with releases/changes, lists of broken URIs/failed contexts/failed constraints, mapping regression summaries, and recommended remediation actions. Outputs SHALL feed into validation and conformance testing and governance/compliance processes.
 
-# Validation and Conformance Testing
+## Validation and Conformance Testing
 
 This chapter defines the validation and conformance testing process used to assess compliance with the interoperability requirements defined in Chapter 3, applied per resource type and evaluated against interoperability levels. The objective is to ensure that onboarding and level-assignment decisions are repeatable, evidence-based, and machine-verifiable wherever feasible.
 
@@ -2701,7 +2701,7 @@ Living Documentation reference:
 
 <https://echoes-eccch-technical.github.io/internal-documentation/engineering-handbook/Validation/>
 
-## Validation workflow
+### Validation workflow
 
 Validation SHALL follow this standard workflow:
 
@@ -2725,7 +2725,7 @@ Validation SHALL follow this standard workflow:
 
 7.  **Remediation and reassessment:** Provider remediates issues and resubmits evidence. Reassessment SHALL be triggered on major changes and sustained failures (REQ-MON-011). Persistent critical failures SHALL trigger remediation plans or level downgrades (REQ-MON-012).
 
-## Validation Artefacts and Machine-Testable Rules
+### Validation Artefacts and Machine-Testable Rules
 
 Validation SHALL use machine-testable artefacts where feasible:
 
@@ -2737,7 +2737,7 @@ Validation SHALL use machine-testable artefacts where feasible:
 
 **Security evidence:** Endpoint classification; AAI integration evidence for restricted services; token validation results; authorization enforcement tests; security logging policy; secrets policy evidence
 
-### Resource-Type Validation Rules
+#### Resource-Type Validation Rules
 
 <table>
 <caption><p><span id="_Toc222088984" class="anchor"></span>Table 6-1: Dataset Validation</p></caption>
@@ -2796,7 +2796,7 @@ Supervised UI walkthrough (where applicable): confirm a visible feedback trigger
 
 For applications, validation confirms that the provider meets the applicable interoperability obligations. For L2+ claims, validators SHALL additionally verify evaluation integration and telemetry accessibility.
 
-### API and Service Validation
+#### API and Service Validation
 
 L1 checks (dynamic):
 
@@ -2842,7 +2842,7 @@ Restricted services (dynamic):
 
 - Fail-closed behavior when policy cannot be evaluated (SEC-11)
 
-###  Semantic Validation (Vocabularies, Ontologies, Mappings, Constraints)
+####  Semantic Validation (Vocabularies, Ontologies, Mappings, Constraints)
 
 L2 semantic artefact checks (static):
 
@@ -2868,13 +2868,13 @@ L3 semantic checks (static + operational):
 
 **Output:** Semantic conformance report referencing artefact locations, versions, and validation of outputs.
 
-## Responsibilities
+### Responsibilities
 
 - **Providers MUST** submit the required evidence package, keep artefacts versioned, remediate failures, and maintain compliance over time (including reassessment on major change and sustained operational failures).
 
 - Validators/operators SHALL execute the workflow in Section 7.1 consistently, run automated checks where feasible, apply level rules deterministically, and publish conformance reports with REQ-ID traceability.
 
-## Findings Classification
+### Findings Classification
 
 Validation findings SHALL be classified as:
 
@@ -2886,7 +2886,7 @@ Validation findings SHALL be classified as:
 
 - **Evidence missing:** Treated as failure for mandatory requirements
 
-## Reporting and Error Handling
+### Reporting and Error Handling
 
 Each validation run SHALL produce a conformance report containing:
 
@@ -2900,13 +2900,13 @@ Each validation run SHALL produce a conformance report containing:
 
 Providers MUST remediate blocking and level-gating failures before onboarding at the target level. Reassessment SHALL be triggered on major changes and sustained failures (REQ-MON-011). Persistent critical failures SHALL trigger remediation plans or level downgrades (REQ-MON-012).
 
-# Governance, Updates, and Compliance
+## Governance, Updates, and Compliance
 
 This chapter defines the governance controls required to keep the CH Cloud interoperability framework stable, enforceable, and continuously maintainable. It specifies decision rights, change control, audits, exception handling, and recordkeeping obligations that preserve interoperability over time.
 
-## Governance structure
+### Governance structure
 
-###  Governance bodies and responsibilities
+####  Governance bodies and responsibilities
 
 The CH Cloud interoperability framework SHALL be governed through the following functions (roles may be implemented by one or more project bodies, depending on project organisation):
 
@@ -2947,9 +2947,9 @@ Manages change requests, decision records, version publication, and communicatio
 
 Decision rights SHALL be documented in a governance charter and reviewed at least annually.
 
-## Standards update process
+### Standards update process
 
-###  Inputs triggering updates
+####  Inputs triggering updates
 
 Updates to the interoperability framework MAY be triggered by:
 
@@ -2961,7 +2961,7 @@ Updates to the interoperability framework MAY be triggered by:
 
 - operational evidence (recurring conformance failures indicating unclear or impractical requirements).
 
-###  Change request (CR) lifecycle
+####  Change request (CR) lifecycle
 
 All updates MUST follow a formal CR lifecycle:
 
@@ -2999,9 +2999,9 @@ A draft version is circulated with:
 
 Publication of the updated framework version (see Section 8.4) and provider/operator guidance.
 
-## Compliance audits
+### Compliance audits
 
-###  Audit objectives
+####  Audit objectives
 
 Audits SHALL verify that:
 
@@ -3011,7 +3011,7 @@ Audits SHALL verify that:
 
 - conformance reports remain reproducible and evidence-backed.
 
-###  Audit scope and cadence
+####  Audit scope and cadence
 
 Audits SHALL be performed:
 
@@ -3021,13 +3021,13 @@ Audits SHALL be performed:
 
 - **on trigger events** (REQ-MON-011), such as major releases, schema changes, AAI policy changes, repeated monitoring failures.
 
-###  Audit artefacts and outputs
+####  Audit artefacts and outputs
 
 Each audit SHALL produce a conformance report including: findings severity, required remediation actions, deadlines, and responsible parties. If remediation is not completed within the agreed timeframe, the assigned level SHALL be downgraded (or the resource temporarily de-listed, if necessary to protect federation integrity).
 
-## Change management and versioning
+### Change management and versioning
 
-###  Versioning of the interoperability framework
+####  Versioning of the interoperability framework
 
 The interoperability framework SHALL be versioned using semantic versioning:
 
@@ -3055,7 +3055,7 @@ Each published version MUST include:
 
 - list of deprecated items (REQ-IDs, templates, test suites).
 
-###  Deprecation policy
+####  Deprecation policy
 
 When a requirement, template, or validation rule is deprecated:
 
@@ -3067,7 +3067,7 @@ When a requirement, template, or validation rule is deprecated:
 
 Deprecations MUST NOT silently reduce interoperability assurances. If a requirement is removed, equivalent assurance MUST be maintained through replacement controls or revised level definitions.
 
-###  Exceptions and waivers
+####  Exceptions and waivers
 
 Exceptions MAY be granted only under controlled conditions:
 
@@ -3079,11 +3079,11 @@ Exceptions MAY be granted only under controlled conditions:
 
 Exceptions MUST NOT be used to bypass blocking security requirements (e.g., SEC-01) for externally reachable endpoints.
 
-## Documentation templates
+### Documentation templates
 
 To support consistent onboarding and validation, the following templates SHALL be maintained and published as versioned artefacts:
 
-###  Required templates
+####  Required templates
 
 - **Resource metadata template** (minimum fields and optional extensions)
 
@@ -3097,7 +3097,7 @@ To support consistent onboarding and validation, the following templates SHALL b
 
 - **Provenance template** (input/output lineage, transformation steps, version links)
 
-###  Template governance
+####  Template governance
 
 Templates MUST:
 
@@ -3107,9 +3107,9 @@ Templates MUST:
 
 - provide validation guidance (static/dynamic/operational checks).
 
-## Communication and onboarding process
+### Communication and onboarding process
 
-###  Onboarding process overview
+####  Onboarding process overview
 
 Onboarding SHALL follow a deterministic process aligned with Chapters 3, 4, and 6:
 
@@ -3125,7 +3125,7 @@ Onboarding SHALL follow a deterministic process aligned with Chapters 3, 4, and 
 
 6.  Resource is registered and becomes discoverable; monitoring integration is confirmed (where applicable).
 
-###  Communication obligations
+####  Communication obligations
 
 Governance SHALL ensure:
 
@@ -3135,7 +3135,7 @@ Governance SHALL ensure:
 
 - operational incidents affecting federation interoperability are communicated with remediation expectations.
 
-###  Support and escalation
+####  Support and escalation
 
 A support model SHALL exist that includes:
 
@@ -3145,7 +3145,7 @@ A support model SHALL exist that includes:
 
 - a process for disputing validation findings (with recorded decisions).
 
-## Compliance recordkeeping
+### Compliance recordkeeping
 
 All conformance-related artefacts SHALL be retained in a controlled repository, including:
 
@@ -3161,13 +3161,13 @@ All conformance-related artefacts SHALL be retained in a controlled repository, 
 
 Record retention policies SHALL align with applicable legal and organizational requirements and MUST support traceability over the lifecycle of onboarded resources.
 
-# Conclusion
+## Conclusion
 
 This deliverable (D6.2) defines the interoperability requirements and technical guidelines for the ECCCH ecosystem. It consolidates the interoperability landscape relevant to cultural heritage and research infrastructures, establishes a CH Cloud–specific interoperability framework, and provides a requirements-first model that is evidence-driven and suitable for federated onboarding, validation, and continuous compliance.
 
 D6.2 is designed to be operational: it supports the onboarding of diverse CH Cloud resources (datasets, applications, APIs/services, semantic artefacts, workflows) into a federated environment by combining (i) clear interoperability levels, (ii) canonical requirements, (iii) resource-type applicability rules, (iv) validation and conformance testing procedures, and (v) federation/node and governance processes that prevent interoperability drift over time
 
-## Key findings
+### Key findings
 
 1.  **Interoperability is a system property.** It requires coordinated semantic, technical, and orgorganizationalignment to enable consistent discovery, access, integration, and reuse across providers.
 
@@ -3183,7 +3183,7 @@ D6.2 is designed to be operational: it supports the onboarding of diverse CH Clo
 
 Node-level operability requirements and governance processes are necessary to keep interoperability constitent at scale.
 
-## Recommendations
+### Recommendations
 
 1.  **Adopt L2 as the default onboarding target** for resources expected to be integrated and reused across providers.
 
@@ -3193,7 +3193,7 @@ Node-level operability requirements and governance processes are necessary to ke
 
 4.  **Operationalise governance and revalidation triggers early** to manage change, enforce consistent interpretation, and prevent interoperability from drifting.
 
-## Summary of requirements and guidelines
+### Summary of requirements and guidelines
 
 D6.2 provides interoperability guidance and requirements in a layered structure:
 
@@ -3230,7 +3230,7 @@ The categories below summarise the scope of the interoperability framework and p
 
 Note: The canonical requirement statements and their identifiers are the authoritative references. Provider-facing guidelines are intended to operationalise those requirements and MUST remain consistent with the canonical catalogue.
 
-## Risk analysis and mitigation
+### Risk analysis and mitigation
 
 - **Interoperability drift:** mitigate via revalidation triggers, periodic audits, and remediation or downgrade discipline.
 
@@ -3242,7 +3242,7 @@ Note: The canonical requirement statements and their identifiers are the authori
 
 - **Tooling gaps:** mitigate by maintaining validation suites, templates, and governance-controlled updates to rules and procedures
 
-## Future work
+### Future work
 
 D6.2 establishes a stable foundation, the following activities will further improve interoperability assurance and operational efficiency:
 
@@ -3256,9 +3256,9 @@ D6.2 establishes a stable foundation, the following activities will further impr
 
 5.  **Iterate using onboarding feedback** to improve clarity, templates, and validation procedures under change control.
 
-# Annexes
+## Annexes
 
-## Relevant CH and research infrastructures
+### Relevant CH and research infrastructures
 
 <table>
 <caption><p><span id="_Toc222088987" class="anchor"></span>Table 10-2: Relevant CH and research infrastructures</p></caption>
@@ -3367,13 +3367,13 @@ Cross-project onboarding (ECHOES cascading grants programme)
 
 WP3 requires the CH Cloud to integrate tools and datasets from external projects, making interoperability guidelines critical.
 
-## RICE Scoring
+### RICE Scoring
 
 RICE is used to rank eligible requirements and to determine level assignments (L1/L2/L3).
 
 **RICE Score** = (Reach × Impact × Confidence) / Effort
 
-#### RICE Factors (Normative Scales)
+##### RICE Factors (Normative Scales)
 
 Each factor SHALL be scored using the following scale:
 
@@ -3386,7 +3386,7 @@ Each factor SHALL be scored using the following scale:
 
 <span id="_Toc222088988" class="anchor"></span>Table 10-3: Each factor SHALL be scored using the following scale
 
-#### RICE Thresholds (Binding)
+##### RICE Thresholds (Binding)
 
 | RICE Score | Interpretation | Action              |
 |------------|----------------|---------------------|

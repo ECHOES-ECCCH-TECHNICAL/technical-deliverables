@@ -1,6 +1,6 @@
 ![](./media/image1.png) European Cloud for Heritage Open Science
 
-**Deliverable D3.2 Integration Roadmap**
+# Deliverable D3.2 Integration Roadmap
 
 HORIZON-CL2-2023-HERITAGE-ECCCH-01
 
@@ -177,7 +177,7 @@ Deliverable Information
 </tbody>
 </table>
 
-# Abstract
+## Abstract
 
 The ECHOES Integration Roadmap provides the operational framework to implement the Integration Strategy defined in deliverable 3.1, translating the high-level and conceptual rationale into practical processes. Whereas the strategy outlines why integration is needed, the present roadmap on how diverse digital resources - from datasets and software to services, workflows, and semantic artefacts - can be prepared, aligned, and incorporated into the emerging Cultural Heritage Cloud (ECCCH). Designed primarily for technical teams and resource providers, the Integration Roadmap also serves as a reference for any external contributors seeking to understand how their resources may participate in the future ECCCH ecosystem.
 
@@ -191,7 +191,7 @@ Finally, the roadmap embeds quantitative and qualitative evaluation via the Key 
 
 *Disclaimer: Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
 
-# Table of Contents
+## Table of Contents
 
 [1. Abstract](#abstract)
 
@@ -257,7 +257,7 @@ Finally, the roadmap embeds quantitative and qualitative evaluation via the Key 
 
 [References](#references)
 
-# List of figures and tables
+## List of figures and tables
 
 Figure 1: [Role View of the ECHOES Integration Steps](#integration-steps)
 
@@ -265,7 +265,7 @@ Table 1: [From ECHOES functionalities to Cloud Components](#how-to-use-this-road
 
 Table 2: [Overview of the first six integration cycles](#timeline-of-the-integration-roadmap)
 
-# List of abbreviations
+## List of abbreviations
 
 | AAI   | Authentication and Authorisation Infrastructure    |
 |-------|----------------------------------------------------|
@@ -284,7 +284,7 @@ Table 2: [Overview of the first six integration cycles](#timeline-of-the-integra
 | UI    | User Interface                                     |
 | VA(s) | Vertical Application(s)                            |
 
-# Purpose & Scope 
+## Purpose & Scope 
 
 This document, the ECHOES Integration Roadmap, serves as the primary operational guide for implementing the integration strategy defined in Deliverable (D)3.1. Whereas D3.1 outlines the strategic rationale, the "why", this roadmap focuses exclusively on the practical implementation, the "how". It provides clear, actionable steps and repeatable processes for integrating diverse digital resources into the future ECCCH ecosystem, while also fulfilling the requirements of a formal European Commission deliverable. It is primarily addressed to technical teams and resource providers who are responsible for carrying out integration tasks. However, it is also intended as a key resource for any external project, institution, or data provider seeking to understand the process for contributing to the European Cloud for Heritage Open Science (ECHOES) and the ECCCH under development.
 
@@ -294,7 +294,7 @@ In addition to the processes included and described in this Integration Roadmap,
 
 This roadmap is not a standalone document; its successful implementation is critically dependent on several other key ECHOES deliverables that provide its strategic and technical foundation. As mentioned above, it directly operationalises the high-level criteria, governance roles, and policies defined in the D3.1 Integration Strategy. In addition to that, the roadmap relies on the D6.1 Data Strategy for the Cultural Heritage (CH) Knowledge Base for the architecture of the CH Knowledge Base, and data lifecycle management. Most critically, the technical substance of this roadmap, including the specific criteria for integration levels and the technical onboarding checklists, is drawn directly from D6.2 Interoperability Requirements and Guidelines. Finally, the processes outlined here align with the broader vision for a collaborative environment, that WP4 deliverables (D4.1 Report on identification of communities and their needs due in May 2026 and D4.2 Strategy for community building due in May 2026) will contribute to shape and the creation of Digital Commons as described in D7.1 The Digital Commons also due in May 2026. Cross-reference tables are provided in the present deliverable to facilitate navigation between these interconnected documents.
 
-# How to Use This Roadmap
+## How to Use This Roadmap
 
 This chapter provides guidance on how to navigate the Integration Roadmap effectively. It is essential to understand that this deliverable serves as the **stable framework** for all integration activities within ECHOES. Building on *Deliverable 3.1 Integration Strategy*, it defines the official process, roles, and stages for bringing new resources into the ecosystem. While this roadmap provides the structural skeleton, the detailed, evolving technical specifications and implementation guides are maintained as living documents, primarily within *Deliverable 6.2 Interoperability Requirements and Guidelines*. This approach ensures that the core process remains consistent, while the technical guidance can adapt to new technologies and the evolving needs of the integration objects.
 
@@ -339,7 +339,7 @@ Table 1 From ECHOES functionalities to Cloud Components
 
 Complementing the high-level navigation view described in this section, the following one provides an exploration of what is intended by integrating with ECHOES today, and some preliminary thoughts on what integrating with the ECCCH will look like.
 
-# Preliminary Integration explorations
+## Preliminary Integration explorations
 
 To add a more lively view of what Integration with ECHOES means and set the full scene, the following use case is included in the Integration Roadmap as example showcasing the first interactions of the ECHOES Vertical Applications (VAs) with the Cloud components.
 
@@ -357,7 +357,7 @@ Thus, the Vertical Applications are expected to generate pairs of digital conten
 
 While this Integration exploration section illustrates the first steps of the integration activities that one can expect from a complex ecosystem, it also demonstrates how much a common framework for all the integration activities is needed. That is what the three following sections elaborate on: first by describing the unified process each integration should follow (ch. 8 Integration steps); then by grounding these processes and tasks into the ECHOES timeline via the so-called integration cycles (ch. 9), and finally by highlighting the monitoring and reviewing tasks envisioned for the roadmap itself (ch. 10).
 
-# Integration Steps
+## Integration Steps
 
 This section of the Integration Roadmap describes the core of the process that teams undertaking ECHOES Integration will have to follow. The 6 identified steps explicit processes to be followed, describe the interactions between the various actors involved in a given integration, and identify the operations to be conducted in the Integration Tracking Tool (further described in ch. 10). As presented in the *D3.1 Integration Strategy*, the following actors are involved:
 
@@ -381,7 +381,7 @@ The diagram on the next summarises these steps and present them adopting a role 
 
 Figure 1: Role View of the ECHOES Integration Steps
 
-## Step 1 - Candidate resources identification for integration 
+### Step 1 - Candidate resources identification for integration 
 
 **Actors involved:** ECHOES adopter representative, EITF coordination team
 
@@ -397,7 +397,7 @@ The result of this initial step is the identification of integration pairs consi
 
 **Translation in the Integration tracking tool:** creation of an issue per unit of integration identified.
 
-## Step 2 - Interoperability Self-Assessment 
+### Step 2 - Interoperability Self-Assessment 
 
 **Actors involved:** ECHOES adopter technical contacts
 
@@ -409,7 +409,7 @@ This Interoperability self-assessment step should lead to a better understanding
 
 **Translation in the Integration tracking tool:** agreement on the start and end date of the units of integration.
 
-## Step 3 - Technical onboarding
+### Step 3 - Technical onboarding
 
 **Actors involved:** ECHOES adopter technical contacts, ECHOES cloud components providers
 
@@ -421,7 +421,7 @@ Even though some cloud components are still under development at the time of wri
 
 **Translation in the Integration tracking tool:** each issue is assigned to two technical individuals (one ECHOES adopter technical contact and one ECHOES cloud component provider). Communication between them happens in the dedicated issues.
 
-## Step 4 - Integration validation
+### Step 4 - Integration validation
 
 **Actors involved:** ECHOES adopter technical contacts, ECHOES cloud components providers
 
@@ -431,7 +431,7 @@ Even though some cloud components are still under development at the time of wri
 
 **Translation in the Integration tracking tool:** change of status of the unit of integration validated
 
-## Step 5 - Release & monitoring
+### Step 5 - Release & monitoring
 
 **Actors involved:** ECHOES adopter technical contacts, ECHOES cloud components providers
 
@@ -445,7 +445,7 @@ The core monitoring capability is expected to be fully in place by Month 48 (KPI
 
 **Translation in the Integration tracking tool:** related units of integration issues are closed and considered completed
 
-## Step 6 - User Evaluation
+### Step 6 - User Evaluation
 
 **Actors involved:** ECHOES adopter representative
 
@@ -457,11 +457,11 @@ The core monitoring capability is expected to be fully in place by Month 48 (KPI
 
 Finally, a process to manage cases where integrated resources become obsolete or are not actively maintained anymore needs to be developed. This could include considering the possible transfer of responsibilities to other partners within the ECCCH federation.
 
-# Timeline of the Integration Roadmap
+## Timeline of the Integration Roadmap
 
 The timeline presented below provides an overview of how the ECHOES Integration Roadmap will unfold over the course of the project. It describes the key notion of **“Integration cycles”**, highlights how the coordination of these cycles that structure the progressive implementation and refinement of integration activities is foreseen. Through the phases approach presented in the last three sub-sections, the roadmap ensures both agility and continuity, allowing integration processes to evolve alongside the maturity of the ECCCH ecosystem.
 
-## What is an Integration Cycle?
+### What is an Integration Cycle?
 
 As stated in *D3.1 Integration Strategy*, Integration in ECHOES follows an **agile and iterative process** that combines open, rolling intake with ideally regular three-month coordination cycles that could be turned into six-month cycles upon decision of the EITF. This hybrid structure (iterative but with rolling intake) allows new integrations to start as soon as they are ready, while maintaining a clear rhythm to regularly “capture” the state of the integration activities. It enables a continuous improvement of the roadmap processes all along the project lifetime, as well as an easy way to **regularly review the progresses of the units of integration, update priorities and provide a snapshot of the ECHOES integration status.**
 
@@ -477,7 +477,7 @@ In practice, every three (or six) months, the EITF coordination team prepares th
 
 A summary of these elements is shared with the EITF to collect potential feedback from this wider group acting as a liaison body between all ECHOES adopters and the WP leads of the ECHOES project. The Integration Cycles Flash Report Template included in Annex D suggests a presentation format to support this work.
 
-## Planning and Prioritising an Integration Cycle 
+### Planning and Prioritising an Integration Cycle 
 
 At the start of each cycle and to ensures that all incoming demands for integration are taken into account and scheduled as efficiently as possible, the EITF coordination team update the Integration Roadmap following a MoSCoW prioritisation methodology based on the following elements:
 
@@ -491,7 +491,7 @@ At the start of each cycle and to ensures that all incoming demands for integrat
 
 - *Won’t Have (for now)*: these integrations are not justified for the current phase due to low impact or unresolved blockers. May be revisited later. Would fall under this category all the integrations relying on cloud components not yet available for example.
 
-## M18: Initial roadmap release
+### M18: Initial roadmap release
 
 The release of the present document, in November 2025 (M18), realises the initial roadmap release. Alongside the publication of the *Integration Strategy*, the Roadmap defines integration actors and processes, even though not all the cloud components are ready for integration yet. In parallel and as already mentioned, *D6.1 Data Strategy for the CH Knowledge Base* is released as well, offering/ensuring an initial view on the data formats and corresponding data harvesting protocols so that data from the ECCCH “contributors” can be prepared to be processed by ECHOES.
 
@@ -499,7 +499,7 @@ At the same time and as illustrated in section 7 Preliminary Integration Explora
 
 On the ECCCH projects side of things, as of November 2025, the first three sister projects are running for one year. They have one representative within the EITF and a first draft of the integration questionnaire has been shared (see annex C and the example integration workflow). In addition to that, 6 out of 10 projects from the second ECCCH projects wave have started in October 2025, and the 12 first ECHOES cascading grants projects call 1 will be notified in December 2025 of their selection.
 
-## M19–M36: setting up 3-month integration cycles
+### M19–M36: setting up 3-month integration cycles
 
 Between December 2025 and June 2027, 6 integration cycles will run offering a chance to test and improve the integration roadmap while starting to collaboratively build the ECCCH. Table 2 below shows what kind of elements are already known and should be taken into consideration to plan and prioritise integrations throughout these upcoming cycles.
 
@@ -588,7 +588,7 @@ Between December 2025 and June 2027, 6 integration cycles will run offering a ch
 </tbody>
 </table>
 
-## M38 & M54: major reviews and updates
+### M38 & M54: major reviews and updates
 
 Between July 2027 and November 2028, almost 6 new integration cycles will happen. While it is difficult to foresee what they will include or how the processes might have evolved in the meantime, one dimension that we can already highlight as one of the goals for this new phase, is that **more automation** – and less ad-hoc communication – should have entered the integration processes, thanks to the work delivered by other ECHOES Work Packages and to the feedback received from the ECHOES adopters. Even though **continuous human interaction** will remain needed in the integration process (and should remain needed as it is also one dimension contributing to the development of the (technical) ECHOES community), we can expect that more tools will come into play that will ease the assessment and validation steps.
 
@@ -596,11 +596,11 @@ In parallel, some major milestone will also be achieved by the ECHOES project th
 
 In addition to that, the EITF will also keep in mind that the target numbers for M60 (i.e. end of the ECHOES project, May 2029) include the following: more than 5000 of HDTs accessible; more than 2000 of HDTs processed by tools and more than 10 external VAs in development.
 
-# Monitoring & Review of the integration roadmap
+## Monitoring & Review of the integration roadmap
 
 While the Integration Cycles are providing a framework and giving a pace to the tracking and assessment of the implementation of the integration strategy, as explained in the previous section, this chapter details how progresses are tracked and evaluated, including how the **Integration Tracking Tool** is set up, how the **Key Performance Indicators** of the project related to integration are taken on board in the roadmap, and how **Collaborative Research Scenarios** are offering a more qualitative approach and a user engagement dimension in the more technical dimensions discussed so far.
 
-## Integration Tracking tool
+### Integration Tracking tool
 
 At the time of writing this deliverable, the choice of a software forge/code repository for the ECHOES project has not been made yet, even though some platforms - especially GitLab and GitHub - are used by various partners and tested out at the project scale. This influences the deployment of the integration tracking tool, as, ideally, the issues created to manage integration activities should be living in the code repository where cloud components to be integrated with are developed. However, whatever the final choice of the platform, the same rationale explained below will be valid and implemented.
 
@@ -622,13 +622,13 @@ A dedicated “Integration” project is created in the repository. It allows th
 
 The Integration Tracking Tool is managed by the EITF coordination team but is set to public to allow interested parties to get an idea of the concrete steps covered by the implementation of an integration task.
 
-## Resource Evaluation and Indicators 
+### Resource Evaluation and Indicators 
 
 Within ECHOES, WP9 is working on developing a set of **Evaluation Criteria and Sustainability indicators** for the ECCCH. Although this work is still under development, several elements can already be highlighted here as the dimensions and sub-dimensions considered by the nascent evaluation matrix are key to evaluate the relevance of the integration activities. Indeed, dimensions such as data quality, metadata and paradata quality, compliance with internal and external regulations, compatibility, usability, software quality (and the list is not exhaustive here) are defined and put into action by WP9. In parallel, investigations related to tools supporting validation, reasoning and quality assessment of semantic and linked data resources are also conducted. These tools include framework for checking data integrity and conformance to ontologies, for measuring dataset completeness, accuracy and FAIRness, and for reasoning over RDF graphs.
 
 Thanks to the alliance of both the evaluation criteria and the tools that will be chosen to support validation, we can expect some major review of the integration roadmap towards automation of especially steps 2 and 4 of the current workflow described in Section 8. Regarding the interoperability self-assessment, several tools will help automate this process, for example, static code analysis tools to assess software contributions, and quality evaluation tools for data and metadata contributions. Once a new resource is integrated, WP9 will also provide tools to support its validation and user evaluation.
 
-## Collaborative Research Scenarios (CRS)
+### Collaborative Research Scenarios (CRS)
 
 To conclude this section about monitoring and reviewing the Integration Roadmap, it is important to present here a more qualitative and community approach to assess the success of the integrations: the Collaborative Research Scenarios. Indeed, ECHOES Task 3.3, *Enhancing and evaluating the collaboration potential of ECHOES*, acts as bridge between the planned infrastructure’s technical aspects and its community dimensions, as developed within WP4, ensuring that the Cloud evolves to a functional collaborative ecosystem. CRS are designed to iteratively map how ECHOES can increase collaboration across target user communities by using its resources, tools and workflows.
 
@@ -638,7 +638,7 @@ Each CRS operates as a *narrative, storyboard-style model* that illustrates how 
 
 This process will allow WP3 to assess how integrated resources enhance collaboration within their respective communities and across communities. In particular, three distinct CRS will document and monitor qualitatively how the specific resources integrated meet the KPIs set in alignment with WP9. Some of the indicators that will measure collaboration include, among others, Value of technology index improvement, Knowledge improvement index, Partnership synergy, and Capacity changes. Results will be analysed in *D3.4 ECHOES Collaboration Potential Report*.
 
-# Conclusion
+## Conclusion
 
 This ECHOES Integration Roadmap establishes the operational backbone of the ECHOES integration efforts, translating the strategic dimensions defined in *D3.1 Integration Strategy* into a structured and iterative process. By providing a unified framework that accommodate a diversity of resource types, providers, various technological contexts and maturity levels, the roadmap ensures a coherence across the inherent heterogeneity of the ECCCH ecosystem.
 
@@ -648,9 +648,9 @@ Furthermore, the introduction of Integration Cycles and the Integration Tracking
 
 Ultimately, the Integration Roadmap contributes not only to the technical implementation of the ECCCH but also to the capacity building and community-centered mission. Thanks to the development of the Collaborative Research Scenarios and the inclusion of community-driven evaluation methods, the roadmap ensures that the integration success is meaningfully measured. As a living document, this Roadmap will evolve over time and new versions will be made publicly available to the ECCCH stakeholders to reflect the most up-to-date integration documentation needed.
 
-# Annexes
+## Annexes
 
-## Annex A: ECHOES Integration Questionnaire v.1
+### Annex A: ECHOES Integration Questionnaire v.1
 
 At the time of writing this deliverable, a series of feedback has been collected to improve this questionnaire, and a new version is already being developed, but not yet ready to be added here.
 
@@ -688,7 +688,7 @@ Here, you should not provide us with the list of all your deliverables and miles
 |  |  |  |
 |  |  |  |
 
-## Annex B: ECHOES Cloud Component Integration Factsheet
+### Annex B: ECHOES Cloud Component Integration Factsheet
 
 The goal of the ECHOES Cloud Component Integration Factsheet is to provide a description of the component that are available for resource integration purposes. Inspired from the European Open Science Cloud (EOSC) Interoperability Guidelines[^7], these factsheets are intended as a summarised view of a given component, complementary of the ECHOES interoperability guidelines.
 
@@ -733,9 +733,9 @@ The goal of the ECHOES Cloud Component Integration Factsheet is to provide a des
 </tbody>
 </table>
 
-## 
+### 
 
-## Annex C: Example integration workflow
+### Annex C: Example integration workflow
 
 Some of the ECCCH projects have started and are already actively contributing to the EITF. In that framework, the first integration questionnaires were received, and in this annex C we are trying to examplify a full integration workflow, based on the answer received to the questionnaire by the Textails project.
 
@@ -785,15 +785,15 @@ Once validated, services are released and actively monitored:
 
 Finally, the integrated resources are evaluated through the engagement of the Textailes user base. This includes testing the upgraded tools and integrated data/knowledge base and collecting feedback from the community to guide further improvements. At this stage, collaborative research scenarios engaging a user base beyond the one from the Textailes project can also be set up.
 
-## 
+### 
 
-## Annex D: Integration Cycles Flash Report Template
+### Annex D: Integration Cycles Flash Report Template
 
 ![](./media/image5.png)
 
-## 
+### 
 
-## Annex E: Cross-reference tables 
+### Annex E: Cross-reference tables 
 
 To clarify the relationship between this roadmap and its companion deliverables, the following table provides a quick reference guide.
 
@@ -907,7 +907,7 @@ To clarify the relationship between this roadmap and its companion deliverables,
 </tbody>
 </table>
 
-# References
+## References
 
 - Koumantaros, K., Themis Zamani, Kagkelidis Konstantinos, Thermolia, C., Emir Imamagic, Daniel Vrcic, Katarina Zailac, & Cyril L'Orphelin. (2023). EOSC Monitoring: Architecture and Interoperability Guidelines (1.0.1). Zenodo. <https://doi.org/10.5281/zenodo.8333934>
 
